@@ -1,152 +1,124 @@
-🌐 Turismo.com — Guia de Viagens
- 
-📝 DESCRIÇÃO GERAL
- 
-Projeto de site completo e acessível com dicas de viagem para 7 países. Reúne informações sobre cultura, gastronomia, pontos turísticos, moeda e onde fazer câmbio, com galeria de fotos e páginas de hospedagem, alimentação, compras e contato.
- 
- 
- 
-🌍 PAÍSES DO PROJETO
- 
-🇧🇷 BRASIL
- 
-- Cultura: Festivais, música, diversidade, tradições regionais
-​
-- Gastronomia: Feijoada, churrasco, pão de queijo, acarajé, brigadeiro
-​
-- Lugares típicos: Rio de Janeiro, Salvador, São Paulo, Foz do Iguaçu, Amazônia
-​
-- Moeda: Real (R$)
-​
-- Câmbio: Casas autorizadas e agências bancárias
- 
-🇵🇹 PORTUGAL
- 
-- Cultura: Fado, azulejos, universidades históricas, tradições marinheiras
-​
-- Gastronomia: Pastel de nata, bacalhau, caldo verde, vinho do Porto
-​
-- Lugares típicos: Lisboa, Porto, Sintra, Coimbra, Algarve
-​
-- Moeda: Euro (€)
-​
-- Câmbio: Agências e estações oficiais
- 
-🇫🇷 FRANÇA
- 
-- Cultura: Arte, moda, museus, literatura, festivais de cinema
-​
-- Gastronomia: Croissant, queijos, vinhos, macaron, coq au vin
-​
-- Lugares típicos: Torre Eiffel, Museu do Louvre, Versalhes, Costa Azul
-​
-- Moeda: Euro (€)
-​
-- Câmbio: Bancos e casas autorizadas
- 
-🇪🇸 ESPANHA
- 
-- Cultura: Flamenco, festas populares, arquitetura, língua e tradições
-​
-- Gastronomia: Paella, tapas, jamón, sangria, churros
-​
-- Lugares típicos: Sagrada Família, Madri, Sevilha, Granada, Valência
-​
-- Moeda: Euro (€)
-​
-- Câmbio: Agências e bancos
- 
-🇮🇹 ITÁLIA
- 
-- Cultura: Renascimento, arte, ópera, arquitetura histórica
-​
-- Gastronomia: Massas, pizza, gelato, vinho, queijos
-​
-- Lugares típicos: Coliseu, Veneza, Florença, Roma, Costa Amalfitana
-​
-- Moeda: Euro (€)
-​
-- Câmbio: Casas de câmbio e agências
- 
-🇯🇵 JAPÃO
- 
-- Cultura: Tradições milenares, templos, cerimônia do chá, flores de cerejeira
-​
-- Gastronomia: Sushi, ramen, tempurá, missô, chá verde
-​
-- Lugares típicos: Tóquio, Quioto, Monte Fuji, Osaka, Nara
-​
-- Moeda: Iene (¥)
-​
-- Câmbio: Aeroportos, bancos e agências autorizadas
- 
-🇨🇳 CHINA
- 
-- Cultura: História de milênios, filosofia, festivais, arte tradicional
-​
-- Gastronomia: Arroz, macarrão, dim sum, chá, pratos regionais
-​
-- Lugares típicos: Muralha da China, Cidade Proibida, Xi'an, Xangai
-​
-- Moeda: Renminbi / Yuan (¥)
-​
-- Câmbio: Bancos autorizados e pontos oficiais.
+<div align="center">
 
-- ESTRUTURA DO PROJETO
+# ✈️ TURISMO.COM
+
+**Descubra o mundo — um destino, uma cultura, uma história de cada vez.**
+
+Projeto acadêmico e colaborativo de turismo, desenvolvido com HTML, CSS e JavaScript.
+
+[🌐 Acessar o site](https://turismo-com.vercel.app/) · [📖 Orientações da equipe](documentacao/ORIENTACOES.md) · [🧭 Explorar Portugal](https://turismo-com.vercel.app/portugal.html)
+
+![Prévia animada das telas do protótipo Figma](/turismo-preview.gif)
+
+<sub>Prévia das telas de referência do Figma. O site publicado e as páginas em desenvolvimento podem apresentar diferenças.</sub>
+
+</div>
+
+## 🌍 Sobre o projeto
+
+O **Turismo.com** é um guia educativo de viagens, criado em equipe para apresentar países, culturas, gastronomia, pontos turísticos e informações práticas. O projeto também conta com páginas de hospedagem, alimentação, compras, contato e galerias fotográficas.
+
+A proposta é construir as páginas progressivamente, com uma identidade visual compartilhada e espaço para as contribuições de cada integrante.
+
+## ✨ O que você encontra
+
+- **Destinos:** páginas dedicadas a países e suas características culturais.
+- **Portugal:** informações gerais, cartões temáticos e acesso à galeria de imagens.
+- **Galerias:** fotografias de destinos com identificação e créditos.
+- **Guias práticos:** hospedagem, alimentação e compras.
+- **Contato:** espaço de comunicação com a equipe.
+
+> 🚧 **Em desenvolvimento:** o conteúdo e as páginas estão sendo revisados e ampliados. Alguns links e recursos ainda podem estar em construção.
+
+## 🗺️ Destinos
+
+As páginas existentes no projeto incluem **Brasil, Portugal, França, Espanha, Itália, Japão e China**.
+
+Também foram preparadas pastas para o trabalho futuro com **África do Sul, Alemanha, Egito, Grécia, Reino Unido e Taiwan**. A criação dessas pastas não significa que suas páginas estejam prontas.
+
+## 🧰 Tecnologias
+
+![HTML5](https://img.shields.io/badge/HTML5-estrutura-E34F26?logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-estilos-1572B6?logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-interatividade-F7DF1E?logo=javascript&logoColor=black)
+![Git](https://img.shields.io/badge/Git-versionamento-F05032?logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-colabora%C3%A7%C3%A3o-181717?logo=github&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-publica%C3%A7%C3%A3o-000000?logo=vercel&logoColor=white)
+
+O projeto utiliza também arquivos JSON para organização de alguns dados.
+
+## 📁 Organização do repositório
+
+```text
 turismo-com/
-├── index.html                  ← Página Inicial
-├── estilo.css                  ← Estilo do site
-├── hospedagem.json             ← Dados de hotéis e pousadas
-│
-├── brasil.html / brasil-fotos.html
-├── portugal.html / portugal-fotos.html
-├── franca.html / franca-fotos.html
-├── espanha.html / espanha-fotos.html
-├── italia.html / italia-fotos.html
-├── japao.html / japao-fotos.html
-├── china.html / china-fotos.html
-│
-├── hospedagem.html
-├── alimentacao.html
-├── compras.html
-├── contato.html
-│
-└── imagens/                    ← Pasta de fotos
+├── index.html                     # Página inicial
+├── estilo.css                     # Estilos compartilhados
+├── portugal.html                  # Página de Portugal
+├── portugal.css                   # Estilos específicos de Portugal
+├── portugal-fotos.html            # Galeria de Portugal
+├── hospedagem.html                # Guia de hospedagem
+├── alimentacao.html               # Guia de alimentação
+├── compras.html                   # Guia de compras
+├── contato.html                   # Contato
+├── imagens-portugal/             # Fotografias e créditos de Portugal
+├── paises/                       # Pastas reservadas para 13 países
+├── documentacao/                 # Guias da equipe
+│   ├── HEADER.md
+│   ├── FOOTER.md
+│   └── ORIENTACOES.md
+└── README.md
+```
 
-TECNOLOGIAS
+**Importante:** a estrutura está em transição. As páginas atuais continuam na raiz do repositório; a pasta `paises/` foi criada para organizar as próximas etapas, sem mover os arquivos existentes.
 
-- HTML5 — Estrutura das páginas
-​
-- CSS3 — Design e cores (azul, dourado, branco)
-​
-- JSON — Dados de hospedagem
-​
-- Git/GitHub — Armazenamento
-​
-- Vercel — Site no ar
-- 
- Link turismo-com.vercel.app
+## 💻 Como executar localmente
 
- 
- 
-✍️ AUTORES
- 
-Neusa Oiveira - Desenvolvedora Master, Lider do Grupo do Curso + Pa Ti - Codifica
-Este Projeto é para Avaliação de final de Curso -Desenvolvedor fullstack
-Coordenador Professor Jaques Antunes
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/Neusacoelho/turismo-com.git
+   ```
+2. Abra a pasta do projeto no VS Code.
+3. Abra `index.html` com a extensão **Live Server** ou diretamente no navegador.
 
-Equipe 
-David Pamplona - Vice-Lider
-Silvia Reis
-Julia Alves
-Emylli da Rosa
-Regina Lucia Matos Lima
-wesley David
-Stanley
-leo Matias
-Matheus Alan
-Lucas Morales
+Não é necessário instalar React ou executar um processo de compilação.
 
-📧 contato.neusa.turismo@gmail.com
-📍 Sapucaia do Sul — RS
-- 
+## 🤝 Padrão visual e colaboração
+
+Os modelos e orientações compartilhados estão em:
+
+- [Cabeçalho — HEADER.md](documentacao/HEADER.md)
+- [Rodapé — FOOTER.md](documentacao/FOOTER.md)
+- [Orientações gerais — ORIENTACOES.md](documentacao/ORIENTACOES.md)
+
+Esses materiais servem como **referência para a equipe**; alterações em estilos globais e elementos compartilhados devem ser alinhadas entre os integrantes.
+
+## 👥 Equipe e créditos
+
+Projeto acadêmico desenvolvido no curso de **Desenvolvimento Full Stack — +Pra Ti / Codifica**.
+
+### Organização da equipe
+
+| Função | Nome |
+| :--- | :--- |
+| Liderança do grupo | **Neusa Oliveira** |
+| Vice-liderança | **David Pamplona** |
+| Coordenação docente | **Prof. Jaques Antunes** |
+
+### Integrantes
+
+| Integrante | Integrante |
+| :--- | :--- |
+| Silvia Reis | Julia Alves |
+| Emylli da Rosa | Regina Lucia Matos Lima |
+| Wesley David | Stanley |
+| Leo Matias | Matheus Alan |
+| Lucas Morales | — |
+
+**Contato:** [contato.neusa.turismo@gmail.com](mailto:contato.neusa.turismo@gmail.com)
+**Localidade informada no projeto:** Sapucaia do Sul — RS
+
+---
+
+<div align="center">
+  <strong>Turismo.com</strong> · Um projeto para aprender, colaborar e descobrir o mundo. 💙
+</div>
