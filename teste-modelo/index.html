@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conheça o País de Exemplo, um destino fictício criado para demonstrar a base reutilizável do TURISMO.COM.">
+    <title>País de Exemplo — Demonstração Turismo.com</title>
+    <!-- Mesma ordem do modelo principal. Não há necessidade de CSS próprio. -->
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/componentes.css">
+    <link rel="stylesheet" href="../assets/css/pais.css">
+    <script src="../assets/js/site.js" defer></script>
+</head>
+<!-- A pasta está um nível abaixo da raiz. O endereço do país é relativo à raiz. -->
+<body class="tc-site pais-exemplo" data-raiz="../"
+      data-pais-nome="País de Exemplo" data-pais-url="teste-modelo/index.html">
+    <a class="tc-pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+
+    <!-- Navegação básica preservada quando o JavaScript não carrega. -->
+    <header class="tc-cabecalho" data-tc-cabecalho>
+        <nav class="tc-container tc-navegacao-basica" aria-label="Navegação básica">
+            <a href="../index.html">TURISMO.COM — Início</a>
+            <a href="index.html" aria-current="page">País de Exemplo</a>
+            <a href="#explorar">Assuntos do país</a>
+        </nav>
+    </header>
+
+    <main id="conteudo" tabindex="-1">
+        <p class="tc-aviso-modelo">Demonstração independente: o País de Exemplo e todas as informações deste destino são fictícios.</p>
+
+        <section class="tc-banner" aria-labelledby="titulo-pais">
+            <div class="tc-container tc-fluxo">
+                <p class="tc-etiqueta">Uma viagem pela imaginação</p>
+                <h1 id="titulo-pais">Descubra o País de Exemplo</h1>
+                <p>Entre montanhas coloridas, praças cheias de música e sabores acolhedores, cada caminho convida a uma nova descoberta.</p>
+                <a class="tc-botao" href="#apresentacao">Começar a explorar</a>
+            </div>
+        </section>
+
+        <div class="tc-container">
+            <dl class="tc-resumo" aria-label="Informações fictícias sobre o País de Exemplo">
+                <div><dt>Capital</dt><dd>Vila Aurora</dd></div>
+                <div><dt>Idioma</dt><dd>Exemplês</dd></div>
+                <div><dt>Moeda</dt><dd>Estrela (EX$)</dd></div>
+            </dl>
+
+            <section class="tc-secao tc-apresentacao" aria-labelledby="apresentacao">
+                <div>
+                    <p class="tc-etiqueta">Bem-vindo ao nosso destino fictício</p>
+                    <h2 id="apresentacao">Pequenos encontros, grandes histórias</h2>
+                </div>
+                <div class="tc-fluxo">
+                    <p>No País de Exemplo, as manhãs começam nas feiras de Vila Aurora e as tardes seguem pelas trilhas do Vale das Cores. Artesãos, cozinheiros e músicos dão vida às praças deste lugar imaginário.</p>
+                    <p>Esta página reúne cultura, gastronomia e paisagens em um único roteiro. Escolha um assunto nos cartões ou use os links abaixo para passear pelo conteúdo.</p>
+                </div>
+            </section>
+
+            <!-- Esta navegação pertence ao conteúdo e funciona também sem JavaScript. -->
+            <section class="tc-secao tc-fluxo" aria-labelledby="explorar">
+                <h2 id="explorar">Escolha sua próxima descoberta</h2>
+                <nav class="tc-navegacao-basica" aria-label="Nesta página">
+                    <a href="#cultura">Cultura e tradições</a>
+                    <a href="#gastronomia">Sabores locais</a>
+                    <a href="#paisagens">Paisagens e passeios</a>
+                </nav>
+                <div class="tc-cartoes">
+                    <article class="tc-cartao tc-fluxo">
+                        <span class="tc-cartao-numero" aria-hidden="true">01</span>
+                        <h3>Cultura que aproxima</h3>
+                        <p>Conheça o Festival das Lanternas e as histórias bordadas pelos artesãos de Vila Aurora.</p>
+                        <a href="#cultura">Descobrir as tradições</a>
+                    </article>
+                    <article class="tc-cartao tc-fluxo">
+                        <span class="tc-cartao-numero" aria-hidden="true">02</span>
+                        <h3>Sabores para compartilhar</h3>
+                        <p>Imagine pães de ervas, frutas perfumadas e uma mesa preparada para receber novos amigos.</p>
+                        <a href="#gastronomia">Conhecer a gastronomia</a>
+                    </article>
+                    <article class="tc-cartao tc-fluxo">
+                        <span class="tc-cartao-numero" aria-hidden="true">03</span>
+                        <h3>Caminhos cheios de cor</h3>
+                        <p>Passeie pelo Vale das Cores, pelos jardins da capital e pela margem do Lago Espelho.</p>
+                        <a href="#paisagens">Explorar as paisagens</a>
+                    </article>
+                </div>
+            </section>
+
+            <section class="tc-secao tc-fluxo" aria-labelledby="cultura">
+                <p class="tc-etiqueta">Histórias do nosso país imaginário</p>
+                <h2 id="cultura">Cultura e tradições</h2>
+                <p>Durante o Festival das Lanternas, os moradores decoram as janelas com luzes de papel e se encontram na praça para ouvir histórias. Cada família escolhe uma cor para representar uma lembrança especial.</p>
+                <div class="tc-cartoes">
+                    <article class="tc-cartao tc-fluxo">
+                        <h3>Ateliês de Vila Aurora</h3>
+                        <p>Peças de cerâmica e tecidos bordados contam as lendas dos rios e das montanhas.</p>
+                    </article>
+                    <article class="tc-cartao tc-fluxo">
+                        <h3>Música nas praças</h3>
+                        <p>Pequenos grupos se reúnem ao entardecer para compartilhar canções e danças circulares.</p>
+                    </article>
+                    <article class="tc-cartao tc-fluxo">
+                        <h3>Biblioteca dos Viajantes</h3>
+                        <p>Um espaço imaginário guarda relatos de quem passou pelo país e deixou uma história para o próximo visitante.</p>
+                    </article>
+                </div>
+                <a href="#explorar">Voltar aos assuntos</a>
+            </section>
+
+            <section class="tc-secao tc-fluxo" aria-labelledby="gastronomia">
+                <p class="tc-etiqueta">Uma mesa de boas-vindas</p>
+                <h2 id="gastronomia">Sabores locais</h2>
+                <p>A culinária fictícia do País de Exemplo valoriza receitas compartilhadas. Nos mercados, o aroma de pão fresco se mistura ao perfume das frutas dos pomares.</p>
+                <div class="tc-cartoes">
+                    <article class="tc-cartao tc-fluxo">
+                        <h3>Pão da Aurora</h3>
+                        <p>Um pão redondo com ervas, servido ainda morno nos encontros de fim de tarde.</p>
+                    </article>
+                    <article class="tc-cartao tc-fluxo">
+                        <h3>Caldo do Vale</h3>
+                        <p>Uma combinação imaginária de legumes coloridos e temperos cultivados nas hortas locais.</p>
+                    </article>
+                    <article class="tc-cartao tc-fluxo">
+                        <h3>Doce Estrela</h3>
+                        <p>Uma sobremesa de frutas cítricas com formato de estrela, feita para dividir à mesa.</p>
+                    </article>
+                </div>
+                <a href="#explorar">Voltar aos assuntos</a>
+            </section>
+
+            <section class="tc-secao tc-fluxo" aria-labelledby="paisagens">
+                <p class="tc-etiqueta">Passeios para imaginar</p>
+                <h2 id="paisagens">Paisagens e passeios</h2>
+                <p>O roteiro fictício combina caminhadas tranquilas, jardins e lugares para observar a paisagem sem pressa.</p>
+                <div class="tc-cartoes">
+                    <article class="tc-cartao tc-fluxo">
+                        <h3>Vale das Cores</h3>
+                        <p>Colinas em tons de azul, verde e dourado formam o cenário mais conhecido deste destino imaginário.</p>
+                    </article>
+                    <article class="tc-cartao tc-fluxo">
+                        <h3>Lago Espelho</h3>
+                        <p>Uma trilha acompanha a margem de águas calmas e termina em um mirante voltado para as montanhas.</p>
+                    </article>
+                    <article class="tc-cartao tc-fluxo">
+                        <h3>Jardins da Capital</h3>
+                        <p>Caminhos floridos ligam pequenas praças onde os visitantes encontram bancos, sombra e histórias.</p>
+                    </article>
+                </div>
+                <div class="tc-acoes">
+                    <a class="tc-botao" href="#apresentacao">Recomeçar a visita</a>
+                    <a class="tc-botao tc-botao-contorno" href="#explorar">Voltar aos assuntos</a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- O rodapé mínimo também permanece disponível sem JavaScript. -->
+    <footer class="tc-rodape" data-tc-rodape>
+        <div class="tc-container tc-fluxo">
+            <p>© 2026 Turismo.com — Demonstração de um destino fictício.</p>
+            <a href="#conteudo">Voltar ao conteúdo</a>
+            <a href="../index.html">Voltar ao início do TURISMO.COM</a>
+        </div>
+    </footer>
+</body>
+</html>

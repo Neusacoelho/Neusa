@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Personalize o título e a descrição com informações do seu país. -->
+    <meta name="description" content="Modelo de página principal de país do TURISMO.COM.">
+    <title>País de exemplo — Turismo.com</title>
+    <!-- Ordem: base, componentes, estrutura de país e, por último, seu CSS local. -->
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/componentes.css">
+    <link rel="stylesheet" href="../assets/css/pais.css">
+    <!-- Ao copiar para paises/egito/, use ../../assets/ e adicione egito.css. -->
+    <script src="../assets/js/site.js" defer></script>
+</head>
+<!-- data-raiz: caminho deste HTML até a raiz do projeto.
+     data-pais-url: caminho da página principal a partir da raiz, sem ../.
+     Troque pais-exemplo por pais-egito, por exemplo, para limitar seu CSS local. -->
+<body class="tc-site pais-exemplo" data-raiz="../"
+      data-pais-nome="País de exemplo" data-pais-url="modelos/pais-principal.html">
+    <a class="tc-pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+
+    <!-- O script substitui apenas o interior destes componentes.
+         Preserve links HTML reais para navegação básica sem JavaScript. -->
+    <header class="tc-cabecalho" data-tc-cabecalho>
+        <nav class="tc-container tc-navegacao-basica" aria-label="Navegação básica">
+            <a href="../index.html">TURISMO.COM — Início</a>
+            <a href="pais-principal.html" aria-current="page">País de exemplo</a>
+            <a href="pais-interna.html">Cultura do país</a>
+        </nav>
+    </header>
+
+    <main id="conteudo" tabindex="-1">
+        <!-- Remova este aviso ao personalizar sua página. -->
+        <p class="tc-aviso-modelo">Modelo de página: substitua os exemplos pelo conteúdo do seu país.</p>
+        <section class="tc-banner" aria-labelledby="titulo-pais">
+            <!-- Opcional: adicione aqui uma img.tc-banner-imagem e seus créditos.
+                 Só use src de imagem existente; consulte documentacao/ESTRUTURA.md. -->
+            <div class="tc-container tc-fluxo">
+                <p class="tc-etiqueta">Descubra um novo destino</p>
+                <h1 id="titulo-pais">Conheça o País de exemplo</h1>
+                <p>Apresente em poucas palavras a história, a cultura e as paisagens deste destino.</p>
+                <a class="tc-botao" href="#apresentacao">Explorar o país</a>
+            </div>
+        </section>
+
+        <div class="tc-container">
+            <!-- Preencha dados reais e verifique suas fontes antes de publicar. -->
+            <dl class="tc-resumo" aria-label="Informações rápidas sobre o país">
+                <div><dt>Capital</dt><dd>Nome da capital</dd></div>
+                <div><dt>Idioma</dt><dd>Idioma do país</dd></div>
+                <div><dt>Moeda</dt><dd>Nome e símbolo</dd></div>
+            </dl>
+
+            <section class="tc-secao tc-apresentacao" aria-labelledby="apresentacao">
+                <div>
+                    <p class="tc-etiqueta">Bem-vindo</p>
+                    <h2 id="apresentacao">Um destino para descobrir</h2>
+                </div>
+                <div class="tc-fluxo">
+                    <p>Escreva uma introdução sobre a localização e as características do país.</p>
+                    <p>Conte o que torna a visita especial, com suas próprias palavras e fontes confiáveis.</p>
+                </div>
+            </section>
+
+            <section class="tc-secao tc-fluxo" aria-labelledby="explorar">
+                <h2 id="explorar">Explore o país</h2>
+                <div class="tc-cartoes">
+                    <article class="tc-cartao tc-fluxo">
+                        <span class="tc-cartao-numero" aria-hidden="true">01</span>
+                        <h3>Cultura</h3>
+                        <p>Apresente tradições, manifestações artísticas e costumes locais.</p>
+                        <!-- Ao copiar a interna como cultura.html, ajuste este link. -->
+                        <a href="pais-interna.html">Conhecer a cultura</a>
+                    </article>
+                    <article class="tc-cartao tc-fluxo">
+                        <span class="tc-cartao-numero" aria-hidden="true">02</span>
+                        <h3>Gastronomia</h3>
+                        <p>Apresente os pratos e ingredientes mais conhecidos do destino.</p>
+                        <a href="#gastronomia">Explorar a gastronomia</a>
+                    </article>
+                    <article class="tc-cartao tc-fluxo">
+                        <span class="tc-cartao-numero" aria-hidden="true">03</span>
+                        <h3>Paisagens</h3>
+                        <p>Apresente cidades, monumentos e lugares que merecem ser conhecidos.</p>
+                        <a href="#paisagens">Conhecer as paisagens</a>
+                    </article>
+                </div>
+            </section>
+
+            <section class="tc-secao tc-fluxo" aria-labelledby="gastronomia">
+                <h2 id="gastronomia">Sabores do país</h2>
+                <p>Desenvolva aqui o conteúdo de gastronomia. Se criar uma página própria depois, atualize o cartão acima.</p>
+            </section>
+
+            <section class="tc-secao tc-fluxo" aria-labelledby="paisagens">
+                <h2 id="paisagens">Paisagens e pontos turísticos</h2>
+                <p>Descreva um lugar e escolha uma fotografia adequada ao país.</p>
+                <!-- Substitua este bloco por uma figure com imagem real e créditos.
+                     Não copie imagens de Portugal apenas para preencher o modelo. -->
+                <div class="tc-imagem-pendente">
+                    <p>Espaço para uma fotografia do destino</p>
+                    <p>Adicione a imagem, uma descrição alternativa e os créditos.</p>
+                </div>
+                <!-- Só inclua um link para galeria quando o arquivo existir. -->
+            </section>
+        </div>
+    </main>
+
+    <footer class="tc-rodape" data-tc-rodape>
+        <div class="tc-container tc-fluxo">
+            <p>© 2026 Turismo.com — Projeto acadêmico desenvolvido em equipe.</p>
+            <a href="../index.html">Voltar ao início</a>
+        </div>
+    </footer>
+</body>
+</html>
