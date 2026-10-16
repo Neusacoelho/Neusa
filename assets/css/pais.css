@@ -1,0 +1,49 @@
+/* Estruturas de conteúdo reutilizáveis; personalizações ficam no CSS do país. */
+.tc-site .tc-aviso-modelo { padding: 0.75rem 1rem; background: var(--tc-suave); color: var(--tc-marinho); font-size: 0.9rem; }
+.tc-site .tc-banner { position: relative; isolation: isolate; padding-block: 5rem; background: linear-gradient(120deg, var(--tc-marinho), #006b75); }
+.tc-site .tc-banner-imagem { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; }
+.tc-site .tc-banner::before { position: absolute; inset: 0; z-index: -1; content: ""; background: #163b5080; }
+.tc-site .tc-banner h1 { max-width: 20ch; color: var(--tc-branco); }
+.tc-site .tc-banner p { max-width: 42rem; color: var(--tc-branco); }
+.tc-site .tc-banner .tc-etiqueta { color: #a1f6fa; }
+.tc-site .tc-banner .tc-botao { margin-top: 1.5rem; }
+.tc-site .tc-etiqueta { margin-bottom: 0.75rem; color: var(--tc-link); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+.tc-site .tc-fluxo > * + * { margin-top: 1rem; }
+.tc-site .tc-secao { padding-block: 3rem; }
+.tc-site .tc-secao + .tc-secao { border-top: 1px solid var(--tc-borda); }
+.tc-site .tc-apresentacao { display: grid; grid-template-columns: 1fr 1.5fr; gap: 2rem; }
+.tc-site .tc-resumo { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; padding-block: 2rem; }
+.tc-site .tc-resumo > div { padding: 1rem; background: var(--tc-branco); border: 1px solid var(--tc-borda); border-radius: 0.75rem; }
+.tc-site .tc-resumo dt { color: var(--tc-link); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; }
+.tc-site .tc-resumo dd { margin: 0.25rem 0 0; color: var(--tc-marinho); font-weight: 700; }
+.tc-site .tc-cartoes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; }
+.tc-site .tc-cartao { min-width: 0; padding: 1.5rem; border: 1px solid var(--tc-borda); border-radius: 0.75rem; background: var(--tc-branco); }
+.tc-site .tc-cartao-numero { color: var(--tc-link); font-weight: 700; }
+.tc-site .tc-imagem-pendente { display: grid; place-items: center; gap: 0.75rem; min-height: 12rem; padding: 2rem; border: 2px dashed #63808e; border-radius: 0.75rem; background: var(--tc-suave); text-align: center; }
+.tc-site .tc-legenda { margin-top: 0.75rem; font-size: 0.875rem; }
+.tc-site .tc-migalhas { margin-bottom: 2rem; }
+.tc-site .tc-migalhas ol { display: flex; flex-wrap: wrap; gap: 0.5rem; padding: 0; list-style: none; }
+.tc-site .tc-migalhas li + li::before { content: "/"; padding-right: 0.5rem; }
+.tc-site .tc-banner .tc-migalhas,
+.tc-site .tc-banner .tc-migalhas a { color: var(--tc-branco); }
+.tc-site .tc-artigo { max-width: 52rem; margin-inline: auto; }
+.tc-site .tc-artigo ul { padding-left: 1.5rem; }
+.tc-site .tc-acoes { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2rem; }
+
+/* Para galerias futuras: não altera .galeria ou .foto-card das páginas antigas. */
+.tc-site .tc-galeria { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; }
+.tc-site .tc-galeria img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 0.5rem; }
+
+@media (max-width: 768px) {
+    .tc-site .tc-apresentacao { grid-template-columns: 1fr; }
+    .tc-site .tc-cartoes,
+    .tc-site .tc-galeria { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 600px) {
+    .tc-site .tc-banner { padding-block: 3rem; }
+    .tc-site .tc-secao { padding-block: 2rem; }
+    .tc-site .tc-resumo,
+    .tc-site .tc-cartoes,
+    .tc-site .tc-galeria { grid-template-columns: 1fr; }
+}

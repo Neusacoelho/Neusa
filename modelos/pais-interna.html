@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Personalize o assunto, o nome do país e a descrição desta página. -->
+    <meta name="description" content="Modelo de página interna de país do TURISMO.COM.">
+    <title>Cultura do País de exemplo — Turismo.com</title>
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/componentes.css">
+    <link rel="stylesheet" href="../assets/css/pais.css">
+    <!-- Na pasta do país, carregue depois o CSS do país e, se preciso, o da interna. -->
+    <script src="../assets/js/site.js" defer></script>
+</head>
+<!-- Ao copiar para paises/egito/cultura.html, use data-raiz="../../" e
+     data-pais-url="paises/egito/egito.html". Ajuste também os links HTML básicos. -->
+<body class="tc-site pais-exemplo pagina-cultura" data-raiz="../"
+      data-pais-nome="País de exemplo" data-pais-url="modelos/pais-principal.html">
+    <a class="tc-pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="tc-cabecalho" data-tc-cabecalho>
+        <!-- Estes links continuam disponíveis sem JavaScript. -->
+        <nav class="tc-container tc-navegacao-basica" aria-label="Navegação básica">
+            <a href="../index.html">TURISMO.COM — Início</a>
+            <a href="pais-principal.html">País de exemplo</a>
+            <a href="pais-interna.html" aria-current="page">Cultura do país</a>
+        </nav>
+    </header>
+
+    <main id="conteudo" tabindex="-1">
+        <!-- Remova este aviso quando o conteúdo estiver personalizado. -->
+        <p class="tc-aviso-modelo">Modelo de página interna: personalize o tema e mantenha os links de retorno.</p>
+        <section class="tc-banner" aria-labelledby="titulo-assunto">
+            <div class="tc-container tc-fluxo">
+                <nav class="tc-migalhas" aria-label="Caminho de navegação">
+                    <ol>
+                        <li><a href="../index.html">Início</a></li>
+                        <li><a href="pais-principal.html">País de exemplo</a></li>
+                        <li><span aria-current="page">Cultura</span></li>
+                    </ol>
+                </nav>
+                <p class="tc-etiqueta">Identidade e tradições</p>
+                <h1 id="titulo-assunto">Cultura do País de exemplo</h1>
+                <p>Apresente o assunto desta página em uma frase curta.</p>
+            </div>
+        </section>
+
+        <div class="tc-container">
+            <article class="tc-artigo" aria-labelledby="titulo-artigo">
+                <section class="tc-secao tc-fluxo" aria-labelledby="titulo-artigo">
+                    <h2 id="titulo-artigo">Histórias e costumes locais</h2>
+                    <p>Escreva aqui uma apresentação do tema usando conteúdo próprio e fontes verificadas.</p>
+                    <p>O mesmo modelo pode apresentar gastronomia, pontos turísticos ou curiosidades. Ajuste os títulos e os textos para o assunto escolhido.</p>
+                </section>
+
+                <section class="tc-secao tc-fluxo" aria-labelledby="tradicoes">
+                    <h2 id="tradicoes">Tradições para conhecer</h2>
+                    <ul>
+                        <li>Descreva uma manifestação cultural e sua importância.</li>
+                        <li>Apresente um costume ou uma celebração local.</li>
+                        <li>Explique uma experiência que ajude a conhecer o país.</li>
+                    </ul>
+                    <!-- Quando tiver uma imagem real, use figure, img com alt e figcaption.
+                         Registre autoria, origem e licença em imagens/CREDITOS.md. -->
+                    <div class="tc-imagem-pendente">
+                        <p>Espaço para uma fotografia relacionada ao tema</p>
+                        <p>Escolha uma imagem e registre os créditos antes de publicar.</p>
+                    </div>
+                </section>
+
+                <section class="tc-secao tc-fluxo" aria-labelledby="fontes">
+                    <h2 id="fontes">Fontes e próximos passos</h2>
+                    <p>Acrescente as fontes utilizadas e a data de consulta durante a pesquisa.</p>
+                    <div class="tc-acoes">
+                        <a class="tc-botao" href="pais-principal.html">Voltar ao país</a>
+                        <a class="tc-botao tc-botao-contorno" href="../index.html">Explorar outros destinos</a>
+                    </div>
+                </section>
+            </article>
+        </div>
+    </main>
+
+    <footer class="tc-rodape" data-tc-rodape>
+        <div class="tc-container tc-fluxo">
+            <p>© 2026 Turismo.com — Projeto acadêmico desenvolvido em equipe.</p>
+            <a href="pais-principal.html">Voltar ao país</a>
+            <a href="../index.html">Voltar ao início</a>
+        </div>
+    </footer>
+</body>
+</html>
