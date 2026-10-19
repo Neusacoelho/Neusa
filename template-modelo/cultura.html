@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página demonstrativa de Cultura do Nome do País, com conteúdo fictício para copiar e adaptar no projeto TURISMO.COM.">
+    <title>Cultura do Nome do País — Template TURISMO.COM</title>
+    <!-- Ordem: estilos compartilhados, base local e, nas internas, CSS da página. -->
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/componentes.css">
+    <link rel="stylesheet" href="../assets/css/pais.css">
+    <link rel="stylesheet" href="template.css">
+    <link rel="stylesheet" href="cultura.css">
+    <script src="../assets/js/site.js" defer></script>
+</head>
+<!-- data-raiz mede a distância até a raiz. data-pais-url parte da raiz, não desta pasta.
+     Ao copiar, mantenha pais-modelo e a classe pagina-cultura; consulte LEIA-ME.md. -->
+<body class="tc-site pais-modelo pagina-cultura" data-raiz="../"
+      data-pais-nome="Nome do País" data-pais-url="template-modelo/index.html">
+    <a class="tc-pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+
+    <!-- INÍCIO: cabeçalho compartilhado. site.js substitui apenas este componente.
+         Os links abaixo continuam disponíveis se o JavaScript estiver desativado. -->
+    <header class="tc-cabecalho" data-tc-cabecalho>
+        <nav class="tc-container tc-navegacao-basica" aria-label="Navegação básica">
+            <a href="../index.html">TURISMO.COM — Início</a>
+            <a href="index.html">Nome do País</a>
+            <a href="cultura.html">Cultura</a>
+            <a href="gastronomia.html">Gastronomia</a>
+        </nav>
+    </header>
+    <!-- FIM: cabeçalho compartilhado. -->
+
+    <main id="conteudo" tabindex="-1">
+        <!-- INÍCIO: cultura. Copie o bloco completo até o comentário FIM. -->
+        <section class="cultura-banner" aria-labelledby="titulo-cultura">
+            <div class="cultura-banner-foto" role="img" aria-label="Ilustração demonstrativa de padrões geométricos em azul e dourado.">
+            </div>
+            <div class="cultura-container cultura-banner-conteudo">
+                <nav class="cultura-migalhas" aria-label="Caminho de navegação">
+                    <ol role="list">
+                        <li>
+                            <a href="../index.html">Início</a>
+                        </li>
+                        <li>
+                            <a href="index.html">Nome do País</a>
+                        </li>
+                        <li>
+                            <span aria-current="page">Cultura</span>
+                        </li>
+                    </ol>
+                </nav>
+                <div class="cultura-banner-texto">
+                    <p class="cultura-etiqueta">Conteúdo de exemplo</p>
+                    <h1 id="titulo-cultura">Cultura do Nome do País</h1>
+                    <p lang="la">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.</p>
+                </div>
+                <p class="cultura-banner-credito">Ilustração demonstrativa · <a href="#creditos-ilustracoes">Sobre as ilustrações</a></p>
+            </div>
+        </section>
+        <!-- FIM: cultura. -->
+        <div class="cultura-container">
+            <!-- INÍCIO: apresentacao. Copie o bloco completo até o comentário FIM. -->
+            <section class="cultura-apresentacao" aria-labelledby="titulo-apresentacao">
+                <div>
+                    <p class="cultura-etiqueta">Conteúdo de exemplo</p>
+                    <h2 id="titulo-apresentacao">Histórias de exemplo<br class="cultura-quebra"> em cada detalhe.</h2>
+                </div>
+                <div class="cultura-apresentacao-texto">
+                    <p lang="la">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
+                    <p lang="la">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+                </div>
+                <aside class="cultura-destaque" aria-label="Quatro exemplos demonstrativos nesta página">
+                    <strong>4</strong>
+                    <p lang="la">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do.</p>
+                </aside>
+            </section>
+            <!-- FIM: apresentacao. -->
+            <!-- INÍCIO: tradicoes. Copie o bloco completo até o comentário FIM. -->
+            <section class="cultura-tradicoes" aria-labelledby="titulo-tradicoes">
+                <div class="cultura-titulo-secao">
+                    <p class="cultura-etiqueta">Conteúdo de exemplo</p>
+                    <h2 id="titulo-tradicoes">Tradições que contam histórias</h2>
+                    <p lang="la">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod.</p>
+                </div>
+                <div class="cultura-tradicoes-grade">
+                    <article class="cultura-tradicao" aria-labelledby="titulo-cartao-01">
+                        <img class="cultura-tradicao-foto" src="imagens/cultura-modelo.svg" alt="Ilustração demonstrativa de padrões geométricos em azul e dourado." width="1200" height="900" loading="lazy" decoding="async">
+                        <div class="cultura-tradicao-texto">
+                            <h3 id="titulo-cartao-01">Expressão 01</h3>
+                            <p lang="la">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.</p>
+                        </div>
+                    </article>
+                    <article class="cultura-tradicao" aria-labelledby="titulo-cartao-02">
+                        <img class="cultura-tradicao-foto" src="imagens/cidade-modelo.svg" alt="Ilustração fictícia de uma cidade com edifícios coloridos." width="1200" height="900" loading="lazy" decoding="async">
+                        <div class="cultura-tradicao-texto">
+                            <h3 id="titulo-cartao-02">Expressão 02</h3>
+                            <p lang="la">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+                        </div>
+                    </article>
+                    <article class="cultura-tradicao" aria-labelledby="titulo-cartao-03">
+                        <img class="cultura-tradicao-foto" src="imagens/paisagem-modelo.svg" alt="Ilustração fictícia de montanhas, rio e sol em formas geométricas." width="1600" height="900" loading="lazy" decoding="async">
+                        <div class="cultura-tradicao-texto">
+                            <h3 id="titulo-cartao-03">Expressão 03</h3>
+                            <p lang="la">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+                        </div>
+                    </article>
+                    <article class="cultura-tradicao" aria-labelledby="titulo-cartao-04">
+                        <img class="cultura-tradicao-foto" src="imagens/gastronomia-modelo.svg" alt="Ilustração fictícia de uma mesa com pratos e alimentos geométricos." width="1200" height="900" loading="lazy" decoding="async">
+                        <div class="cultura-tradicao-texto">
+                            <h3 id="titulo-cartao-04">Expressão 04</h3>
+                            <p lang="la">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            <!-- FIM: tradicoes. -->
+        </div>
+        <!-- INÍCIO: patrimonio. Copie o bloco completo até o comentário FIM. -->
+        <section class="cultura-patrimonio" aria-labelledby="titulo-patrimonio">
+            <div class="cultura-container">
+                <div class="cultura-titulo-secao">
+                    <p class="cultura-etiqueta">Conteúdo de exemplo</p>
+                    <h2 id="titulo-patrimonio">Lugares que inspiram novas histórias</h2>
+                    <p lang="la">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.</p>
+                </div>
+                <div class="cultura-patrimonio-grade">
+                    <figure class="cultura-patrimonio-foto cultura-patrimonio-principal">
+                        <img src="imagens/cidade-modelo.svg" alt="Ilustração fictícia de uma cidade com edifícios coloridos." width="1200" height="900" loading="lazy" decoding="async">
+                        <figcaption>
+                            <p class="cultura-etiqueta">Conteúdo de exemplo</p>
+                            <h3>Título de exemplo 05</h3>
+                            <p lang="la">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</p>
+                        </figcaption>
+                    </figure>
+                    <div class="cultura-patrimonio-lateral">
+                        <figure class="cultura-patrimonio-foto">
+                            <img src="imagens/paisagem-modelo.svg" alt="Ilustração fictícia de montanhas, rio e sol em formas geométricas." width="1600" height="900" loading="lazy" decoding="async">
+                            <figcaption>
+                                <p class="cultura-etiqueta">Conteúdo de exemplo</p>
+                                <h3>Título de exemplo 06</h3>
+                                <p lang="la">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut.</p>
+                            </figcaption>
+                        </figure>
+                        <blockquote lang="la">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.”</blockquote>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- FIM: patrimonio. -->
+        <div class="cultura-container">
+            <!-- INÍCIO: experiencias. Copie o bloco completo até o comentário FIM. -->
+            <section class="cultura-experiencias" aria-labelledby="titulo-experiencias">
+                <figure class="cultura-experiencias-foto">
+                    <img src="imagens/cidade-modelo.svg" alt="Ilustração fictícia de uma cidade com edifícios coloridos." width="1200" height="900" loading="lazy" decoding="async">
+                    <figcaption>
+                        <span class="cultura-etiqueta">Cultura no cotidiano</span>
+                        <strong>Lugar de exemplo</strong>
+                    </figcaption>
+                </figure>
+                <div class="cultura-experiencias-conteudo">
+                    <div class="cultura-titulo-secao">
+                        <p class="cultura-etiqueta">Conteúdo de exemplo</p>
+                        <h2 id="titulo-experiencias">Experiências culturais</h2>
+                        <p lang="la">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod.</p>
+                    </div>
+                    <ol class="cultura-experiencias-lista" role="list">
+                        <li>
+                            <h3>Experiência de exemplo 01</h3>
+                            <p lang="la">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</p>
+                        </li>
+                        <li>
+                            <h3>Experiência de exemplo 02</h3>
+                            <p lang="la">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                        </li>
+                        <li>
+                            <h3>Experiência de exemplo 03</h3>
+                            <p lang="la">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et.</p>
+                        </li>
+                        <li>
+                            <h3>Experiência de exemplo 04</h3>
+                            <p lang="la">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                        </li>
+                    </ol>
+                </div>
+            </section>
+            <!-- FIM: experiencias. -->
+            <!-- INÍCIO: continuar. Copie o bloco completo até o comentário FIM. -->
+            <section class="cultura-continuar" aria-labelledby="titulo-continuar">
+                <div>
+                    <p class="cultura-etiqueta">Conteúdo de exemplo</p>
+                    <h2 id="titulo-continuar">Descubra outros olhares sobre o destino.</h2>
+                </div>
+                <nav class="cultura-acoes" aria-label="Continue explorando o país de exemplo">
+                    <a class="cultura-botao cultura-botao-contorno" href="index.html">← Voltar ao País</a>
+                    <a class="cultura-botao" href="index.html#galeria">Ver galeria →</a>
+                </nav>
+            </section>
+            <!-- FIM: continuar. -->
+            <!-- INÍCIO: cultura creditos. Copie o bloco completo até o comentário FIM. -->
+            <details class="cultura-creditos" id="creditos-ilustracoes">
+                <summary>Sobre as ilustrações demonstrativas</summary>
+                <p>As quatro ilustrações SVG locais são exemplos fictícios do template. Não representam um país real. Os arquivos originais foram preservados; o CSS pode recortar sua exibição sem distorção.</p>
+                <ul>
+                    <li>
+                        <a href="imagens/paisagem-modelo.svg">Paisagem demonstrativa</a>
+                    </li>
+                    <li>
+                        <a href="imagens/cidade-modelo.svg">Cidade demonstrativa</a>
+                    </li>
+                    <li>
+                        <a href="imagens/cultura-modelo.svg">Composição cultural demonstrativa</a>
+                    </li>
+                    <li>
+                        <a href="imagens/gastronomia-modelo.svg">Mesa gastronômica demonstrativa</a>
+                    </li>
+                </ul>
+                <p>Ao substituir as ilustrações por fotografias, registre autor, fonte, licença e adaptações. Consulte o <a href="LEIA-ME.md">LEIA-ME do template</a>.</p>
+            </details>
+            <!-- FIM: cultura creditos. -->
+        </div>
+    </main>
+
+    <!-- INÍCIO: rodapé compartilhado de quatro colunas, gerado por site.js.
+         Não copie o HTML que o navegador gera: mantenha data-tc-rodape e os links básicos. -->
+    <footer class="tc-rodape" data-tc-rodape>
+        <div class="tc-container tc-fluxo">
+            <p>© 2026 TURISMO.COM — Exemplo acadêmico com conteúdo fictício.</p>
+            <nav class="tc-navegacao-basica" aria-label="Navegação básica do rodapé">
+                <a href="index.html">Nome do País</a>
+                <a href="cultura.html">Cultura</a>
+                <a href="gastronomia.html">Gastronomia</a>
+                <a href="../index.html">Início do projeto</a>
+            </nav>
+        </div>
+    </footer>
+    <!-- FIM: rodapé compartilhado. -->
+</body>
+</html>

@@ -179,3 +179,46 @@
     .tc-site .tc-marca-texto strong { font-size: 0.95rem; }
     .tc-site .tc-marca-texto small { font-size: 0.6rem; letter-spacing: 0.07em; }
 }
+
+/* Quatro colunas no padrão de Cultura, apenas para o rodapé gerado.
+   Rodapés próprios sem data-tc-rodape continuam usando suas regras atuais. */
+.tc-site .tc-rodape[data-tc-rodape] {
+    margin-top: 40px;
+    padding-block: 48px 20px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+}
+.tc-site .tc-rodape[data-tc-rodape] > .tc-container { width: calc(100% - 48px); max-width: 1180px; }
+.tc-site .tc-rodape[data-tc-rodape] .tc-rodape-grade { grid-template-columns: 2fr repeat(3, 1fr); gap: 36px; }
+.tc-site .tc-rodape[data-tc-rodape] h2 { margin-bottom: 14px; font-size: 22px; line-height: 1.6; }
+.tc-site .tc-rodape[data-tc-rodape] h2 span { color: #00c2cf; }
+.tc-site .tc-rodape[data-tc-rodape] h3 { margin-bottom: 6px; font-size: 15px; line-height: 1.6; }
+.tc-site .tc-rodape[data-tc-rodape] .tc-rodape-grade > .tc-fluxo > p {
+    max-width: 280px;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.7;
+}
+.tc-site .tc-rodape[data-tc-rodape] .tc-rodape-coluna { gap: 12px; }
+.tc-site .tc-rodape[data-tc-rodape] .tc-rodape-coluna a { font-size: 14px; font-weight: 400; text-decoration: none; }
+.tc-site .tc-rodape[data-tc-rodape] .tc-rodape-coluna a:hover { color: #00c2cf; text-decoration: underline; }
+.tc-site .tc-rodape[data-tc-rodape] .tc-rodape-inferior {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 36px;
+    padding-top: 20px;
+    border-color: #456678;
+    font-size: 12px;
+}
+
+@media (max-width: 768px) {
+    .tc-site .tc-rodape[data-tc-rodape] .tc-rodape-grade { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px; }
+    .tc-site .tc-rodape[data-tc-rodape] .tc-rodape-inferior { flex-direction: column; text-align: center; }
+}
+
+@media (max-width: 480px) {
+    .tc-site .tc-rodape[data-tc-rodape] { padding-top: 36px; }
+    .tc-site .tc-rodape[data-tc-rodape] .tc-rodape-grade { grid-template-columns: 1fr; gap: 28px; }
+}

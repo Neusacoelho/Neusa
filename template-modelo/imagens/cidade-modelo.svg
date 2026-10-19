@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900">
+  <title>Cidade imaginária demonstrativa</title>
+  <rect width="1200" height="900" fill="#e0eff0"/>
+  <circle cx="945" cy="180" r="88" fill="#e9be78"/>
+  <path d="M0 440q270-170 530 0t670-30v490H0Z" fill="#b3ced0"/>
+  <path d="M70 375h245v370H70Z" fill="#e1b086"/>
+  <path d="m45 375 147-105 148 105Z" fill="#31586a"/>
+  <path d="M350 255h300v490H350Z" fill="#f3e9d5"/>
+  <path d="m325 255 175-115 175 115Z" fill="#477985"/>
+  <path d="M700 405h230v340H700Z" fill="#76aeb3"/>
+  <path d="m675 405 140-100 140 100Z" fill="#31586a"/>
+  <path d="M970 315h140v430H970Z" fill="#e1b086"/>
+  <path d="M955 280h170v45H955Z" fill="#31586a"/>
+  <path d="M445 745V600a55 55 0 0 1 110 0v145" fill="#31586a"/>
+  <g fill="#31586a">
+    <path d="M125 445h45v65h-45zm95 0h45v65h-45zm-95 130h45v65h-45zm95 0h45v65h-45zM405 330h55v75h-55zm135 0h55v75h-55zm-135 130h55v55h-55zm135 0h55v55h-55zM750 470h45v65h-45zm90 0h45v65h-45zm-90 130h45v65h-45zm90 0h45v65h-45zM1017 375h45v65h-45zm0 110h45v65h-45z"/>
+  </g>
+  <path d="M0 745h1200v155H0Z" fill="#d7e3df"/>
+  <path d="m390 900 105-155h55l120 155Z" fill="#a5c6c7"/>
+  <path d="M0 815h1200" stroke="#b7cdca" stroke-width="5"/>
+</svg>

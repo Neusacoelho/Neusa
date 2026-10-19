@@ -148,9 +148,10 @@
     color: #ffffff;
 }
 
-/* A fotografia alcança as bordas sem mudar a altura nem o espaço após o banner. */
+/* A fotografia alcança as bordas; a faixa de informações encosta no banner. */
 .pagina-portugal.pagina-portugal-inicio .banner-portugal {
     border-radius: 0;
+    margin-bottom: 0;
 }
 
 /* Fotografia de destaque */
@@ -216,7 +217,7 @@
     padding: 14px 24px;
     border-radius: 8px;
     background: #00a7b5;
-    color: #ffffff;
+    color: #001018;
     font-weight: 700;
     text-decoration: none;
     transition: background 0.2s ease;
@@ -741,78 +742,111 @@
    INFORMAÇÕES RÁPIDAS SOBRE PORTUGAL
 ===================================== */
 
-.pagina-portugal .resumo-portugal {
+.pagina-portugal-inicio .resumo-portugal {
+    margin: 0;
+    background-color: #ffffff;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+/* Fundo de ponta a ponta; informações alinhadas à largura de leitura do template. */
+.pagina-portugal-inicio .resumo-conteudo {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 0;
-    background-color: #ffffff;
-    border-radius: 14px;
-    padding: 28px 24px;
-    margin: 24px 0 48px;
-    box-shadow: 0 4px 18px rgba(22, 59, 80, 0.06);
+    width: calc(100% - 48px);
+    max-width: 1280px;
+    margin-inline: auto;
+    padding-block: 28px;
 }
 
-.pagina-portugal .resumo-item {
+.pagina-portugal-inicio .resumo-item {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 14px;
+    min-width: 0;
     padding: 8px 18px;
+    text-align: left;
 }
 
-.pagina-portugal .resumo-item:not(:last-child) {
+/* A mesma largura para os ícones mantém títulos e valores alinhados em todas as colunas. */
+.pagina-portugal-inicio .resumo-icone {
+    flex: 0 0 26px;
+    min-width: 0;
+    font-size: 22px;
+    line-height: 1;
+    text-align: center;
+}
+
+.pagina-portugal-inicio .resumo-item:not(:last-child) {
     border-right: 1px solid #e1e8eb;
 }
 
-.pagina-portugal .resumo-icone {
-    font-size: 26px;
-    flex-shrink: 0;
-}
-
-.pagina-portugal .resumo-item > div {
+.pagina-portugal-inicio .resumo-item > div {
     display: flex;
     flex-direction: column;
+    min-width: 0;
     gap: 5px;
 }
 
-.pagina-portugal .resumo-label {
+.pagina-portugal-inicio .resumo-label {
     color: #607784;
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 1.5px;
+    text-transform: uppercase;
 }
 
-.pagina-portugal .resumo-item strong {
+.pagina-portugal-inicio .resumo-item strong {
     color: #163b50;
     font-size: 17px;
+    font-weight: 700;
 }
 
 /* Tablets */
 @media (max-width: 900px) {
-    .pagina-portugal .resumo-portugal {
+    .pagina-portugal-inicio .resumo-conteudo {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        row-gap: 20px;
+        padding-block: 12px;
     }
 
-    .pagina-portugal .resumo-item {
+    .pagina-portugal-inicio .resumo-item {
         justify-content: flex-start;
+        padding: 20px 24px;
     }
 
-    .pagina-portugal .resumo-item:not(:last-child) {
+    .pagina-portugal-inicio .resumo-item:not(:last-child) {
         border-right: none;
+    }
+
+    .pagina-portugal-inicio .resumo-item:nth-child(odd) {
+        border-right: 1px solid #e1e8eb;
+    }
+
+    .pagina-portugal-inicio .resumo-item:nth-child(n + 3) {
+        border-top: 1px solid #e1e8eb;
     }
 }
 
 /* Celulares */
 @media (max-width: 480px) {
-    .pagina-portugal .resumo-portugal {
+    .pagina-portugal-inicio .resumo-conteudo {
         grid-template-columns: 1fr;
-        padding: 20px 16px;
-        gap: 12px;
+        width: calc(100% - 32px);
+        padding-block: 8px;
     }
 
-    .pagina-portugal .resumo-item {
-        padding: 8px;
+    .pagina-portugal-inicio .resumo-item {
+        padding: 16px 8px;
+    }
+
+    .pagina-portugal-inicio .resumo-item:nth-child(odd) {
+        border-right: none;
+    }
+
+    .pagina-portugal-inicio .resumo-item + .resumo-item {
+        border-top: 1px solid #e1e8eb;
     }
 }
 
@@ -983,7 +1017,7 @@
     padding: 14px 24px;
     border-radius: 8px;
     background: #00a7b5;
-    color: #ffffff;
+    color: #001018;
     font-size: 15px;
     font-weight: 700;
     text-decoration: none;
@@ -992,7 +1026,7 @@
 
 .pagina-portugal .destaque-galeria-botao:hover {
     background: #008b98;
-    color: #ffffff;
+    color: #001018;
 }
 
 /* Tablets e celulares */

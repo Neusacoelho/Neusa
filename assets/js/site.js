@@ -98,7 +98,7 @@
             <div class="tc-container">
                 <div class="tc-rodape-grade">
                     <div class="tc-fluxo">
-                        <h2>✈ TURISMO.COM</h2>
+                        <h2>✈ TURISMO<span>.COM</span></h2>
                         <p>Descubra destinos, culturas e experiências ao redor do mundo.</p>
                     </div>
                     <nav class="tc-rodape-coluna" aria-label="Explorar no rodapé">
@@ -106,6 +106,9 @@
                     </nav>
                     <nav class="tc-rodape-coluna" aria-label="Serviços no rodapé">
                         <h3>Serviços</h3>
+                    </nav>
+                    <nav class="tc-rodape-coluna" aria-label="Informações no rodapé">
+                        <h3>Informações</h3>
                     </nav>
                 </div>
                 <div class="tc-rodape-inferior"><p></p><p>Projeto acadêmico desenvolvido em equipe.</p></div>
@@ -119,7 +122,11 @@
         if (caminhoHtmlValido(pagina.dataset.galeriaUrl)) {
             explorar.append(criarLink("Galeria do país", pagina.dataset.galeriaUrl));
         }
-        preencherLinks(conteudo.querySelector('[aria-label="Serviços no rodapé"]'), servicos);
+        // Separa os grupos só no rodapé. A lista do cabeçalho mantém Contato.
+        preencherLinks(conteudo.querySelector('[aria-label="Serviços no rodapé"]'),
+            servicos.filter(([, caminho]) => caminho !== "contato.html"));
+        preencherLinks(conteudo.querySelector('[aria-label="Informações no rodapé"]'),
+            servicos.filter(([, caminho]) => caminho === "contato.html"));
         conteudo.querySelector(".tc-rodape-inferior p").textContent =
             `© ${new Date().getFullYear()} Turismo.com`;
         rodape.replaceChildren(conteudo);
