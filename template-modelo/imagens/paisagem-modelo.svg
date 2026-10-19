@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <title>Paisagem imaginária demonstrativa</title>
+  <rect width="1600" height="900" fill="#dceff1"/>
+  <circle cx="1230" cy="190" r="105" fill="#e9be78"/>
+  <path d="M0 610 310 180 700 610 1030 270 1600 630V900H0Z" fill="#8bb5ba"/>
+  <path d="m310 180-88 122 82-26 69 28ZM1030 270l-100 116 103-32 74 34Z" fill="#f4f7f8"/>
+  <path d="M0 730 420 425 800 700 1260 455 1600 720V900H0Z" fill="#477985"/>
+  <path d="M0 820Q330 640 630 780t610-25q210-55 360 75v70H0Z" fill="#1d5367"/>
+  <path d="M760 705q190 70 105 125t105 70h330q-320-55-280-95t-190-100Z" fill="#65c8cf"/>
+  <path d="M100 725v75m-28-24 28-57 28 57m1090-76v78m-28-24 28-58 28 58" stroke="#163b50" stroke-width="16" fill="#163b50" stroke-linecap="round"/>
+</svg>

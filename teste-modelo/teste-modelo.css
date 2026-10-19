@@ -1,0 +1,89 @@
+/* Faixa local de demonstração, seguindo Portugal sem alterar os componentes comuns. */
+.tc-site.pagina-teste-modelo .teste-resumo {
+    margin: 0;
+    background: var(--tc-branco);
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.tc-site.pagina-teste-modelo .teste-resumo .tc-resumo {
+    gap: 0;
+    padding-block: 28px;
+}
+
+.tc-site.pagina-teste-modelo .teste-resumo .tc-resumo > div {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    min-width: 0;
+    padding: 8px 18px 8px 58px;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    text-align: left;
+}
+
+.tc-site.pagina-teste-modelo .teste-resumo .tc-resumo > div + div {
+    border-left: 1px solid #e1e8eb;
+}
+
+.tc-site.pagina-teste-modelo .teste-resumo dt {
+    color: #607784;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+}
+
+.tc-site.pagina-teste-modelo .teste-resumo dd {
+    margin: 0;
+    font-size: 17px;
+}
+
+/* Ícones decorativos alinhados ao centro do conjunto termo/valor, com largura fixa. */
+.tc-site.pagina-teste-modelo .teste-resumo-icone {
+    position: absolute;
+    top: 50%;
+    left: 18px;
+    width: 26px;
+    transform: translateY(-50%);
+    font-size: 22px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-align: center;
+}
+
+/* Três colunas também no tablet: sem deixar uma quarta posição vazia. */
+@media (max-width: 900px) {
+    .tc-site.pagina-teste-modelo .teste-resumo .tc-resumo {
+        padding-block: 12px;
+    }
+
+    .tc-site.pagina-teste-modelo .teste-resumo .tc-resumo > div {
+        padding: 20px 12px 20px 52px;
+    }
+
+    .tc-site.pagina-teste-modelo .teste-resumo-icone {
+        left: 12px;
+    }
+}
+
+/* A base compartilhada já empilha a grade até 600 px. */
+@media (max-width: 600px) {
+    .tc-site.pagina-teste-modelo .teste-resumo .tc-resumo {
+        padding-block: 8px;
+    }
+
+    .tc-site.pagina-teste-modelo .teste-resumo .tc-resumo > div {
+        padding: 16px 8px 16px 48px;
+    }
+
+    .tc-site.pagina-teste-modelo .teste-resumo .tc-resumo > div + div {
+        border-left: 0;
+        border-top: 1px solid #e1e8eb;
+    }
+
+    .tc-site.pagina-teste-modelo .teste-resumo-icone {
+        left: 8px;
+    }
+}

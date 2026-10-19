@@ -1,0 +1,530 @@
+/* Base local das três demonstrações. Cabeçalho e rodapé vêm dos componentes compartilhados.
+   Não edite assets/ para personalizar uma página: use estas classes locais. */
+.pais-modelo main { font-family: Arial, sans-serif; line-height: 1.6; }
+.pais-modelo.pagina-inicio { background: #f4f4f4; }
+.pais-modelo main:focus { outline: none; }
+
+/* Página principal: mesma organização e medidas de portugal.html/portugal.css.
+   As classes de conteúdo usam -modelo para distinguir o exemplo do país real. */
+
+/* ===== ESTRUTURA PRINCIPAL DE EXEMPLO ===== */
+
+/* O conteúdo principal ocupa toda a largura; os blocos internos limitam a leitura. */
+.pais-modelo.pagina-inicio main {
+    max-width: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+/* Mantém as medidas originais do conteúdo e o alinhamento do texto do banner. */
+.pais-modelo.pagina-inicio .conteudo-modelo,
+.pais-modelo.pagina-inicio .banner-modelo-conteudo {
+    max-width: 1280px;
+    width: calc(100% - 48px);
+    margin: 0 auto;
+}
+
+
+/* ===== APRESENTAÇÃO DE EXEMPLO ===== */
+
+.pais-modelo.pagina-inicio .apresentacao-modelo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 64px;
+    max-width: 1180px;
+    margin: 72px auto;
+    padding: 0 24px;
+    text-align: left;
+}
+
+/* Etiqueta acima do título */
+.pais-modelo.pagina-inicio .apresentacao-etiqueta {
+    display: block;
+    margin-bottom: 18px;
+    color: #00a7b5;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* Título à esquerda */
+.pais-modelo.pagina-inicio .apresentacao-modelo h2 {
+    margin: 0;
+    color: #163b50;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(32px, 3.5vw, 48px);
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+/* Parágrafos à direita */
+.pais-modelo.pagina-inicio .apresentacao-textos p {
+    margin: 0 0 20px;
+    color: #465d69;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.pais-modelo.pagina-inicio .apresentacao-textos p:last-child {
+    margin-bottom: 0;
+}
+
+/* Apresentação responsiva */
+@media (max-width: 768px) {
+    .pais-modelo.pagina-inicio .apresentacao-modelo {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        margin: 48px auto;
+        padding: 0 8px;
+    }
+
+    .pais-modelo.pagina-inicio .apresentacao-modelo h2 {
+        font-size: clamp(30px, 7vw, 40px);
+    }
+
+    .pais-modelo.pagina-inicio .apresentacao-textos p {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+}
+
+
+
+/* Ajusta as margens em telas pequenas */
+@media (max-width: 600px) {
+    /* O main permanece de ponta a ponta; somente o conteúdo interno recebe margens. */
+    .pais-modelo.pagina-inicio main { width: 100%; margin: 0; }
+
+    .pais-modelo.pagina-inicio .conteudo-modelo,
+    .pais-modelo.pagina-inicio .banner-modelo-conteudo {
+        width: calc(100% - 32px);
+    }
+}
+
+/* ===== BANNER PRINCIPAL DE EXEMPLO ===== */
+
+.pais-modelo.pagina-inicio .banner-modelo {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    min-height: 480px;
+    margin: 0;
+    overflow: hidden;
+    border-radius: 16px;
+    background: #163b50;
+    color: #ffffff;
+}
+
+/* A ilustração alcança as bordas; a faixa de informações encosta no banner. */
+.pais-modelo.pagina-inicio .banner-modelo {
+    border-radius: 0;
+}
+
+/* Ilustração de destaque */
+.pais-modelo.pagina-inicio .banner-modelo > img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    margin: 0;
+    border-radius: 0;
+}
+
+/* Degradê para melhorar a leitura */
+.pais-modelo.pagina-inicio .banner-modelo::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(10, 34, 48, 0.88) 0%,
+        rgba(10, 34, 48, 0.55) 55%,
+        rgba(10, 34, 48, 0.12) 100%
+    );
+}
+
+/* Texto sobre a ilustração */
+.pais-modelo.pagina-inicio .banner-modelo-texto {
+    position: relative;
+    z-index: 1;
+    max-width: 650px;
+    padding: 48px;
+    overflow-wrap: anywhere;
+}
+
+.pais-modelo.pagina-inicio .banner-etiqueta {
+    display: inline-block;
+    margin-bottom: 16px;
+    color: #67e8f0;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.pais-modelo.pagina-inicio .banner-modelo-texto h1 {
+    margin: 0 0 18px;
+    color: #ffffff;
+    font-size: clamp(30px, 4vw, 52px);
+    line-height: 1.15;
+}
+
+.pais-modelo.pagina-inicio .banner-modelo-texto p {
+    margin: 0 0 26px;
+    color: #f0f7f9;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+/* Botão principal */
+.pais-modelo.pagina-inicio .banner-botao {
+    display: inline-block;
+    padding: 14px 24px;
+    border-radius: 8px;
+    background: #00a7b5;
+    color: #001018;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background 0.2s ease;
+}
+
+.pais-modelo.pagina-inicio .banner-botao:hover {
+    background: #008b98;
+}
+
+/* Ajustes para celular */
+@media (max-width: 600px) {
+    .pais-modelo.pagina-inicio .banner-modelo {
+        min-height: 420px;
+        border-radius: 0;
+    }
+
+    .pais-modelo.pagina-inicio .banner-modelo-texto {
+        padding: 28px 22px;
+    }
+
+    .pais-modelo.pagina-inicio .banner-modelo-texto p {
+        font-size: 15px;
+    }
+}
+
+
+/* =====================================
+   INFORMAÇÕES RÁPIDAS SOBRE EXEMPLO
+===================================== */
+
+.pais-modelo.pagina-inicio .resumo-modelo {
+    margin: 0;
+    background-color: #ffffff;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+/* O fundo ocupa a página inteira; as quatro informações acompanham a largura de leitura. */
+.pais-modelo.pagina-inicio .resumo-conteudo {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0;
+    width: calc(100% - 48px);
+    max-width: 1280px;
+    margin-inline: auto;
+    padding-block: 28px;
+}
+
+.pais-modelo.pagina-inicio .resumo-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 14px;
+    min-width: 0;
+    padding: 8px 18px;
+    text-align: left;
+}
+
+/* A mesma largura para os ícones mantém títulos e valores alinhados em todas as colunas. */
+.pais-modelo.pagina-inicio .resumo-icone {
+    flex: 0 0 26px;
+    min-width: 0;
+    font-size: 22px;
+    line-height: 1;
+    text-align: center;
+}
+
+.pais-modelo.pagina-inicio .resumo-item:not(:last-child) {
+    border-right: 1px solid #e1e8eb;
+}
+
+.pais-modelo.pagina-inicio .resumo-item > div {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    gap: 5px;
+}
+
+.pais-modelo.pagina-inicio .resumo-label {
+    color: #607784;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.pais-modelo.pagina-inicio .resumo-item strong {
+    color: #163b50;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+/* Tablets */
+@media (max-width: 900px) {
+    .pais-modelo.pagina-inicio .resumo-conteudo {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        padding-block: 12px;
+    }
+
+    .pais-modelo.pagina-inicio .resumo-item {
+        justify-content: flex-start;
+        padding: 20px 24px;
+    }
+
+    .pais-modelo.pagina-inicio .resumo-item:not(:last-child) {
+        border-right: none;
+    }
+
+    .pais-modelo.pagina-inicio .resumo-item:nth-child(odd) {
+        border-right: 1px solid #e1e8eb;
+    }
+
+    .pais-modelo.pagina-inicio .resumo-item:nth-child(n + 3) {
+        border-top: 1px solid #e1e8eb;
+    }
+}
+
+/* Celulares */
+@media (max-width: 480px) {
+    .pais-modelo.pagina-inicio .resumo-conteudo {
+        grid-template-columns: 1fr;
+        width: calc(100% - 32px);
+        padding-block: 8px;
+    }
+
+    .pais-modelo.pagina-inicio .resumo-item {
+        padding: 16px 8px;
+    }
+
+    .pais-modelo.pagina-inicio .resumo-item:nth-child(odd) {
+        border-right: none;
+    }
+
+    .pais-modelo.pagina-inicio .resumo-item + .resumo-item {
+        border-top: 1px solid #e1e8eb;
+    }
+}
+
+
+/* ===== CARTÕES PARA EXPLORAR EXEMPLO ===== */
+
+.pais-modelo.pagina-inicio .explorar-modelo {
+    margin: 32px 0 72px;
+}
+
+.pais-modelo.pagina-inicio .explorar-cartoes {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+/* Aparência dos cartões */
+.pais-modelo.pagina-inicio .explorar-cartao {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 0;
+    padding: 28px 24px;
+    background: #ffffff;
+    border: 1px solid #e6edef;
+    border-radius: 14px;
+    box-shadow: 0 4px 18px rgba(22, 59, 80, 0.05);
+}
+
+/* Número turquesa */
+.pais-modelo.pagina-inicio .cartao-numero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    margin-bottom: 24px;
+    border-radius: 50%;
+    background: #e0f4f5;
+    color: #008b98;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+/* Títulos */
+.pais-modelo.pagina-inicio .explorar-cartao h3 {
+    margin: 0 0 14px;
+    color: #163b50;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+/* Descrições */
+.pais-modelo.pagina-inicio .explorar-cartao p {
+    margin: 0 0 24px;
+    color: #465d69;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* Links */
+.pais-modelo.pagina-inicio .cartao-link {
+    margin-top: auto;
+    color: #008b98;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.pais-modelo.pagina-inicio .cartao-link:hover {
+    color: #163b50;
+    text-decoration: underline;
+}
+
+/* Tablets */
+@media (max-width: 1000px) {
+    .pais-modelo.pagina-inicio .explorar-cartoes {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Celulares */
+@media (max-width: 600px) {
+    .pais-modelo.pagina-inicio .explorar-modelo {
+        margin: 24px 0 48px;
+    }
+
+    .pais-modelo.pagina-inicio .explorar-cartoes {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .pais-modelo.pagina-inicio .explorar-cartao {
+        padding: 24px;
+    }
+}
+
+
+/* ===== DESTAQUE PARA A GALERIA DE EXEMPLO ===== */
+
+.pais-modelo.pagina-inicio .destaque-galeria {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 340px;
+    margin: 0 0 72px;
+    overflow: hidden;
+    border-radius: 16px;
+    background: #163b50;
+    color: #ffffff;
+}
+
+/* Ilustração à esquerda */
+.pais-modelo.pagina-inicio .destaque-galeria-imagem {
+    min-width: 0;
+    overflow: hidden;
+}
+
+.pais-modelo.pagina-inicio .destaque-galeria-imagem img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border-radius: 0;
+    object-fit: cover;
+    /* A janela mantém a proporção da referência, mesmo usando um SVG de outro formato. */
+    aspect-ratio: 1920 / 1285;
+}
+
+/* Conteúdo à direita */
+.pais-modelo.pagina-inicio .destaque-galeria-conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 48px;
+}
+
+/* Etiqueta */
+.pais-modelo.pagina-inicio .destaque-galeria-etiqueta {
+    margin-bottom: 16px;
+    color: #67e8f0;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* Título */
+.pais-modelo.pagina-inicio .destaque-galeria h2 {
+    margin: 0 0 20px;
+    color: #ffffff;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(30px, 3vw, 42px);
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+/* Descrição */
+.pais-modelo.pagina-inicio .destaque-galeria p {
+    margin: 0 0 28px;
+    color: #d4e2e8;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* Botão da galeria */
+.pais-modelo.pagina-inicio .destaque-galeria-botao {
+    display: inline-block;
+    padding: 14px 24px;
+    border-radius: 8px;
+    background: #00a7b5;
+    color: #001018;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background 0.2s ease;
+}
+
+.pais-modelo.pagina-inicio .destaque-galeria-botao:hover {
+    background: #008b98;
+    color: #001018;
+}
+
+/* Tablets e celulares */
+@media (max-width: 768px) {
+    .pais-modelo.pagina-inicio .destaque-galeria {
+        grid-template-columns: 1fr;
+        margin-bottom: 48px;
+    }
+
+    .pais-modelo.pagina-inicio .destaque-galeria-imagem img {
+        height: 260px;
+    }
+
+    .pais-modelo.pagina-inicio .destaque-galeria-conteudo {
+        padding: 32px 24px;
+    }
+
+    .pais-modelo.pagina-inicio .destaque-galeria h2 {
+        font-size: 32px;
+    }
+}
+

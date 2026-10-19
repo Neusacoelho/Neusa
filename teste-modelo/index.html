@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Conheça o País de Exemplo, um destino fictício criado para demonstrar a base reutilizável do TURISMO.COM.">
     <title>País de Exemplo — Demonstração Turismo.com</title>
-    <!-- Mesma ordem do modelo principal. Não há necessidade de CSS próprio. -->
+    <!-- Base compartilhada primeiro; ajustes exclusivos desta demonstração por último. -->
     <link rel="stylesheet" href="../assets/css/base.css">
     <link rel="stylesheet" href="../assets/css/componentes.css">
     <link rel="stylesheet" href="../assets/css/pais.css">
+    <link rel="stylesheet" href="teste-modelo.css">
     <script src="../assets/js/site.js" defer></script>
 </head>
 <!-- A pasta está um nível abaixo da raiz. O endereço do país é relativo à raiz. -->
-<body class="tc-site pais-exemplo" data-raiz="../"
+<body class="tc-site pais-exemplo pagina-teste-modelo" data-raiz="../"
       data-pais-nome="País de Exemplo" data-pais-url="teste-modelo/index.html">
     <a class="tc-pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
 
@@ -37,13 +38,25 @@
             </div>
         </section>
 
-        <div class="tc-container">
-            <dl class="tc-resumo" aria-label="Informações fictícias sobre o País de Exemplo">
-                <div><dt>Capital</dt><dd>Vila Aurora</dd></div>
-                <div><dt>Idioma</dt><dd>Exemplês</dd></div>
-                <div><dt>Moeda</dt><dd>Estrela (EX$)</dd></div>
+        <!-- Fundo de ponta a ponta; somente as informações usam o contêiner de leitura. -->
+        <div class="teste-resumo">
+            <dl class="tc-resumo tc-container" aria-label="Informações fictícias sobre o País de Exemplo">
+                <div>
+                    <dt><span class="teste-resumo-icone" aria-hidden="true">🏛️</span>Capital</dt>
+                    <dd>Vila Aurora</dd>
+                </div>
+                <div>
+                    <dt><span class="teste-resumo-icone" aria-hidden="true">🗣️</span>Idioma</dt>
+                    <dd>Exemplês</dd>
+                </div>
+                <div>
+                    <dt><span class="teste-resumo-icone" aria-hidden="true">💶</span>Moeda</dt>
+                    <dd>Estrela (EX$)</dd>
+                </div>
             </dl>
+        </div>
 
+        <div class="tc-container">
             <section class="tc-secao tc-apresentacao" aria-labelledby="apresentacao">
                 <div>
                     <p class="tc-etiqueta">Bem-vindo ao nosso destino fictício</p>

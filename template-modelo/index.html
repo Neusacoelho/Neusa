@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página demonstrativa de Nome do País, com conteúdo fictício para copiar e adaptar no projeto TURISMO.COM.">
+    <title>Nome do País — Template TURISMO.COM</title>
+    <!-- Ordem: estilos compartilhados, base local e, nas internas, CSS da página. -->
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/componentes.css">
+    <link rel="stylesheet" href="../assets/css/pais.css">
+    <link rel="stylesheet" href="template.css">
+    <script src="../assets/js/site.js" defer></script>
+</head>
+<!-- data-raiz mede a distância até a raiz. data-pais-url parte da raiz, não desta pasta.
+     Ao copiar, mantenha pais-modelo e a classe pagina-inicio; consulte LEIA-ME.md. -->
+<body class="tc-site pais-modelo pagina-inicio" data-raiz="../"
+      data-pais-nome="Nome do País" data-pais-url="template-modelo/index.html">
+    <a class="tc-pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+
+    <!-- INÍCIO: cabeçalho compartilhado. site.js substitui apenas este componente.
+         Os links abaixo continuam disponíveis se o JavaScript estiver desativado. -->
+    <header class="tc-cabecalho" data-tc-cabecalho>
+        <nav class="tc-container tc-navegacao-basica" aria-label="Navegação básica">
+            <a href="../index.html">TURISMO.COM — Início</a>
+            <a href="index.html">Nome do País</a>
+            <a href="cultura.html">Cultura</a>
+            <a href="gastronomia.html">Gastronomia</a>
+        </nav>
+    </header>
+    <!-- FIM: cabeçalho compartilhado. -->
+
+    <main id="conteudo" tabindex="-1">
+        <!-- INÍCIO: banner modelo. Copie o bloco completo até o comentário FIM. -->
+        <section class="banner-modelo" aria-labelledby="titulo-banner-modelo">
+            <img src="imagens/paisagem-modelo.svg" alt="Ilustração fictícia de montanhas, rio e sol em formas geométricas." width="1600" height="900">
+            <div class="banner-modelo-conteudo">
+                <div class="banner-modelo-texto">
+                    <span class="banner-etiqueta">DESCUBRA O NOME DO PAÍS</span>
+                    <h1 id="titulo-banner-modelo">Nome do País: cultura e paisagens</h1>
+                    <p lang="la">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</p>
+                    <a href="#titulo-apresentacao" class="banner-botao">Explorar o destino →</a>
+                </div>
+            </div>
+        </section>
+        <!-- FIM: banner modelo. -->
+        <!-- INÍCIO: resumo modelo. Faixa de largura total, fora do contêiner das demais seções. -->
+        <section class="resumo-modelo" aria-label="Informações fictícias do país de exemplo" id="resumo">
+            <div class="resumo-conteudo">
+                <div class="resumo-item">
+                    <span class="resumo-icone" aria-hidden="true">🏛️</span>
+                    <div>
+                        <span class="resumo-label">CAPITAL</span>
+                        <strong>Capital fictícia</strong>
+                    </div>
+                </div>
+                <div class="resumo-item">
+                    <span class="resumo-icone" aria-hidden="true">🗣️</span>
+                    <div>
+                        <span class="resumo-label">IDIOMA</span>
+                        <strong>Idioma fictício</strong>
+                    </div>
+                </div>
+                <div class="resumo-item">
+                    <span class="resumo-icone" aria-hidden="true">💶</span>
+                    <div>
+                        <span class="resumo-label">MOEDA</span>
+                        <strong>Moeda fictícia</strong>
+                    </div>
+                </div>
+                <div class="resumo-item">
+                    <span class="resumo-icone" aria-hidden="true">☀️</span>
+                    <div>
+                        <span class="resumo-label">MELHOR ÉPOCA</span>
+                        <strong>Período fictício</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- FIM: resumo modelo. -->
+        <div class="conteudo-modelo">
+            <!-- INÍCIO: apresentacao. Copie o bloco completo até o comentário FIM. -->
+            <section class="apresentacao-modelo" aria-labelledby="titulo-apresentacao">
+                <div class="apresentacao-titulo">
+                    <span class="apresentacao-etiqueta">BEM-VINDO AO NOME DO PAÍS</span>
+                    <h2 id="titulo-apresentacao">Um destino de exemplo com grandes histórias.</h2>
+                </div>
+                <div class="apresentacao-textos">
+                    <p lang="la">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
+                    <p lang="la">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+                </div>
+            </section>
+            <!-- FIM: apresentacao. -->
+            <!-- INÍCIO: explorar modelo. Copie o bloco completo até o comentário FIM. -->
+            <section class="explorar-modelo" aria-label="Explore o país de exemplo">
+                <div class="explorar-cartoes">
+                    <article class="explorar-cartao">
+                        <span class="cartao-numero">01</span>
+                        <h3>Cultura</h3>
+                        <p lang="la">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                        <a href="cultura.html" class="cartao-link">Conhecer a cultura →</a>
+                    </article>
+                    <article class="explorar-cartao">
+                        <span class="cartao-numero">02</span>
+                        <h3>Gastronomia</h3>
+                        <p lang="la">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                        <a href="gastronomia.html" class="cartao-link">Conhecer a gastronomia →</a>
+                    </article>
+                    <article class="explorar-cartao">
+                        <span class="cartao-numero">03</span>
+                        <h3>Pontos turísticos</h3>
+                        <p lang="la">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                        <a href="#galeria" class="cartao-link">Ver imagem do destino →</a>
+                    </article>
+                    <article class="explorar-cartao">
+                        <span class="cartao-numero">04</span>
+                        <h3>Curiosidades</h3>
+                        <p lang="la">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</p>
+                        <a href="#resumo" class="cartao-link">Ver resumo do destino →</a>
+                    </article>
+                </div>
+            </section>
+            <!-- FIM: explorar modelo. -->
+            <!-- INÍCIO: destaque galeria. Copie o bloco completo até o comentário FIM. -->
+            <section class="destaque-galeria" aria-labelledby="titulo-destaque-galeria" id="galeria">
+                <div class="destaque-galeria-imagem">
+                    <img src="imagens/cidade-modelo.svg" alt="Ilustração fictícia de uma cidade com edifícios coloridos." loading="lazy" width="1200" height="900">
+                </div>
+                <div class="destaque-galeria-conteudo">
+                    <span class="destaque-galeria-etiqueta">OLHARES SOBRE O DESTINO</span>
+                    <h2 id="titulo-destaque-galeria">Veja o destino por outros ângulos.</h2>
+                    <p lang="la">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                    <a href="imagens/cidade-modelo.svg" class="destaque-galeria-botao">Ampliar ilustração →</a>
+                </div>
+            </section>
+            <!-- FIM: destaque galeria. -->
+        </div>
+    </main>
+
+    <!-- INÍCIO: rodapé compartilhado de quatro colunas, gerado por site.js.
+         Não copie o HTML que o navegador gera: mantenha data-tc-rodape e os links básicos. -->
+    <footer class="tc-rodape" data-tc-rodape>
+        <div class="tc-container tc-fluxo">
+            <p>© 2026 TURISMO.COM — Exemplo acadêmico com conteúdo fictício.</p>
+            <nav class="tc-navegacao-basica" aria-label="Navegação básica do rodapé">
+                <a href="index.html">Nome do País</a>
+                <a href="cultura.html">Cultura</a>
+                <a href="gastronomia.html">Gastronomia</a>
+                <a href="../index.html">Início do projeto</a>
+            </nav>
+        </div>
+    </footer>
+    <!-- FIM: rodapé compartilhado. -->
+</body>
+</html>
