@@ -420,7 +420,7 @@ O recorte das ilustrações usa as mesmas áreas de imagem da referência. */
 }
 
 .pais-modelo.pagina-gastronomia .gastronomia-continuar .tc-botao:hover {
-    border-color: var(--tc-marinho); background: var(--tc-marinho); color: var(--tc-branco); text-decoration: none;
+    border-color: var(--tc-marinho); background: var(--tc-marinho); color: var(--tc-branco);
 }
 
 /* Informações e créditos das imagens usadas na sua cópia. */

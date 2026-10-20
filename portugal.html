@@ -10,7 +10,7 @@
 </head>
 
 <body class="pagina-portugal pagina-portugal-inicio">
-
+    <a class="portugal-pular" href="#conteudo">Pular para o conteúdo</a>
 
     <!-- Cabeçalho principal do Turismo.com -->
     <header class="cabecalho-principal">
@@ -26,17 +26,26 @@
                 </span>
             </a>
 
+            <!-- O controle precede os links para preservar a ordem de Tab no celular. -->
+            <button class="botao-menu" type="button" aria-label="Abrir menu" aria-expanded="true"
+                    aria-controls="navegacao-principal" disabled>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
             <!-- Menu de navegação -->
-            <nav class="navegacao" aria-label="Menu principal">
+            <nav class="navegacao" id="navegacao-principal" aria-label="Menu principal">
                 <a href="index.html">Início</a>
 
                 <!-- Lista de países -->
                 <div class="grupo-dropdown">
-                    <button class="botao-dropdown" type="button" aria-expanded="false">
+                    <button class="botao-dropdown" type="button" aria-expanded="true"
+                            aria-controls="lista-paises" disabled>
                         Países <span>⌄</span>
                     </button>
 
-                    <div class="menu-dropdown">
+                    <div class="menu-dropdown" id="lista-paises">
                         <a href="brasil.html">Brasil</a>
                         <a href="portugal.html">Portugal</a>
                         <a href="franca.html">França</a>
@@ -53,24 +62,17 @@
                 <a href="contato.html">Contato</a>
             </nav>
 
-            <!-- Botão para o menu no celular -->
-            <button class="botao-menu" type="button" aria-label="Abrir menu" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-
         </div>
     </header>
 
 
-    <main>
+    <main id="conteudo" tabindex="-1">
 
         <!-- Apresentação principal de Portugal -->
         <section class="banner-portugal" aria-labelledby="titulo-banner-portugal">
 
             <img src="imagens-portugal/palacio-pena.jpg" alt="Palácio da Pena em Sintra, Portugal" width="1920"
-                height="1285">
+                height="1285" aria-describedby="credito-banner-palacio-pena">
 
             <div class="banner-portugal-conteudo">
                 <div class="banner-portugal-texto">
@@ -88,6 +90,11 @@
                     <a href="#titulo-apresentacao" class="banner-botao">
                         Explorar Portugal →
                     </a>
+                    <p class="portugal-foto-credito" id="credito-banner-palacio-pena">
+                        Palácio da Pena: <a href="https://commons.wikimedia.org/wiki/File:Pena_Palace_Sintra.jpg">© Sergey Pesterev / Wikimedia Commons</a> ·
+                        Licença: <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.
+                        Recorte apenas na exibição.
+                    </p>
                 </div>
             </div>
 
@@ -251,7 +258,8 @@
 
                 <!-- Fotografia de destaque -->
                 <div class="destaque-galeria-imagem">
-                    <img src="imagens-portugal/palacio-pena.jpg" alt="Palácio da Pena, em Sintra, Portugal" loading="lazy">
+                    <img src="imagens-portugal/palacio-pena.jpg" alt="Palácio da Pena, em Sintra, Portugal" loading="lazy"
+                        aria-describedby="credito-galeria-palacio-pena">
                 </div>
 
                 <!-- Apresentação da galeria -->
@@ -274,6 +282,11 @@
                     <a href="portugal-fotos.html" class="destaque-galeria-botao">
                         Abrir galeria →
                     </a>
+                    <p class="portugal-foto-credito" id="credito-galeria-palacio-pena">
+                        Palácio da Pena: <a href="https://commons.wikimedia.org/wiki/File:Pena_Palace_Sintra.jpg">© Sergey Pesterev / Wikimedia Commons</a> ·
+                        Licença: <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.
+                        Recorte apenas na exibição.
+                    </p>
 
                 </div>
 
@@ -329,27 +342,112 @@
 
 
     <script>
-        // Controla o menu em celulares e tablets
-        const botaoMenu = document.querySelector(".botao-menu");
-        const navegacao = document.querySelector(".navegacao");
-        const botaoPaises = document.querySelector(".botao-dropdown");
-        const grupoPaises = document.querySelector(".grupo-dropdown");
+        (() => {
+            const pagina = document.body;
+            const cabecalho = pagina.querySelector(".cabecalho-principal");
+            const botaoMenu = cabecalho.querySelector(".botao-menu");
+            const navegacao = cabecalho.querySelector(".navegacao");
+            const botaoPaises = cabecalho.querySelector(".botao-dropdown");
+            const grupoPaises = cabecalho.querySelector(".grupo-dropdown");
+            const listaPaises = cabecalho.querySelector(".menu-dropdown");
+            const telaCompacta = window.matchMedia("(max-width: 980px)");
+            const permiteHover = window.matchMedia("(hover: hover) and (pointer: fine)");
+            let modoAnterior = telaCompacta.matches;
+            let focoAntesDaMudanca = null;
+            let paisesPorHover = false;
 
-        botaoMenu.addEventListener("click", () => {
-            const aberto = navegacao.classList.toggle("aberta");
+            // Clique, hover e teclado compartilham o mesmo estado visual e ARIA.
+            function definirPaises(aberto, porHover = false) {
+                paisesPorHover = aberto && porHover;
+                grupoPaises.classList.toggle("aberto", aberto);
+                botaoPaises.setAttribute("aria-expanded", String(aberto));
+            }
 
-            botaoMenu.setAttribute("aria-expanded", aberto);
-            botaoMenu.setAttribute(
-                "aria-label",
-                aberto ? "Fechar menu" : "Abrir menu"
-            );
-        });
+            function definirMenu(aberto) {
+                const expandido = aberto && telaCompacta.matches;
+                navegacao.classList.toggle("aberta", expandido);
+                botaoMenu.setAttribute("aria-expanded", String(expandido));
+                botaoMenu.setAttribute("aria-label", expandido ? "Fechar menu" : "Abrir menu");
+                if (!expandido) definirPaises(false);
+            }
 
-        // Abre e fecha a lista de países ao clicar
-        botaoPaises.addEventListener("click", () => {
-            const aberto = grupoPaises.classList.toggle("aberto");
-            botaoPaises.setAttribute("aria-expanded", aberto);
-        });
+            botaoMenu.addEventListener("click", () => {
+                definirMenu(botaoMenu.getAttribute("aria-expanded") !== "true");
+            });
+            botaoPaises.addEventListener("click", () => {
+                // O primeiro clique confirma a abertura por hover; o próximo fecha.
+                definirPaises(paisesPorHover || botaoPaises.getAttribute("aria-expanded") !== "true");
+            });
+            grupoPaises.addEventListener("pointerenter", (evento) => {
+                if (permiteHover.matches && evento.pointerType === "mouse" &&
+                    botaoPaises.getAttribute("aria-expanded") !== "true") definirPaises(true, true);
+            });
+            grupoPaises.addEventListener("pointerleave", () => {
+                if (!grupoPaises.contains(document.activeElement)) definirPaises(false);
+            });
+
+            document.addEventListener("keydown", (evento) => {
+                if (evento.key !== "Escape") return;
+                if (grupoPaises.classList.contains("aberto")) {
+                    const devolverFoco = grupoPaises.contains(document.activeElement);
+                    definirPaises(false);
+                    if (devolverFoco) botaoPaises.focus();
+                } else if (telaCompacta.matches && navegacao.classList.contains("aberta")) {
+                    const devolverFoco = cabecalho.contains(document.activeElement);
+                    definirMenu(false);
+                    if (devolverFoco) botaoMenu.focus();
+                } else {
+                    return;
+                }
+                evento.preventDefault();
+            });
+
+            document.addEventListener("click", (evento) => {
+                if (!cabecalho.contains(evento.target)) {
+                    const focoNoMenu = telaCompacta.matches && navegacao.contains(document.activeElement);
+                    const focoNosPaises = listaPaises.contains(document.activeElement);
+                    definirMenu(false);
+                    if (focoNoMenu) botaoMenu.focus();
+                    else if (focoNosPaises) botaoPaises.focus();
+                } else if (!grupoPaises.contains(evento.target)) {
+                    definirPaises(false);
+                }
+            });
+            grupoPaises.addEventListener("focusout", (evento) => {
+                if (!grupoPaises.contains(evento.relatedTarget)) definirPaises(false);
+            });
+            cabecalho.addEventListener("focusout", (evento) => {
+                // O CSS pode ocultar o foco antes de o navegador avisar a mudança de largura.
+                if (telaCompacta.matches !== modoAnterior && evento.relatedTarget === null) {
+                    focoAntesDaMudanca = evento.target;
+                }
+                if (!cabecalho.contains(evento.relatedTarget)) definirMenu(false);
+            });
+            navegacao.addEventListener("click", (evento) => {
+                if (!evento.target.closest("a")) return;
+                const focoNoMenu = telaCompacta.matches && navegacao.contains(document.activeElement);
+                const focoNosPaises = listaPaises.contains(document.activeElement);
+                definirMenu(false);
+                if (focoNoMenu) botaoMenu.focus();
+                else if (focoNosPaises) botaoPaises.focus();
+            });
+            telaCompacta.addEventListener("change", () => {
+                const foco = focoAntesDaMudanca || document.activeElement;
+                focoAntesDaMudanca = null;
+                modoAnterior = telaCompacta.matches;
+                definirMenu(false);
+                if (telaCompacta.matches && navegacao.contains(foco)) botaoMenu.focus();
+                else if (!telaCompacta.matches && (foco === botaoMenu || listaPaises.contains(foco))) {
+                    navegacao.querySelector("a").focus();
+                }
+            });
+
+            // Só recolhe a navegação depois de os controles estarem funcionais.
+            botaoMenu.disabled = false;
+            botaoPaises.disabled = false;
+            definirMenu(false);
+            pagina.classList.add("menu-pronto");
+        })();
     </script>
 
 </body>

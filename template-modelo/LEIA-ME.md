@@ -1,15 +1,18 @@
 # Template de páginas de país — TURISMO.COM
 
-Este exemplo permite consultar, copiar e adaptar páginas completas, sem começar o layout do zero. Textos e ilustrações são fictícios: não descrevem um país real.
+`template-modelo/` é um exemplo visual completo que permite consultar, copiar e adaptar páginas, sem começar o layout do zero. Textos e ilustrações são fictícios: não descrevem um país real. O layout é opcional, não obrigatório para todos os países.
 
 A organização visual acompanha as páginas de Portugal, usadas somente como referência. Os arquivos de Portugal não são dependências deste template.
+
+O [guia principal — ESTRUTURA.md](../documentacao/ESTRUTURA.md) explica a organização atual do projeto e o uso dos componentes compartilhados. Este LEIA-ME detalha como copiar o exemplo visual inteiro ou aproveitar apenas partes dele.
 
 ## Qual opção escolher?
 
 | Opção | Quando usar |
 | --- | --- |
-| **1 — `modelos/`: estrutura básica reutilizável** | Para montar seu próprio layout a partir de uma principal e uma interna genérica, acrescentando o conteúdo aos poucos. Veja o [passo a passo no guia de estrutura](../documentacao/ESTRUTURA.md). |
+| **1 — `modelos/`: estrutura básica reutilizável** | Para montar seu próprio layout a partir de uma principal e uma interna genérica, acrescentando o conteúdo aos poucos. Siga o passo a passo do guia principal indicado acima. |
 | **2 — `template-modelo/`: exemplo visual completo** | Para copiar a principal, Cultura e Gastronomia prontas para adaptar, ou usar os arquivos como referência e copiar somente uma seção ou um cartão. Este LEIA-ME explica essa opção. |
+| **3 — `teste-modelo/`: demonstração de componentes** | Para observar o funcionamento dos componentes com dados fictícios. Não é conteúdo de um país real nem precisa ser copiado para criar suas páginas. |
 
 **Os exemplos são opcionais e permitem personalização.** Você pode reorganizar seções, retirar blocos, incluir cartões e mudar os estilos locais da sua cópia. Não precisa usar todas as páginas nem manter exatamente o visual demonstrado. Combine com a equipe as mudanças nos elementos compartilhados.
 
@@ -25,22 +28,25 @@ A organização visual acompanha as páginas de Portugal, usadas somente como re
 
 Os cartões da principal **não têm imagens**, assim como na principal de Portugal. O destaque de galeria ocupa duas colunas no computador e seu botão abre a ilustração local. Não há uma página separada de galeria. “Pontos turísticos” e “Curiosidades” levam a seções existentes da principal; Cultura e Gastronomia abrem as respectivas páginas completas.
 
-As três páginas carregam `assets/css/base.css`, `componentes.css`, `pais.css` e `assets/js/site.js`. O cabeçalho e o rodapé de quatro colunas são compartilhados. Eles mantêm os links institucionais reais para Início, países, serviços e Contato. O conteúdo fictício está no `<main>` de cada HTML.
+As três páginas carregam `assets/css/base.css`, `assets/css/componentes.css` e `assets/css/pais.css`, nessa ordem, seguidos de `template.css` e do CSS da interna, quando houver. Carregam também `assets/js/site.js` uma única vez, com `defer`. O cabeçalho e o rodapé de quatro colunas são compartilhados. Eles mantêm os links institucionais reais para Início, países, serviços e Contato. O conteúdo fictício está no `<main>` de cada HTML.
 
 ## Abrir o exemplo
 
-Abra `template-modelo/index.html` no navegador ou use um servidor local, como o Live Server do editor. Mantenha a pasta dentro do projeto: abrir apenas um HTML isolado não carrega os estilos compartilhados.
+Abra `template-modelo/index.html` diretamente no navegador, mantendo a estrutura do projeto. Levar apenas um HTML para fora dessa estrutura faz os caminhos dos estilos compartilhados deixarem de funcionar.
 
-Os cartões abrem Cultura e Gastronomia. Nas internas, as migalhas e “Voltar ao País” retornam à principal do template. “Ver galeria” e “Explorar o destino” levam ao destaque de galeria da principal.
+Os cartões de Cultura e Gastronomia abrem as respectivas internas. Nelas, as migalhas e “Voltar ao País” retornam à principal do template; “Ver galeria” e “Explorar o destino” levam ao destaque de galeria da principal. O botão “Explorar o destino” do banner da principal leva à introdução da própria página.
 
 ## Copiar o exemplo completo ou uma página inteira
 
-1. Combine com a equipe um destino novo, por exemplo `paises/meu-pais/`. Confira se ele contém trabalho de alguém antes de copiar.
-2. Copie os HTML desejados e seus CSS locais. Todas as páginas precisam de `template.css`. Cultura também precisa de `cultura.css`; Gastronomia, de `gastronomia.css`.
-3. Copie `imagens/`. Para começar com as três páginas conectadas, copie todo o conteúdo de `template-modelo/`, incluindo o `LEIA-ME.md`, diretamente para `paises/meu-pais/`. A principal deve ficar em `paises/meu-pais/index.html`, sem uma pasta `template-modelo/` intermediária. Não sobrescreva arquivos existentes.
+1. Combine com a equipe quem trabalha no país e qual será sua página principal. Verifique se a pasta do país já existe e se contém trabalho de outro colega. Preserve os arquivos e as alterações locais existentes.
+2. Crie ou utilize `paises/<nome-do-pais>/`, por exemplo `paises/meu-pais/`, conforme o combinado. Use nomes em minúsculas, sem espaços ou acentos. Não mova páginas existentes de outros colegas para seguir este exemplo.
+3. Copie os HTML desejados, seus CSS locais e as imagens utilizadas. Todas as páginas precisam de `template.css`. Cultura também precisa de `cultura.css`; Gastronomia, de `gastronomia.css`. Para começar com as três páginas conectadas, copie todo o conteúdo de `template-modelo/`, incluindo `imagens/` e `LEIA-ME.md`, diretamente para a pasta do país. A principal fica em `paises/meu-pais/index.html`, sem uma pasta `template-modelo/` intermediária. Não sobrescreva arquivos existentes.
 4. Mantenha `assets/` na raiz do projeto e use os caminhos abaixo para acessá-lo. Para esta opção, não é necessário copiar `estilo.css`, `portugal.css`, os arquivos de Portugal ou os modelos da pasta `modelos/`.
-5. Ajuste os caminhos pela tabela abaixo e substitua os textos genéricos.
-6. Mantenha inicialmente as classes `tc-site`, `pais-modelo` e `pagina-inicio`, `pagina-cultura` ou `pagina-gastronomia` no `<body>`. Elas ativam os estilos corretos. `pais-modelo` delimita estas demonstrações; não é o nome do país. Você pode trocá-la, por exemplo, por `pais-egito`, desde que atualize também todos os seletores correspondentes nos CSS locais copiados. Preserve `tc-site` para os componentes comuns.
+5. Substitua nomes, textos genéricos, dados fictícios e ilustrações pelo conteúdo do seu país, conferindo fontes e créditos conforme a seção **Substituir conteúdo**.
+6. Ajuste os caminhos de CSS, JavaScript, imagens e links pela tabela abaixo, incluindo o link de documentação do LEIA-ME copiado. Confira também os caminhos `url(...)` nos CSS locais.
+7. Mantenha inicialmente as classes `tc-site`, `pais-modelo` e `pagina-inicio`, `pagina-cultura` ou `pagina-gastronomia` no `<body>`. Elas ativam os estilos corretos. `pais-modelo` delimita estas demonstrações; não é o nome do país. Você pode trocá-la, por exemplo, por `pais-egito`, desde que atualize também todos os seletores correspondentes nos CSS locais copiados. Preserve `tc-site` para os componentes comuns.
+8. Atualize os atributos `data-*` nas três páginas e confira os links básicos do cabeçalho e rodapé, as migalhas e os retornos à principal do país e ao início do projeto. Alterar `data-pais-nome` não troca automaticamente o conteúdo da página.
+9. Teste as páginas copiadas em telas pequenas e grandes, com e sem JavaScript, usando a lista final deste documento. Solicite a integração no menu apenas quando os destinos existirem e a equipe autorizar.
 
 Você pode manter os nomes dos arquivos para começar. Se mudar `index.html` para o nome do país, por exemplo `egito.html`, atualize todos os links que apontam para ele, inclusive `index.html#galeria`, e o atributo `data-pais-url` nas três páginas.
 
@@ -60,10 +66,19 @@ Se copiar somente uma interna para um país que já tem página principal, ajust
 | `data-pais-nome` no `<body>` | `Nome do País` | Nome escolhido pela equipe |
 | CSS local e imagens | `template.css`, `cultura.css`, `imagens/cidade-modelo.svg` | Iguais, mantendo essa organização |
 | Links entre as três páginas | `index.html`, `cultura.html`, `gastronomia.html` | Iguais, mantendo os três HTML juntos |
+| Link do LEIA-ME para o guia principal | `../documentacao/ESTRUTURA.md` | `../../documentacao/ESTRUTURA.md` |
 
 **Atenção:** `data-pais-url` parte da raiz do projeto, sem `../` no início. `data-raiz` parte do HTML atual. Atualize os atributos nas três páginas copiadas. Os links básicos do cabeçalho e rodapé e o “Início” das migalhas também precisam da distância correta até a raiz.
 
 Não configure `data-galeria-url` com `#galeria`: o gerador aceita um caminho para um HTML existente. Aqui o atributo foi omitido porque não há página separada de galeria. Quando ela existir, configure o caminho relativo à raiz.
+
+### Link de documentação no LEIA-ME copiado
+
+No original `template-modelo/LEIA-ME.md`, o link `../documentacao/ESTRUTURA.md` está correto: sobe uma pasta até a raiz e entra em `documentacao/`.
+
+Se copiar este LEIA-ME para `paises/meu-pais/LEIA-ME.md`, altere **somente nessa cópia** o destino do link do guia principal para `../../documentacao/ESTRUTURA.md`. São duas pastas até a raiz. Mantenha o caminho com apenas um `../` no arquivo original. A pasta `meu-pais` é um exemplo de destino futuro, não uma pasta criada por estas instruções.
+
+Não faça uma troca geral de todo `../`: links locais, recursos compartilhados e atributos `data-*` têm origens diferentes, como mostra a tabela.
 
 ## Substituir conteúdo
 
@@ -121,22 +136,31 @@ Faça ajustes de cor, espaço, imagem e tipografia nos CSS da sua cópia. Os sel
 
 Não altere sem combinar com a equipe os arquivos compartilhados `assets/css/base.css`, `assets/css/componentes.css`, `assets/css/pais.css` e `assets/js/site.js`, nem o `estilo.css` das páginas antigas. Isso inclui a marca, o cabeçalho, o menu, o rodapé e a lista comum de países e links. Para uma necessidade do seu país, use os HTML e CSS locais copiados; preserve os exemplos originais e os arquivos dos colegas.
 
-Mantenha `data-tc-cabecalho` e `data-tc-rodape`. O `site.js` substitui esses componentes e ativa o menu; não substitui o conteúdo principal. Sem JavaScript, permanecem os links básicos escritos no HTML, mas o menu interativo e as quatro colunas geradas não aparecem.
+Adicionar o país ao menu compartilhado ou modificar `index.html` **da raiz do projeto** depende de coordenação e autorização da equipe. Criar a pasta ou preencher `data-pais-url` não adiciona o país ao menu. Já o `index.html` copiado para a pasta do próprio país é a principal que você adapta conforme o combinado.
+
+Mantenha `data-tc-cabecalho` e `data-tc-rodape`. O `site.js` substitui o conteúdo interno desses elementos e ativa o menu; não substitui o conteúdo principal. Configure os links variáveis pelos atributos do `body`: personalizações feitas apenas dentro do rodapé marcado serão substituídas quando o script carregar. Sem JavaScript, permanecem os links básicos escritos no HTML e o rodapé mínimo, mas o menu interativo e as quatro colunas geradas não aparecem. Preserve essa alternativa ao adaptar os arquivos.
 
 Cultura e Gastronomia têm estruturas diferentes de propósito: Cultura tem patrimônio com imagem principal, imagem lateral e citação; Gastronomia tem uma sobremesa principal e duas laterais, além de regiões. Os estilos ficam separados para facilitar a manutenção.
 
-## Testar antes de entregar
+## Lista final de conferência
 
-Abra as três páginas em 390, 768 e 1440 px no modo de dispositivos do navegador e confira:
+Abra cada página copiada em 390, 768 e 1440 px no modo de dispositivos do navegador. Teste primeiro com JavaScript e depois desative-o e recarregue. Antes de entregar, confira:
 
-- Ausência de rolagem horizontal, textos cortados e cartões sobrepostos.
-- Imagens carregadas, proporcionais e com textos alternativos coerentes.
-- Links da principal para Cultura e Gastronomia e retorno por “Voltar ao País”.
-- Botões da galeria, migalhas e âncoras das seções com destinos corretos.
-- Menu no celular, lista “Países” e fechamento com Escape.
-- Tab, Shift+Tab e Enter com foco visível; o primeiro Tab oferece “Pular para o conteúdo”.
-- Rodapé com TURISMO.COM, Explorar, Serviços e Informações: quatro colunas no computador, duas até 768 px e uma até 480 px.
-- Abertura das informações das ilustrações com mouse e teclado.
-- Conteúdo e links básicos acessíveis com JavaScript desativado.
+- [ ] Conteúdo real do país, sem nomes genéricos, dados fictícios ou Lorem ipsum; títulos, descrição e fontes revisados.
+- [ ] CSS compartilhados na ordem indicada, CSS locais depois e `site.js` carregado uma única vez com `defer`.
+- [ ] Classes do `body` e atributos `data-*` coerentes com os caminhos e os seletores da cópia.
+- [ ] Imagens carregadas, proporcionais, com dimensões reais e textos alternativos coerentes; fundo do banner de Cultura também conferido no CSS.
+- [ ] Autoria, fonte, licença, URLs exigidas e eventuais adaptações registrados para cada fotografia, com as atribuições exigidas visíveis na página. Textos sobre ilustrações revisados após a troca por fotos.
+- [ ] Links de ida e volta entre a principal e as internas, além do retorno ao Início do projeto, funcionando. Nenhum destino aponta para arquivo não copiado ou ainda inexistente.
+- [ ] Botões da galeria, migalhas e âncoras com destinos corretos; link do guia principal ajustado apenas no LEIA-ME copiado.
+- [ ] Um `h1` e um `main` por página, hierarquia de títulos coerente, IDs únicos e atributos `aria-labelledby` apontando para elementos existentes.
+- [ ] Ausência de rolagem horizontal, textos cortados e cartões sobrepostos nas três larguras.
+- [ ] Com JavaScript, Menu no celular e lista “Países” abrindo pelos botões, com `aria-expanded` coerente e fechamento com Escape. O menu compartilhado não abre por hover independente.
+- [ ] Tab, Shift+Tab, Enter e Espaço funcionando nos controles correspondentes, sem prender o foco; o primeiro Tab oferece “Pular para o conteúdo”, ligado a `main id="conteudo" tabindex="-1"`.
+- [ ] Foco visível preservado, incluindo o contorno de 3 px. Botões `tc-botao`, preenchidos e de contorno, sem sublinhado nos estados normal, hover, focus e visited.
+- [ ] Com JavaScript, rodapé com TURISMO.COM, Explorar, Serviços e Informações: quatro colunas no computador, duas até 768 px e uma até 480 px.
+- [ ] Créditos expansíveis em `<details>` abrindo com mouse e teclado, inclusive sem JavaScript.
+- [ ] Sem JavaScript, conteúdo, link de salto, links básicos do cabeçalho e rodapé mínimo acessíveis. Reative JavaScript ao terminar.
+- [ ] Somente os arquivos do próprio trabalho foram alterados; exemplos originais, arquivos compartilhados e páginas dos colegas preservados. Integrações no menu e na página inicial combinadas com a equipe.
 
 Confira Console e Rede do navegador. Repita a validação visual após trocar textos ou imagens: o conteúdo pode mudar as alturas dos cartões e banners.
