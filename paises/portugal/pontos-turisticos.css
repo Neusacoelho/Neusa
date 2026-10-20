@@ -22,6 +22,7 @@
 .pagina-pontos-turisticos .pt-secao { padding-block: 96px; }
 .pagina-pontos-turisticos .pt-titulo { margin-bottom: 40px; }
 .pagina-pontos-turisticos .pt-titulo > p:last-child { max-width: 850px; margin-top: 18px; font-size: 16px; line-height: 1.8; }
+.pagina-pontos-turisticos .tc-acoes a.tc-botao[href="../../portugal-fotos.html"] { text-decoration: none; }
 
 /* Banner panorâmico e migalhas no padrão das outras internas de Portugal. */
 .pagina-pontos-turisticos .pt-banner { overflow: hidden; padding: 0; background: var(--tc-marinho); }
