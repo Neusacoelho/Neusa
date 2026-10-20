@@ -46,12 +46,6 @@
 .pagina-galeria-portugal .pg-cartao p { margin-top: 12px; line-height: 1.7; }
 
 .pagina-galeria-portugal .pg-retorno { justify-content: center; margin-top: 44px; }
-.pagina-galeria-portugal main a.tc-botao,
-.pagina-galeria-portugal main a.tc-botao:hover,
-.pagina-galeria-portugal main a.tc-botao:focus,
-.pagina-galeria-portugal main a.tc-botao:visited {
-    text-decoration: none;
-}
 .pagina-galeria-portugal .pg-creditos {
     margin-top: 36px;
     padding-block: 24px;

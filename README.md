@@ -20,6 +20,18 @@ O **Turismo.com** é um guia educativo de viagens, criado em equipe para apresen
 
 A proposta é construir as páginas progressivamente, com uma identidade visual compartilhada e espaço para as contribuições de cada integrante.
 
+## Comece por aqui
+
+Se você vai criar ou adaptar a página de um país, comece pelo [guia principal — ESTRUTURA.md](documentacao/ESTRUTURA.md). Ele explica como escolher os arquivos, preparar a pasta do país, adaptar os caminhos e testar a página.
+
+| Opção | Como usar |
+| --- | --- |
+| [Modelos básicos — modelos/](modelos/) | Uma principal e uma interna genérica para desenvolver seu próprio layout, acrescentando conteúdo aos poucos. |
+| [Exemplo visual completo — template-modelo/](template-modelo/) | Principal, Cultura e Gastronomia para copiar integralmente ou reaproveitar por seções e cartões. Siga as [instruções do exemplo visual — LEIA-ME.md](template-modelo/LEIA-ME.md). |
+| [Demonstração — teste-modelo/](teste-modelo/) | Página para observar os componentes compartilhados funcionando. O país e os dados são fictícios e não devem ser publicados como conteúdo real. |
+
+Os modelos são opcionais e permitem personalização. Portugal é uma referência de implementação; seu layout não é obrigatório para os demais países.
+
 ## ✨ O que você encontra
 
 - **Destinos:** páginas dedicadas a países e suas características culturais.
@@ -52,24 +64,53 @@ O projeto utiliza também arquivos JSON para organização de alguns dados.
 ```text
 turismo-com/
 ├── index.html                     # Página inicial
-├── estilo.css                     # Estilos compartilhados
+├── estilo.css                     # Estilos das páginas antigas
 ├── portugal.html                  # Página de Portugal
 ├── portugal.css                   # Estilos específicos de Portugal
 ├── portugal-fotos.html            # Galeria de Portugal
+├── portugal-fotos.css             # Estilos exclusivos da galeria
 ├── hospedagem.html                # Guia de hospedagem
 ├── alimentacao.html               # Guia de alimentação
 ├── compras.html                   # Guia de compras
 ├── contato.html                   # Contato
-├── imagens-portugal/             # Fotografias e créditos de Portugal
-├── paises/                       # Pastas reservadas para 13 países
-├── documentacao/                 # Guias da equipe
+├── imagens-portugal/              # Fotografias e créditos de Portugal
+├── assets/                       # Componentes compartilhados dos modelos
+│   ├── css/
+│   │   ├── base.css
+│   │   ├── componentes.css
+│   │   └── pais.css
+│   └── js/
+│       └── site.js
+├── paises/                       # Páginas internas e pastas preparadas por país
+│   └── portugal/
+│       ├── cultura.html / cultura.css
+│       ├── gastronomia.html / gastronomia.css
+│       ├── pontos-turisticos.html / pontos-turisticos.css
+│       └── curiosidades.html / curiosidades.css
+├── modelos/                      # Estruturas básicas reutilizáveis
+│   ├── pais-principal.html
+│   └── pais-interna.html
+├── template-modelo/              # Exemplo visual completo
+│   ├── index.html / template.css
+│   ├── cultura.html / cultura.css
+│   ├── gastronomia.html / gastronomia.css
+│   ├── imagens/
+│   └── LEIA-ME.md
+├── teste-modelo/                 # Demonstração com dados fictícios
+│   ├── index.html
+│   └── teste-modelo.css
+├── documentacao/                 # Guias da equipe e registros de conferência
+│   ├── ESTRUTURA.md              # Guia principal dos componentes e modelos
+│   ├── REGRESSAO.md
+│   ├── ORIENTACOES.md
 │   ├── HEADER.md
-│   ├── FOOTER.md
-│   └── ORIENTACOES.md
+│   └── FOOTER.md
 └── README.md
 ```
 
-**Importante:** a estrutura está em transição. As páginas atuais continuam na raiz do repositório; a pasta `paises/` foi criada para organizar as próximas etapas, sem mover os arquivos existentes.
+Esta árvore é um resumo. As barras entre um HTML e um CSS indicam dois arquivos na mesma pasta; outras páginas de países e galerias também permanecem na raiz.
+
+**Compatibilidade:** `portugal.html` e `portugal-fotos.html` permanecem na raiz para preservar os links publicados e as integrações existentes. As páginas internas de Portugal estão em `paises/portugal/`, com seus CSS locais. Novos países podem organizar suas páginas em `paises/<nome-do-pais>/`, mediante coordenação com a equipe. Não é necessário mover as páginas existentes dos colegas.
 
 ## 💻 Como executar localmente
 
@@ -84,13 +125,13 @@ Não é necessário instalar React ou executar um processo de compilação.
 
 ## 🤝 Padrão visual e colaboração
 
-Os modelos e orientações compartilhados estão em:
+Cada colega é responsável pelas páginas do seu país, conforme a divisão de trabalho combinada com a equipe. Antes de copiar arquivos, confira se a pasta já existe e preserve o conteúdo e as alterações de outros integrantes.
 
-- [Cabeçalho — HEADER.md](documentacao/HEADER.md)
-- [Rodapé — FOOTER.md](documentacao/FOOTER.md)
-- [Orientações gerais — ORIENTACOES.md](documentacao/ORIENTACOES.md)
+O projeto reúne páginas com implementações diferentes. Os modelos utilizam os componentes compartilhados de `assets/`; páginas existentes podem manter cabeçalhos, menus e rodapés próprios. Personalize sua cópia sem transformar a referência de Portugal em uma obrigação para todo o site.
 
-Esses materiais servem como **referência para a equipe**; alterações em estilos globais e elementos compartilhados devem ser alinhadas entre os integrantes.
+**Adicionar países ao menu compartilhado, alterar o `index.html` da raiz ou modificar os CSS e o JavaScript compartilhados exige coordenação com a equipe.** Não altere páginas de outros países ou os exemplos originais para fazer sua página funcionar. Criar a pasta de um país não o inclui automaticamente no menu.
+
+Para implementar páginas com os modelos, siga o guia principal e o LEIA-ME da seção **Comece por aqui**. Também permanecem disponíveis materiais de etapas anteriores: [HEADER.md](documentacao/HEADER.md), [FOOTER.md](documentacao/FOOTER.md) e [ORIENTACOES.md](documentacao/ORIENTACOES.md). Eles não são arquivos incluídos automaticamente no site nem substituem o fluxo atual do guia principal.
 
 ## 👥 Equipe e créditos
 

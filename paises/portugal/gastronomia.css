@@ -223,7 +223,7 @@
     line-height: 1.6;
 }
 .pagina-gastronomia .gastronomia-continuar .tc-botao-contorno { background: var(--tc-branco); color: #007a85; }
-.pagina-gastronomia .gastronomia-continuar .tc-botao:hover { border-color: var(--tc-marinho); background: var(--tc-marinho); color: var(--tc-branco); text-decoration: none; }
+.pagina-gastronomia .gastronomia-continuar .tc-botao:hover { border-color: var(--tc-marinho); background: var(--tc-marinho); color: var(--tc-branco); }
 .pagina-gastronomia .gastronomia-creditos { margin-block: 24px 32px; font-size: 13px; line-height: 1.8; overflow-wrap: anywhere; }
 .pagina-gastronomia .gastronomia-creditos summary { width: fit-content; padding-block: 8px; color: var(--tc-marinho); font-weight: 700; cursor: pointer; }
 .pagina-gastronomia .gastronomia-creditos ul { padding-left: 24px; }

@@ -160,7 +160,7 @@
     text-align: center;
     text-decoration: none;
 }
-.tc-site .tc-botao:hover { background: #008b98; text-decoration: underline; }
+.tc-site .tc-botao:hover { background: #008b98; text-decoration: none; }
 .tc-site .tc-botao-contorno { border-color: var(--tc-link); background: var(--tc-branco); color: var(--tc-link); }
 .tc-site .tc-botao-contorno:hover { background: var(--tc-suave); }
 

@@ -738,6 +738,55 @@
 }
 
 
+/* Acessibilidade e melhoria progressiva apenas na página principal de Portugal. */
+.pagina-portugal-inicio :is(a, button, summary):focus-visible {
+    outline: 3px solid #006b75;
+    outline-offset: 5px;
+    box-shadow: 0 0 0 3px #fff;
+}
+
+.pagina-portugal-inicio .portugal-pular {
+    position: fixed;
+    top: 12px;
+    left: 16px;
+    z-index: 200;
+    padding: 12px 18px;
+    transform: translateY(-200%);
+    border-radius: 6px;
+    background: #fff;
+    color: #163b50;
+    font-weight: 700;
+    text-decoration: none;
+}
+.pagina-portugal-inicio .portugal-pular:focus { transform: translateY(0); }
+.pagina-portugal-inicio #conteudo { scroll-margin-top: 100px; }
+
+/* Com script, a classe de estado é a única responsável por exibir o submenu. */
+.pagina-portugal-inicio.menu-pronto .grupo-dropdown .menu-dropdown { display: none; }
+.pagina-portugal-inicio.menu-pronto .grupo-dropdown.aberto .menu-dropdown { display: block; }
+
+/* Sem script, todos os links ficam no fluxo e nenhum controle depende de clique. */
+.pagina-portugal-inicio:not(.menu-pronto) .cabecalho-principal { position: static; }
+.pagina-portugal-inicio:not(.menu-pronto) .barra-cabecalho { flex-wrap: wrap; }
+.pagina-portugal-inicio:not(.menu-pronto) .botao-menu { display: none; }
+.pagina-portugal-inicio:not(.menu-pronto) .cabecalho-principal .navegacao {
+    position: static;
+    display: flex;
+    width: 100%;
+    max-height: none;
+    overflow: visible;
+    flex-wrap: wrap;
+    box-shadow: none;
+}
+.pagina-portugal-inicio:not(.menu-pronto) .grupo-dropdown .menu-dropdown {
+    position: static;
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 0;
+    box-shadow: none;
+}
+.pagina-portugal-inicio:not(.menu-pronto) .botao-dropdown { cursor: default; }
+
 /* =====================================
    INFORMAÇÕES RÁPIDAS SOBRE PORTUGAL
 ===================================== */
@@ -1027,6 +1076,19 @@
 .pagina-portugal .destaque-galeria-botao:hover {
     background: #008b98;
     color: #001018;
+}
+
+/* Créditos das duas utilizações do Palácio da Pena na principal. */
+.pagina-portugal-inicio :is(.banner-portugal-texto, .destaque-galeria-conteudo) .portugal-foto-credito {
+    margin: 16px 0 0;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.pagina-portugal-inicio .portugal-foto-credito a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 3px;
 }
 
 /* Tablets e celulares */

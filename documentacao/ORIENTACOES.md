@@ -1,14 +1,28 @@
 # Orientações para a equipe — Turismo.com
 
-## O que foi preparado
+## Comece pelo guia principal
 
-Foram criadas pastas para os 13 países, sem mover páginas, imagens, CSS ou outros arquivos existentes. Cada pasta de país contém somente um `.gitkeep`: é um marcador vazio para o Git registrar a pasta, sem efeito no navegador e sem função de página HTML.
+O guia principal para criar páginas de países é [ESTRUTURA.md](ESTRUTURA.md). Ele explica como escolher e copiar um modelo, adaptar os caminhos e testar a página. O [README](../README.md) apresenta o projeto e os atalhos de entrada. Este documento complementa esses guias com orientações de colaboração e o histórico da organização inicial.
+
+| Opção | Para que serve |
+| --- | --- |
+| [modelos/](../modelos/) | Estruturas básicas de página principal e interna para desenvolver um layout próprio. |
+| [template-modelo/](../template-modelo/) | Exemplo visual completo com principal, Cultura e Gastronomia, reutilizável inteiro ou por seções e cartões. Consulte o [LEIA-ME](../template-modelo/LEIA-ME.md). |
+| [teste-modelo/](../teste-modelo/) | Demonstração dos componentes com dados fictícios. Serve para consultar e conferir o comportamento, não para publicar como conteúdo real. |
+
+Os modelos são opcionais e permitem personalização. Portugal é uma referência de implementação, não um layout obrigatório para os demais países.
+
+## Organização atual
+
+Na preparação inicial, foram criadas pastas para os 13 países, sem mover páginas, imagens, CSS ou outros arquivos existentes. Naquele momento, elas continham somente `.gitkeep`, um marcador vazio para o Git registrar a pasta, sem efeito no navegador. Hoje, `paises/portugal/` já contém páginas e estilos; as outras 12 pastas preparadas ainda contêm apenas o marcador. Antes de trabalhar, confira o conteúdo real da pasta para não sobrescrever o trabalho de um colega.
 
 A documentação está em `documentacao/`, alternativa escolhida para preservar o arquivo existente `Docs`. No Windows, esse arquivo conflita com uma pasta chamada `docs/`, mesmo com letras minúsculas.
 
-Os exemplos de [HEADER.md](HEADER.md) e [FOOTER.md](FOOTER.md) são **modelos opcionais**, copiados da implementação atual de Portugal. Não são componentes automáticos e não são inseridos nas páginas por nenhum sistema.
+`portugal.html` e `portugal-fotos.html` permanecem na raiz para preservar os links publicados. Cultura, Gastronomia, Pontos Turísticos e Curiosidades estão em `paises/portugal/`, com seus CSS locais. Novos países podem usar `paises/<nome-do-pais>/`, mediante coordenação. Não é necessário mover ou padronizar páginas existentes dos colegas.
 
-## Estrutura atual após a preparação
+Os documentos [HEADER.md](HEADER.md) e [FOOTER.md](FOOTER.md) são materiais complementares sobre implementações próprias de Portugal. Não são a fonte obrigatória de código para novas páginas. Para começar, use os modelos atuais e as instruções de ESTRUTURA, em vez de copiar manualmente cabeçalho, rodapé e script desses documentos.
+
+### Arquivos de referência existentes
 
 ```text
 turismo-com-paginas/
@@ -34,11 +48,26 @@ turismo-com-paginas/
 ├── japao.html / japao-fotos.html
 ├── portugal.html / portugal-fotos.html
 ├── portugal.css
+├── portugal-fotos.css
 ├── imagens-portugal/            (imagens e CREDITOS.md preservados)
+├── assets/
+│   ├── css/
+│   │   ├── base.css
+│   │   ├── componentes.css
+│   │   └── pais.css
+│   └── js/
+│       └── site.js
+├── modelos/
+│   ├── pais-principal.html
+│   └── pais-interna.html
+├── template-modelo/             (principal, Cultura, Gastronomia, CSS e imagens)
+├── teste-modelo/                (index.html e teste-modelo.css)
 ├── documentacao/
+│   ├── ESTRUTURA.md
 │   ├── HEADER.md
 │   ├── FOOTER.md
-│   └── ORIENTACOES.md
+│   ├── ORIENTACOES.md
+│   └── REGRESSAO.md
 └── paises/
     ├── africa-do-sul/
     ├── alemanha/
@@ -51,13 +80,15 @@ turismo-com-paginas/
     ├── italia/
     ├── japao/
     ├── portugal/
+    │   ├── cultura.html / cultura.css
+    │   ├── gastronomia.html / gastronomia.css
+    │   ├── pontos-turisticos.html / pontos-turisticos.css
+    │   └── curiosidades.html / curiosidades.css
     ├── reino-unido/
     └── taiwan/
-
-Cada pasta de país acima contém um .gitkeep.
 ```
 
-As barras entre nomes de HTML indicam dois arquivos na mesma pasta. Nenhum arquivo HTML novo foi criado nesta preparação.
+As barras entre nomes indicam arquivos separados na mesma pasta. A árvore resume a organização atual; não representa uma migração de todas as páginas. Os marcadores `.gitkeep` foram omitidos da árvore, mas permanecem nas pastas preparadas.
 
 | País | Pasta preparada | Página que já existe na raiz |
 | --- | --- | --- |
@@ -78,11 +109,12 @@ As barras entre nomes de HTML indicam dois arquivos na mesma pasta. Nenhum arqui
 ## Como começar
 
 1. Consulte [TAREFAS.md](../TAREFAS.md) e combine com Neusa quem desenvolve cada país.
-2. Confira `git status --short` antes de trabalhar, para reconhecer alterações de outros colegas.
+2. Confira os arquivos existentes e reconheça as alterações locais antes de trabalhar. Preserve tudo o que não pertence à sua tarefa.
 3. Para um país que já tem HTML, use o arquivo atual como referência e combine a próxima mudança com a equipe. A pasta nova não substitui a página da raiz. Evite manter duas versões concorrentes sem combinar qual será integrada.
-4. Para um país novo, crie uma página com conteúdo real dentro da pasta correspondente quando começar seu desenvolvimento. Não é necessário criar HTML vazio como reserva.
+4. Para um país novo, escolha uma das duas opções de criação apresentadas acima e siga o roteiro de cópia em [ESTRUTURA.md](ESTRUTURA.md). Use ou crie a pasta do próprio país sem sobrescrever arquivos. Não é necessário criar HTML vazio como reserva.
 5. Use nomes em minúsculas, sem espaços ou acentos nos caminhos: `africa-do-sul`, `reino-unido`, `grecia`. No conteúdo visível, escreva normalmente: “África do Sul”, “Reino Unido”, “Grécia”.
 6. Salve HTML, CSS, JavaScript e Markdown em UTF-8. No HTML, mantenha `lang="pt-BR"`, a declaração de codificação e a configuração da viewport.
+7. Cada colega é responsável pelas páginas do seu país. Alterações em `index.html` da raiz, no menu compartilhado ou nos arquivos compartilhados exigem coordenação e autorização da equipe. Criar uma pasta ou configurar o país no modelo não o adiciona automaticamente ao menu.
 
 ## Organização sugerida para arquivos futuros
 
@@ -99,13 +131,32 @@ paises/egito/
     └── CREDITOS.md
 ```
 
-Mantenha os estilos específicos no CSS do próprio país. Se precisar de JavaScript, crie um arquivo local com propósito claro; para reproduzir apenas o menu de Portugal, o script documentado em HEADER.md já é suficiente.
+Mantenha os estilos específicos no CSS do próprio país. Os modelos já usam `assets/js/site.js` para os componentes compartilhados e o menu: não copie um segundo script de cabeçalho nem duplique essa lógica. Um JavaScript local só deve ser acrescentado se houver uma necessidade própria do conteúdo, mantendo sua função separada da navegação compartilhada.
 
 Não copie imagens de Portugal para outros países só para preencher espaços. Prefira imagens adequadas ao destino, com texto alternativo descritivo, arquivo otimizado e registro de autoria, origem e licença. Os créditos existentes em `imagens-portugal/CREDITOS.md` são preservados; confirme as informações antes de reutilizar esse material.
 
-## Identidade visual e dependências reais
+## Estilos e componentes compartilhados
 
-Use como referência o visual de Portugal: turquesa, azul-marinho e branco. A folha global ainda usa azul `#0047ab` em cabeçalhos, rodapés e títulos. Por isso, carregar apenas `estilo.css` não reproduz o visual específico de Portugal.
+Para páginas novas baseadas nos modelos, use os arquivos compartilhados abaixo. Carregue os três CSS nesta ordem e o CSS local por último. Inclua `site.js` uma única vez, com `defer`.
+
+| Arquivo | Função |
+| --- | --- |
+| `assets/css/base.css` | Cores, fonte, estilos básicos, contêiner e foco visível nas páginas com `tc-site`. |
+| `assets/css/componentes.css` | Cabeçalho, marca, menu, rodapé, botões e link de salto para o conteúdo. |
+| `assets/css/pais.css` | Banner, seções, cartões, artigo, dados rápidos e galeria. |
+| `assets/js/site.js` | Montagem dos componentes marcados e controle do menu acessível. |
+
+Preserve `tc-site` no `body` e ajuste `data-raiz`, `data-pais-nome` e `data-pais-url` conforme ESTRUTURA. Acrescente `data-galeria-url` somente quando a galeria existir. Ao copiar o template, preserve inicialmente suas classes e os CSS locais; se renomear uma classe, atualize os seletores correspondentes na cópia.
+
+`site.js` pode substituir o conteúdo de `header.tc-cabecalho[data-tc-cabecalho]` e `footer.tc-rodape[data-tc-rodape]`. Configure os dados variáveis pelo `body`, sem editar o HTML gerado no navegador. Preserve a navegação e o rodapé básicos escritos nos modelos: eles continuam disponíveis sem JavaScript, embora o menu interativo e as quatro colunas geradas não apareçam nessa alternativa mínima.
+
+Nem todas as páginas de Portugal usam o mesmo mecanismo: a principal e Cultura mantêm cabeçalho, rodapé e script próprios; Gastronomia e Pontos Turísticos usam o cabeçalho compartilhado e rodapé próprio; Galeria e Curiosidades usam os dois componentes gerados e já têm rodapé completo no HTML para a alternativa sem JavaScript. Consulte a relação de consumidores em [ESTRUTURA.md](ESTRUTURA.md) antes de propor mudanças compartilhadas.
+
+`estilo.css` e `portugal.css` continuam sendo dependências de páginas existentes, mas **não são o padrão de carregamento dos modelos novos**. Não adicione essas folhas nem copie blocos de cabeçalho e rodapé para fazer uma nova cópia funcionar.
+
+### Referência visual opcional de Portugal
+
+Portugal usa turquesa, azul-marinho e branco. Estes tons são uma referência, não uma obrigação para os outros países:
 
 | Uso observado | Cor |
 | --- | --- |
@@ -115,55 +166,33 @@ Use como referência o visual de Portugal: turquesa, azul-marinho e branco. A fo
 | Cabeçalho, cartões e títulos no rodapé | `#ffffff` |
 | Texto secundário no rodapé | `#d4e2e8` |
 
-A base usa Arial, sem dependência de fonte externa. Preserve espaçamento confortável, títulos bem organizados, contraste e navegação legível em celular.
-
-Para copiar o visual em uma página nova, escolha um dos modos descritos em HEADER.md:
-
-- **Referência completa:** carregue `estilo.css` e depois `portugal.css`, usando `<body class="pagina-portugal">`. Isso também aplica estilos de conteúdo de Portugal, inclusive de `main`.
-- **Adaptação local opcional:** copie somente os blocos CSS do cabeçalho e do rodapé para o novo CSS do país, substitua `.pagina-portugal` por `body` nessa cópia e use `<body>`. Carregue `estilo.css` primeiro e o CSS local depois. Nenhum estilo original deve ser editado para isso.
-
-Não misture os modos. Preserve as classes internas reais do cabeçalho e do rodapé e inclua o script do menu uma única vez, depois dos elementos ou em arquivo externo com `defer`.
+A base compartilhada usa Arial, sem dependência de fonte externa; alguns títulos locais usam Georgia. Preserve espaçamento confortável, contraste e navegação legível em celular. Personalize o conteúdo no CSS local, sem alterar os componentes de todos os colegas.
 
 ## Exemplo de ponto de partida para uma página nova
 
-Este exemplo serve para um futuro arquivo `paises/egito/egito.html`, no modo de adaptação local. Antes de usá-lo, prepare `egito.css` com os dois blocos CSS documentados, trocando o prefixo conforme explicado acima. Os comentários mostram onde colar os blocos completos de HEADER.md e FOOTER.md; **o exemplo sozinho ainda não contém a navegação**.
+Para um futuro arquivo `paises/egito/egito.html`, copie `modelos/pais-principal.html`; se precisar de uma interna, copie também `modelos/pais-interna.html`, por exemplo como `cultura.html`. Copie somente o necessário e ajuste os links entre as páginas. Se copiar apenas a principal, substitua os links para a interna por destinos existentes.
+
+O trecho abaixo mostra apenas a configuração dos arquivos compartilhados e do `body` nessa futura pasta. **Não é uma página completa:** mantenha o cabeçalho, o conteúdo, o rodapé, o link de salto e os links básicos da cópia do modelo. O arquivo `egito.css` só deve ser carregado depois de criado.
 
 ```html
-<!DOCTYPE html>
-<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Egito — Turismo.com</title>
-    <link rel="stylesheet" href="../../estilo.css">
+    <link rel="stylesheet" href="../../assets/css/base.css">
+    <link rel="stylesheet" href="../../assets/css/componentes.css">
+    <link rel="stylesheet" href="../../assets/css/pais.css">
     <link rel="stylesheet" href="egito.css">
+    <script src="../../assets/js/site.js" defer></script>
 </head>
-<body>
-    <!-- Cole aqui o cabeçalho de HEADER.md com links ajustados para ../../. -->
-
-    <main>
-        <h1>Egito</h1>
-        <section aria-labelledby="cultura">
-            <h2 id="cultura">Cultura</h2>
-            <p>A história e o patrimônio do Egito estão ligados ao rio Nilo.</p>
-        </section>
-        <section aria-labelledby="gastronomia">
-            <h2 id="gastronomia">Gastronomia</h2>
-            <p>O koshari reúne arroz, lentilhas e massas em uma receita popular.</p>
-        </section>
-        <section aria-labelledby="pontos-turisticos">
-            <h2 id="pontos-turisticos">Pontos turísticos</h2>
-            <p>As pirâmides de Gizé e os templos de Luxor são destaques do país.</p>
-        </section>
-    </main>
-
-    <!-- Cole aqui o rodapé de FOOTER.md com os links ajustados. -->
-    <!-- Cole aqui o script completo de HEADER.md, após inserir o cabeçalho. -->
-</body>
-</html>
+<body class="tc-site pais-egito" data-raiz="../../"
+      data-pais-nome="Egito" data-pais-url="paises/egito/egito.html">
+    <!-- Preserve e adapte o restante do HTML copiado do modelo. -->
 ```
 
-Desenvolva também curiosidades, moeda e câmbio conforme a divisão de tarefas, verificando as fontes do conteúdo. Não adicione no menu links para arquivos que ainda não existem.
+`data-raiz` mede a distância do HTML até a raiz; `data-pais-url` parte da raiz e não recebe `../../`. Os links HTML básicos não são reescritos pelo script: ajuste também as migalhas, os cartões e os retornos. Desenvolva os assuntos conforme a divisão de tarefas, verificando as fontes. Não adicione links para arquivos que ainda não existem.
+
+Se escolher o exemplo visual, siga a cópia completa ou parcial descrita em [ESTRUTURA.md](ESTRUTURA.md) e no [LEIA-ME](../template-modelo/LEIA-ME.md). Um cartão pode depender da grade, dos contêineres, das classes do `body` e dos CSS da seção original; não basta copiar apenas seu texto.
 
 ## Caminhos relativos: o que muda nas páginas novas
 
@@ -171,15 +200,19 @@ Os caminhos são resolvidos a partir da localização do HTML, não da pasta em 
 
 | Recurso | Exemplo em `paises/egito/egito.html` |
 | --- | --- |
-| CSS global existente | `../../estilo.css` |
+| CSS básicos compartilhados | `../../assets/css/base.css`, `../../assets/css/componentes.css`, `../../assets/css/pais.css` |
+| JavaScript compartilhado | `../../assets/js/site.js` |
 | CSS local futuro | `egito.css` |
 | Página inicial existente | `../../index.html` |
 | Serviços existentes | `../../hospedagem.html`, `../../alimentacao.html`, `../../compras.html`, `../../contato.html` |
 | Página de Portugal existente | `../../portugal.html` |
 | Galeria de Portugal existente | `../../portugal-fotos.html` |
+| Internas de Portugal existentes | `../portugal/cultura.html`, `../portugal/gastronomia.html`, `../portugal/pontos-turisticos.html`, `../portugal/curiosidades.html` |
 | Foto nova dentro da própria pasta | `imagens/piramides.jpg` |
 
-As folhas de estilo resolvem seus próprios `url(...)` a partir do arquivo CSS. Uma futura mudança de pasta precisa revisar tanto o HTML quanto o CSS.
+Nos modelos originais, os recursos compartilhados usam `../assets/`; numa cópia em `paises/egito/`, passam a usar `../../assets/`. O Início do projeto passa a ser `../../index.html`. Links entre arquivos da mesma pasta continuam locais se os nomes forem mantidos. Não substitua todo `../` automaticamente.
+
+As folhas de estilo resolvem seus próprios `url(...)` a partir do arquivo CSS. Uma futura mudança de pasta precisa revisar tanto o HTML quanto o CSS. Se copiar o LEIA-ME para a pasta do país, ajuste também o link dessa cópia para o guia principal, conforme ESTRUTURA.
 
 Somente **depois de adicionar a imagem** e seus créditos, um trecho como este pode ser usado na página nova:
 
@@ -192,9 +225,9 @@ Somente **depois de adicionar a imagem** e seus créditos, um trecho como este p
 </figure>
 ```
 
-## Estado observado e pontos de atenção
+## Registro histórico da preparação inicial
 
-Na análise inicial, o branch era `feature/header-turques`, com:
+As observações desta seção descrevem o estado inicial, anterior aos modelos e componentes atuais. **Não são instruções de implementação nem um retrato da branch atual.** Na análise inicial, a branch era `feature/header-turques`, e foram registradas estas alterações locais:
 
 ```text
  M portugal.css
@@ -202,38 +235,39 @@ Na análise inicial, o branch era `feature/header-turques`, com:
 ?? imagens-portugal/lisboa-eletrico.jpg
 ```
 
-Essas alterações preexistentes foram preservadas. Esta organização não faz commit, push ou merge.
+Essas alterações preexistentes foram preservadas naquela preparação. O registro acima não foi atualizado por uma nova consulta ao Git.
+
+- O README então descrevia uma pasta `imagens/` e uma paleta diferente. O README atual já apresenta a estrutura compartilhada e os modelos; as fotografias de Portugal continuam em `imagens-portugal/`.
+- Os cartões de Portugal então apontavam para as âncoras provisórias `#conteudo-cultura`, `#conteudo-gastronomia`, `#conteudo-pontos-turisticos` e `#conteudo-curiosidades`, sem os IDs correspondentes. Hoje apontam para as páginas existentes em `paises/portugal/`. Não copie aqueles destinos históricos.
+- Naquele momento não havia JavaScript compartilhado, e as páginas tinham implementações diferentes de cabeçalho e rodapé. Hoje existe `assets/js/site.js`, usado pelos modelos e por parte das páginas de Portugal. A principal e Cultura ainda mantêm seu script próprio.
+- A extração de estilos e do menu para arquivos compartilhados era uma proposta futura. Esses arquivos agora existem em `assets/`; não é necessário repetir essa extração nem copiar os blocos antigos ao criar uma página pelo modelo.
+- O levantamento inicial observou que `imagens-portugal/CREDITOS.md` ainda indicava downloads pendentes, embora os arquivos citados já estivessem presentes. Os problemas de download e essa divergência pertencem ao histórico do projeto: o estado atual de utilização das imagens já está atualizado em `imagens-portugal/CREDITOS.md`, e as imagens utilizadas estão disponíveis. As verificações de correspondência com os originais que ainda faltam permanecem identificadas como pendentes nesse documento; não presuma licença ou autoria somente porque o arquivo existe.
+
+### Cuidados que continuam válidos
 
 - `Docs`, `Dados`, `Galerias` e `paginas` são arquivos, não diretórios. Não os use como pastas nem os converta sem combinar com a equipe.
-- O README descreve uma pasta `imagens/` e uma paleta diferente; a estrutura real tem `imagens-portugal/`, e Portugal usa os tons listados acima. O README foi preservado.
-- Há links nos cartões de `portugal.html` para `#conteudo-cultura`, `#conteudo-gastronomia`, `#conteudo-pontos-turisticos` e `#conteudo-curiosidades`, mas esses IDs não estão presentes na página examinada. Eles não foram corrigidos nem devem ser copiados sem criar as seções correspondentes na nova página.
-- O cabeçalho de Portugal usa JavaScript inline; não existe um componente ou arquivo JavaScript compartilhado. A galeria de Portugal e as outras páginas ainda têm cabeçalhos e rodapés diferentes.
-- `imagens-portugal/CREDITOS.md` informa downloads pendentes e imagens ausentes, embora os arquivos citados já estejam no diretório. A equipe deve conferir essa documentação em uma etapa própria; ela não foi sobrescrita.
-- Os novos diretórios não tornam os países acessíveis pelo menu atual. A integração dos novos links deve acontecer quando as páginas estiverem prontas.
+- Os diretórios de países não tornam suas páginas acessíveis pelo menu. A integração só deve ocorrer com destinos existentes e após coordenação.
+- Preserve alterações locais, páginas dos colegas e os arquivos protegidos `documentacao/HEADER.md`, `curiosidades-layout.pdf` e `imagens-portugal/lisboa-eletrico.jpg`. Não presuma origem ou licença dessa fotografia e não a inclua automaticamente no trabalho.
 
 ## Como conferir o trabalho da sua página
 
-Abra sua página no navegador e confira o console, carregamento de CSS e imagens, todos os links e os destinos das âncoras. Se usar o cabeçalho de Portugal, teste em tela maior que 980 px e em tela menor, acionando os dois botões por clique e por teclado. Confira o rodapé em 768 px e 480 px e a marca em 400 px.
+Abra sua página no navegador, mantendo a estrutura do projeto. A lista completa está em **Testar sua cópia e conferir regressões**, em [ESTRUTURA.md](ESTRUTURA.md). Use [REGRESSAO.md](REGRESSAO.md) como complemento e registro de testes anteriores; resultados históricos não substituem a conferência da sua cópia.
 
-Antes de compartilhar as alterações, use:
+1. Teste em 390, 768 e 1440 px: sem rolagem horizontal, textos legíveis, imagens carregadas e rodapé equilibrado. Confira também a mudança do menu em torno de 980 px.
+2. Confira o carregamento dos CSS e de `site.js`, o console, os links, as âncoras e os retornos à principal do país e ao início do projeto.
+3. Com JavaScript, teste o menu por clique e teclado: Tab, Shift+Tab, Enter e Escape. Confira foco visível e o estado `aria-expanded` dos controles. Não acrescente abertura por hover apenas com CSS, pois ela pode divergir do estado acessível; preserve o comportamento do modelo escolhido.
+4. Desative o JavaScript e recarregue: o conteúdo e os links básicos do cabeçalho e do rodapé devem continuar utilizáveis. Não espere o menu interativo ou as quatro colunas geradas no HTML mínimo dos modelos.
+5. Confira os botões `tc-botao`, inclusive a variante de contorno: sem sublinhado nos estados normal, hover, focus e visited, mantendo o indicador de foco visível de 3 px. Não remova o foco para ajustar a aparência.
+6. Verifique os textos alternativos, as fontes do conteúdo e os créditos das imagens. Se usar `<details>` e `<summary>`, confira sua abertura pelo teclado também sem JavaScript.
 
-```powershell
-git status --short
-git diff --stat
-git diff -- caminho/do/seu-arquivo.html
-```
+Antes de compartilhar, revise somente os arquivos da sua tarefa, incluindo os arquivos novos, e preserve alterações dos colegas. Combine a revisão com Neusa e siga o fluxo de branches do grupo; não faça integrações em nome de outra pessoa sem combinar.
 
-Arquivos novos não aparecem no `git diff` comum; confira-os diretamente e observe os itens `??` no status. Não inclua alterações de colegas por engano. Combine a revisão com Neusa e siga o fluxo de branches do grupo.
+## Integrações e mudanças futuras
 
-## Recomendações para uma migração futura
-
-Estas ações são propostas para outra etapa; **não foram executadas**:
+As recomendações abaixo dependem de coordenação e autorização; não são uma exigência para criar uma página com os modelos:
 
 1. Combinar uma estrutura final, nomes dos arquivos, URLs e responsabilidade de cada país com Neusa.
-2. Revisar as diferenças entre as páginas e escolher uma referência visual comum para o grupo.
-3. Extrair os estilos comuns de cabeçalho e rodapé para uma folha compartilhada, com escopo apropriado, removendo a dependência do nome de Portugal. Manter os estilos de conteúdo em cada país.
-4. Avaliar a extração do script do menu para um arquivo compartilhado e melhorias de teclado, foco, fechamento e estado acessível.
-5. Decidir como reutilizar o HTML. Copiar blocos manualmente continua sendo possível; uma inclusão automática exigiria um mecanismo escolhido pela equipe. Não há necessidade de adotar React ou outra biblioteca para planejar essa separação.
-6. Migrar um país por vez, incluindo sua página, galeria e imagens, revisando cada `href`, `src`, `url(...)` e âncora. Testar também os links que chegam da página inicial e dos serviços.
-7. Planejar a continuidade dos endereços antigos conforme a hospedagem e conferir a navegação antes de integrar a mudança.
-8. Atualizar README, tarefas, créditos e estes modelos depois de aprovada a nova organização, evitando instruções divergentes.
+2. Integrar novos países em `index.html` e no menu compartilhado somente quando as páginas estiverem prontas, sem alterar as páginas de outros integrantes.
+3. Se houver necessidade aprovada de mudar componentes compartilhados, conferir seus consumidores e testar a mudança antes de integrar. Não usar a personalização de um país como motivo para alterar o componente de todos.
+4. Se uma reorganização de páginas existentes for autorizada, fazê-la em etapas pequenas, revisando cada `href`, `src`, `url(...)` e âncora, além dos links de entrada. Preservar os endereços publicados, incluindo os dois HTML de Portugal na raiz. Não mover páginas apenas para uniformizar pastas.
+5. Atualizar a documentação correspondente e os créditos após mudanças aprovadas, distinguindo orientações atuais de registros históricos.
