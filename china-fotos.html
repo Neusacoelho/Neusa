@@ -3,85 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>China — Pontos Turísticos</title>
-    <link rel="stylesheet" href="estilo.css">
+    <meta name="description" content="Galeria de pontos turísticos da China: Grande Muralha, Cidade Proibida, Guerreiros de Terracota, Zhangjiajie, rio Li e Templo do Céu.">
+    <title>Galeria de fotos da China | TURISMO.COM</title>
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/componentes.css">
+    <link rel="stylesheet" href="assets/css/pais.css">
+    <link rel="stylesheet" href="china-fotos.css">
+    <script src="assets/js/site.js" defer></script>
 </head>
-<body>
+<body class="tc-site pagina-galeria-china" data-raiz="./"
+      data-pais-nome="China" data-pais-url="china.html" data-galeria-url="china-fotos.html">
+    <a class="tc-pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+    <header class="tc-cabecalho" data-tc-cabecalho>
+        <nav class="tc-container tc-navegacao-basica" aria-label="Navegação básica">
+            <a href="index.html">TURISMO.COM — Início</a>
+            <a href="china.html">China</a>
+            <a href="china-fotos.html" aria-current="page">Galeria da China</a>
+        </nav>
+    </header>
 
-<header>
-    <h1>🌍 TURISMO.COM — Descubra o Mundo</h1>
-    <nav>
-        <a href="index.html">🏠 Início</a>
-        <a href="brasil.html">Brasil</a>
-        <a href="brasil-fotos.html">📸 Fotos do Brasil</a>
-        <a href="portugal.html">Portugal</a>
-        <a href="portugal-fotos.html">📸 Fotos de Portugal</a>
-        <a href="franca.html">França</a>
-        <a href="franca-fotos.html">📸 Fotos da França</a>
-        <a href="espanha.html">Espanha</a>
-        <a href="espanha-fotos.html">📸 Fotos da Espanha</a>
-        <a href="italia.html">Itália</a>
-        <a href="italia-fotos.html">📸 Fotos da Itália</a>
-        <a href="japao.html">Japão</a>
-        <a href="japao-fotos.html">📸 Fotos do Japão</a>
-        <a href="china.html">China</a>
-        <a href="china-fotos.html" class="ativo">📸 Fotos da China</a>
-        <a href="hospedagem.html">🏠 Hospedagem</a>
-        <a href="alimentacao.html">🍽️ Alimentação</a>
-        <a href="compras.html">🛒 Compras</a>
-        <a href="contato.html">Contato</a>
-    </nav>
-</header>
+    <main id="conteudo" tabindex="-1">
+        <div class="tc-container">
+            <header class="pg-apresentacao">
+                <nav class="tc-migalhas" aria-label="Caminho de navegação">
+                    <ol><li><a href="index.html">Início</a></li><li><a href="china.html">China</a></li><li><span aria-current="page">Galeria</span></li></ol>
+                </nav>
+                <p class="tc-etiqueta">China — Pontos Turísticos</p>
+                <h1>Galeria de fotos da China</h1>
+                <p class="pg-introducao">Seis lugares para conhecer a história, a arquitetura e as paisagens da China.</p>
+            </header>
 
-<main>
-    <h2>China — Pontos Turísticos</h2>
+            <section class="pg-grade" aria-label="Fotografias de pontos turísticos da China">
+                <figure class="pg-cartao">
+                    <img src="imagens-china/grande-muralha.png" alt="Trecho da Grande Muralha serpenteando pelos montes verdes de Mutianyu, perto de Pequim." width="1280" height="960" fetchpriority="high" decoding="async">
+                    <figcaption><h2><span class="pg-icone" aria-hidden="true">🧱</span> Grande Muralha — Mutianyu</h2><p>Fortificações construídas e ampliadas por diferentes dinastias ao longo de séculos.</p></figcaption>
+                </figure>
+                <figure class="pg-cartao">
+                    <img src="imagens-china/cidade-proibida.jpg" alt="Fachada de um edifício palaciano de telhado dourado no complexo da Cidade Proibida, em Pequim." width="2848" height="2134" loading="lazy" decoding="async">
+                    <figcaption><h2><span class="pg-icone" aria-hidden="true">🏯</span> Cidade Proibida — Pequim</h2><p>Antigo conjunto de palácios imperiais no coração da capital chinesa.</p></figcaption>
+                </figure>
+                <figure class="pg-cartao">
+                    <img src="imagens-china/guerreiros-terracota.jpg" alt="Fileiras de figuras de terracota em tamanho natural no sítio arqueológico de Xi’an." width="2592" height="1728" loading="lazy" decoding="async">
+                    <figcaption><h2><span class="pg-icone" aria-hidden="true">🗿</span> Guerreiros de Terracota — Xi’an</h2><p>Um exército de esculturas guarda o mausoléu do primeiro imperador Qin.</p></figcaption>
+                </figure>
+                <figure class="pg-cartao">
+                    <img src="imagens-china/zhangjiajie.jpg" alt="Altos pilares rochosos cobertos de vegetação no Parque Florestal Nacional de Zhangjiajie." width="3648" height="2736" loading="lazy" decoding="async">
+                    <figcaption><h2><span class="pg-icone" aria-hidden="true">⛰️</span> Parque Nacional de Zhangjiajie</h2><p>Picos de arenito e florestas na província de Hunan, em uma paisagem singular.</p></figcaption>
+                </figure>
+                <figure class="pg-cartao">
+                    <img src="imagens-china/rio-li.jpg" alt="Montanhas cársticas ao redor do rio Li, próximo a Guilin." width="1536" height="1024" loading="lazy" decoding="async">
+                    <figcaption><h2><span class="pg-icone" aria-hidden="true">🚤</span> Rio Li — Guilin</h2><p>O rio atravessa formações cársticas que marcam a paisagem da região de Guangxi.</p></figcaption>
+                </figure>
+                <figure class="pg-cartao">
+                    <img src="imagens-china/templo-do-ceu.jpg" alt="Salão circular de telhado azul no complexo do Templo do Céu, em Pequim." width="1024" height="683" loading="lazy" decoding="async">
+                    <figcaption><h2><span class="pg-icone" aria-hidden="true">⛩️</span> Templo do Céu — Pequim</h2><p>Complexo cerimonial imperial conhecido pela arquitetura e pelo projeto paisagístico.</p></figcaption>
+                </figure>
+            </section>
 
-    <div class="galeria">
-        <div class="foto-card">
-            <img src="https://picsum.photos/seed/muralha/400/300" alt="Grande Muralha da China">
-            <h3>🧱 Grande Muralha</h3>
-            <p>Milhares de quilômetros de história! Construída para proteger o império.</p>
+            <div class="tc-acoes pg-retorno"><a class="tc-botao" href="china.html">← Voltar para a China</a></div>
+
+            <aside class="pg-creditos" aria-label="Autoria e licenças das fotografias">
+                <details class="creditos-fotos" id="creditos-fotografias">
+                    <summary>Créditos das fotografias</summary>
+                    <p class="pg-nota-creditos">Arquivos locais preservados sem edição. As imagens são redimensionadas e recortadas somente na exibição; cada licença continua indicada abaixo.</p>
+                    <ul>
+                        <li><strong>Grande Muralha — Mutianyu</strong> — “Mutianyu Great Wall.png”, de David290. <a href="https://commons.wikimedia.org/wiki/File:Mutianyu_Great_Wall.png">Original no Wikimedia Commons</a>. Licença: <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</li>
+                        <li><strong>Cidade Proibida — Pequim</strong> — “Forbidden City Beijing China.jpg”, de Philip Nalangan. <a href="https://commons.wikimedia.org/wiki/File:Forbidden_City_Beijing_China.jpg">Original no Wikimedia Commons</a>. Licença: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</li>
+                        <li><strong>Guerreiros de Terracota — Xi’an</strong> — “Terracotta Army.jpg”, de Ondřej Žváček. <a href="https://commons.wikimedia.org/wiki/File:Terracotta_Army.jpg">Original no Wikimedia Commons</a>. Licença: <a href="https://creativecommons.org/licenses/by/2.5/">CC BY 2.5</a>.</li>
+                        <li><strong>Parque Nacional de Zhangjiajie</strong> — “Zhangjiajie National Forest Park.jpg”, de Kuruman. <a href="https://commons.wikimedia.org/wiki/File:Zhangjiajie_National_Forest_Park.jpg">Original no Wikimedia Commons</a>. Licença: <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>.</li>
+                        <li><strong>Rio Li — Guilin</strong> — “Rio li Guilin02.jpg”, de Airunp. <a href="https://commons.wikimedia.org/wiki/File:Rio_li_Guilin02.jpg">Original no Wikimedia Commons</a>. Licença: <a href="https://creativecommons.org/licenses/by-sa/2.1/es/">CC BY-SA 2.1 Espanha</a>.</li>
+                        <li><strong>Templo do Céu — Pequim</strong> — “Temple of Heaven, Beijing, China (37500120664).jpg”, de Andrey Filippov 安德烈. <a href="https://commons.wikimedia.org/wiki/File:Temple_of_Heaven,_Beijing,_China_(37500120664).jpg">Original no Wikimedia Commons</a>. Licença: <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>.</li>
+                    </ul>
+                </details>
+            </aside>
         </div>
+    </main>
 
-        <div class="foto-card">
-            <img src="https://picsum.photos/seed/forbida/400/300" alt="Cidade Proibida">
-            <h3>🏯 Cidade Proibida — Pequim</h3>
-            <p>Palácio imperial durante séculos! Arquitetura tradicional chinesa.</p>
+    <footer class="tc-rodape" data-tc-rodape>
+        <div class="tc-container">
+            <div class="tc-rodape-grade">
+                <div class="tc-fluxo"><h2>✈ TURISMO<span>.COM</span></h2><p>Descubra destinos, culturas e experiências ao redor do mundo.</p></div>
+                <nav class="tc-rodape-coluna" aria-label="Explorar no rodapé"><h3>Explorar</h3><a href="index.html">Início</a><a href="china.html">China</a><a href="china-fotos.html">Galeria do país</a></nav>
+                <nav class="tc-rodape-coluna" aria-label="Serviços no rodapé"><h3>Serviços</h3><a href="hospedagem.html">Hospedagem</a><a href="alimentacao.html">Alimentação</a><a href="compras.html">Compras</a></nav>
+                <nav class="tc-rodape-coluna" aria-label="Informações no rodapé"><h3>Informações</h3><a href="contato.html">Contato</a></nav>
+            </div>
+            <div class="tc-rodape-inferior"><p>© 2026 Turismo.com</p><p>Projeto acadêmico desenvolvido em equipe.</p></div>
         </div>
-
-        <div class="foto-card">
-            <img src="https://picsum.photos/seed/guerreiros/400/300" alt="Guerreiros de Terracota">
-            <h3>🗿 Guerreiros de Terracota — Xi'an</h3>
-            <p>Exército de barro com milhares de figuras! Cada rosto é único.</p>
-        </div>
-
-        <div class="foto-card">
-            <img src="https://picsum.photos/seed/zhang/400/300" alt="Montanhas de Zhangjiajie">
-            <h3>⛰️ Montanhas de Zhangjiajie</h3>
-            <p>Picos de pedra que parecem flutuar! Inspiraram o filme Avatar.</p>
-        </div>
-
-        <div class="foto-card">
-            <img src="https://picsum.photos/seed/rio/400/300" alt="Rio Li">
-            <h3>🚤 Rio Li — Guilin</h3>
-            <p>Passeio de barco entre montanhas e águas calmas! Cenário de pintura.</p>
-        </div>
-
-        <div class="foto-card">
-            <img src="https://picsum.photos/seed/templo/400/300" alt="Templo do Céu">
-            <h3>⛩️ Templo do Céu — Pequim</h3>
-            <p>Forma circular única! Símbolo de harmonia entre céu e terra.</p>
-        </div>
-    </div>
-
-    <p style="text-align: center; margin-top: 30px;">
-        ← Voltar para a <a href="china.html">página da China</a>
-    </p>
-</main>
-
-<footer>
-    <p>&copy; 2026 Turismo.com — Fotos e Pontos Turísticos da China</p>
-</footer>
-
+    </footer>
 </body>
 </html>
