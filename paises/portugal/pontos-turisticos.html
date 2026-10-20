@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore os pontos turísticos de Portugal: Lisboa, Porto, Sintra e Algarve, patrimônio histórico, paisagens naturais e sugestões de roteiros.">
+    <title>Pontos Turísticos de Portugal | TURISMO.COM</title>
+    <link rel="stylesheet" href="../../assets/css/base.css">
+    <link rel="stylesheet" href="../../assets/css/componentes.css">
+    <link rel="stylesheet" href="../../assets/css/pais.css">
+    <link rel="stylesheet" href="pontos-turisticos.css">
+    <script src="../../assets/js/site.js" defer></script>
+</head>
+<body class="tc-site pais-portugal pagina-pontos-turisticos" data-raiz="../../"
+      data-pais-nome="Portugal" data-pais-url="portugal.html">
+    <a class="tc-pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="tc-cabecalho" data-tc-cabecalho>
+        <!-- Navegação básica disponível também sem JavaScript. -->
+        <nav class="tc-container tc-navegacao-basica" aria-label="Navegação básica">
+            <a href="../../index.html">TURISMO.COM — Início</a>
+            <a href="../../portugal.html">Portugal</a>
+            <a href="pontos-turisticos.html" aria-current="page">Pontos turísticos</a>
+        </nav>
+    </header>
+
+    <main id="conteudo" tabindex="-1">
+        <section class="tc-banner pt-banner" aria-labelledby="titulo-pagina">
+            <img class="tc-banner-imagem" src="../../imagens-portugal/palacio-pena.jpg"
+                 alt="Palácio da Pena, com torres amarelas e vermelhas sobre a serra de Sintra."
+                 width="1920" height="1285" fetchpriority="high">
+            <div class="tc-container pt-banner-conteudo">
+                <nav class="tc-migalhas" aria-label="Caminho de navegação">
+                    <ol>
+                        <li><a href="../../index.html">Início</a></li>
+                        <li><a href="../../portugal.html">Portugal</a></li>
+                        <li><span aria-current="page">Pontos Turísticos</span></li>
+                    </ol>
+                </nav>
+                <div class="pt-banner-texto">
+                    <p class="tc-etiqueta">Lugares inesquecíveis</p>
+                    <h1 id="titulo-pagina">Pontos Turísticos de Portugal</h1>
+                    <p>Descubra castelos, cidades históricas e paisagens inesquecíveis.</p>
+                </div>
+                <p class="pt-banner-credito">Palácio da Pena · © Sergey Pesterev / Wikimedia Commons ·
+                    <a href="#creditos-fotografias">Créditos e licença</a></p>
+            </div>
+        </section>
+
+        <section class="tc-container pt-apresentacao" aria-labelledby="titulo-apresentacao">
+            <div>
+                <p class="tc-etiqueta">Muitos destinos em um só país</p>
+                <h2 id="titulo-apresentacao">Lugares que<br class="pt-quebra"> contam histórias.</h2>
+            </div>
+            <div class="tc-fluxo">
+                <p>Portugal reúne cidades antigas, palácios coloridos, vilas medievais, ilhas vulcânicas e uma costa recortada por praias e falésias.</p>
+                <p>As distâncias convidam a combinar diferentes paisagens em uma mesma viagem, sempre com tempo para observar a arquitetura, a natureza e o cotidiano local.</p>
+            </div>
+            <aside class="pt-numero" aria-label="Patrimônio Mundial em Portugal">
+                <strong>17</strong>
+                <p>bens portugueses inscritos na Lista do Patrimônio Mundial da
+                    <a href="https://whc.unesco.org/en/statesparties/PT/">UNESCO</a>.</p>
+            </aside>
+        </section>
+
+        <section class="tc-container pt-secao pt-destinos" aria-labelledby="titulo-destinos">
+            <div class="pt-titulo">
+                <p class="tc-etiqueta">Primeiras paradas</p>
+                <h2 id="titulo-destinos">Destinos imperdíveis</h2>
+                <p>Quatro destinos que apresentam diferentes paisagens, ritmos e capítulos da história portuguesa.</p>
+            </div>
+            <div class="pt-grade-quatro">
+                <article class="pt-cartao" aria-labelledby="titulo-lisboa">
+                    <img src="../../imagens-portugal/lisboa-panorama-alfama.jpg"
+                         alt="Telhados de Alfama e o rio Tejo vistos de um miradouro de Lisboa."
+                         width="1280" height="461" loading="lazy" decoding="async">
+                    <div class="pt-cartao-conteudo">
+                        <p class="pt-regiao">Lisboa e Vale do Tejo</p>
+                        <h3 id="titulo-lisboa">Lisboa</h3>
+                        <p>A capital luminosa é marcada por colinas, miradouros, bondes e bairros históricos.</p>
+                        <p class="pt-cartao-nota">Alfama e seus miradouros</p>
+                    </div>
+                </article>
+                <article class="pt-cartao" aria-labelledby="titulo-porto">
+                    <img src="../../imagens-portugal/ribeira-porto.jpg"
+                         alt="Casas coloridas da Ribeira do Porto junto à margem do rio Douro."
+                         width="1920" height="1440" loading="lazy" decoding="async">
+                    <div class="pt-cartao-conteudo">
+                        <p class="pt-regiao">Norte</p>
+                        <h3 id="titulo-porto">Porto</h3>
+                        <p>Fachadas coloridas e ruas que acompanham o encontro entre o Douro e o Atlântico.</p>
+                        <p class="pt-cartao-nota">Ribeira e Ponte D. Luís I</p>
+                    </div>
+                </article>
+                <article class="pt-cartao" aria-labelledby="titulo-sintra">
+                    <img src="../../imagens-portugal/palacio-pena.jpg"
+                         alt="Fachadas amarelas e vermelhas do Palácio da Pena entre as árvores de Sintra."
+                         width="1920" height="1285" loading="lazy" decoding="async">
+                    <div class="pt-cartao-conteudo">
+                        <p class="pt-regiao">Lisboa e Vale do Tejo</p>
+                        <h3 id="titulo-sintra">Sintra</h3>
+                        <p>Palácios, jardins e bosques criam uma paisagem cultural cercada de romantismo.</p>
+                        <p class="pt-cartao-nota">Palácio Nacional da Pena</p>
+                    </div>
+                </article>
+                <article class="pt-cartao" aria-labelledby="titulo-algarve">
+                    <img src="../../imagens-portugal/algarve-praia-marinha.jpg"
+                         alt="Praia da Marinha, no Algarve, com falésias douradas e águas azuladas."
+                         width="1280" height="960" loading="lazy" decoding="async">
+                    <div class="pt-cartao-conteudo">
+                        <p class="pt-regiao">Sul</p>
+                        <h3 id="titulo-algarve">Algarve</h3>
+                        <p>Falésias douradas, praias de águas claras e pequenas cidades voltadas para o oceano.</p>
+                        <p class="pt-cartao-nota">Praia da Marinha e a costa</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="pt-secao pt-patrimonio" aria-labelledby="titulo-patrimonio">
+            <div class="tc-container">
+                <div class="pt-titulo">
+                    <p class="tc-etiqueta">Arquitetura e memória</p>
+                    <h2 id="titulo-patrimonio">Patrimônio histórico</h2>
+                    <p>Monumentos que ajudam a compreender a formação do país, suas viagens e sua vida cultural.</p>
+                </div>
+                <div class="pt-grade-quatro">
+                    <article class="pt-cartao" aria-labelledby="titulo-belem">
+                        <img src="../../imagens-portugal/torre-belem.jpg"
+                             alt="Torre de Belém, com sua torre de pedra e bastião às margens do Tejo."
+                             width="1920" height="1440" loading="lazy" decoding="async">
+                        <div class="pt-cartao-conteudo">
+                            <p class="pt-regiao">Lisboa</p>
+                            <h3 id="titulo-belem">Torre de Belém</h3>
+                            <p>Um dos símbolos das navegações portuguesas às margens do rio Tejo.</p>
+                        </div>
+                    </article>
+                    <article class="pt-cartao" aria-labelledby="titulo-jeronimos">
+                        <img src="../../imagens-portugal/mosteiro-jeronimos-claustro.jpg"
+                             alt="Arcadas de pedra esculpida nos dois andares do claustro do Mosteiro dos Jerónimos."
+                             width="1280" height="849" loading="lazy" decoding="async">
+                        <div class="pt-cartao-conteudo">
+                            <p class="pt-regiao">Lisboa</p>
+                            <h3 id="titulo-jeronimos">Mosteiro dos Jerónimos</h3>
+                            <p>Arquitetura manuelina, claustros detalhados e séculos de história.</p>
+                        </div>
+                    </article>
+                    <article class="pt-cartao" aria-labelledby="titulo-castelo">
+                        <img class="pt-foto-castelo" src="../../imagens-portugal/castelo-sao-jorge-muralhas.jpg"
+                             alt="Torre e muralhas de pedra do Castelo de São Jorge, em Lisboa."
+                             width="1280" height="1920" loading="lazy" decoding="async">
+                        <div class="pt-cartao-conteudo">
+                            <p class="pt-regiao">Lisboa</p>
+                            <h3 id="titulo-castelo">Castelo de São Jorge</h3>
+                            <p>Muralhas antigas e uma vista privilegiada sobre a capital portuguesa.</p>
+                        </div>
+                    </article>
+                    <article class="pt-cartao" aria-labelledby="titulo-coimbra">
+                        <img src="../../imagens-portugal/coimbra-paco-escolas.jpg"
+                             alt="Edifícios históricos do Paço das Escolas, na Universidade de Coimbra."
+                             width="1280" height="853" loading="lazy" decoding="async">
+                        <div class="pt-cartao-conteudo">
+                            <p class="pt-regiao">Centro · Coimbra</p>
+                            <h3 id="titulo-coimbra">Universidade de Coimbra</h3>
+                            <p>Uma das universidades mais antigas da Europa e referência da vida acadêmica.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="pt-secao pt-natureza" aria-labelledby="titulo-natureza">
+            <div class="tc-container">
+                <div class="pt-titulo">
+                    <p class="tc-etiqueta">Além das cidades</p>
+                    <h2 id="titulo-natureza">Natureza e paisagens</h2>
+                    <p>Vales, ilhas e praias revelam um lado de Portugal moldado pelo oceano e por formações naturais singulares.</p>
+                </div>
+                <div class="pt-paisagens">
+                    <figure class="pt-paisagem pt-paisagem-douro">
+                        <img src="../../imagens-portugal/douro-vinhas-socalcos.jpg"
+                             alt="Vinhas em socalcos nas encostas junto ao rio Douro, perto da Régua."
+                             width="1280" height="720" loading="lazy" decoding="async">
+                        <figcaption>
+                            <p class="pt-regiao">Norte</p>
+                            <h3>Vale do Douro</h3>
+                            <p>Encostas cultivadas acompanham o rio em uma das paisagens mais características do país.</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="pt-paisagem pt-paisagem-madeira">
+                        <img src="../../imagens-portugal/madeira-ponta-sao-lourenco.jpg"
+                             alt="Falésias vulcânicas da Ponta de São Lourenço recortadas pelo Atlântico, na Madeira."
+                             width="1280" height="850" loading="lazy" decoding="async">
+                        <figcaption><p class="pt-regiao">Atlântico</p><h3>Ilha da Madeira</h3></figcaption>
+                    </figure>
+                    <figure class="pt-paisagem pt-paisagem-acores">
+                        <img src="../../imagens-portugal/sete-cidades.jpg"
+                             alt="Lagoa das Sete Cidades cercada por encostas verdes na ilha de São Miguel, Açores."
+                             width="1920" height="1440" loading="lazy" decoding="async">
+                        <figcaption><p class="pt-regiao">Atlântico</p><h3>Açores</h3></figcaption>
+                    </figure>
+                    <figure class="pt-paisagem pt-paisagem-praias">
+                        <img src="../../imagens-portugal/algarve-praia-marinha.jpg"
+                             alt="Areia, rochedos e mar na Praia da Marinha, na costa do Algarve."
+                             width="1280" height="960" loading="lazy" decoding="async">
+                        <figcaption><p class="pt-regiao">Sul</p><h3>Praias do Algarve</h3></figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <div class="tc-container">
+            <section class="pt-secao pt-roteiros" aria-labelledby="titulo-roteiros">
+                <div class="pt-titulo">
+                    <p class="tc-etiqueta">Ideias para começar</p>
+                    <h2 id="titulo-roteiros">Roteiros sugeridos</h2>
+                    <p>Sugestões ilustrativas para organizar destinos de acordo com o tempo disponível.</p>
+                </div>
+                <div class="pt-grade-tres">
+                    <article class="pt-roteiro" aria-labelledby="titulo-roteiro-3">
+                        <p class="pt-dias"><strong>03</strong> dias</p>
+                        <div>
+                            <p class="pt-regiao">Lisboa, Belém e Sintra</p>
+                            <h3 id="titulo-roteiro-3">Portugal em 3 dias</h3>
+                            <p>Um dia pelos bairros e miradouros de Lisboa, outro em Belém e o terceiro entre os palácios de Sintra.</p>
+                        </div>
+                    </article>
+                    <article class="pt-roteiro" aria-labelledby="titulo-roteiro-7">
+                        <p class="pt-dias"><strong>07</strong> dias</p>
+                        <div>
+                            <p class="pt-regiao">Lisboa, Sintra, Coimbra e Porto</p>
+                            <h3 id="titulo-roteiro-7">Portugal em 7 dias</h3>
+                            <p>Combine a capital e Sintra com uma parada em Coimbra e alguns dias para descobrir o Porto.</p>
+                        </div>
+                    </article>
+                    <article class="pt-roteiro" aria-labelledby="titulo-roteiro-10">
+                        <p class="pt-dias"><strong>10</strong> dias</p>
+                        <div>
+                            <p class="pt-regiao">Portugal de norte a sul</p>
+                            <h3 id="titulo-roteiro-10">Portugal em 10 dias</h3>
+                            <p>Comece no Porto e no Douro, siga por Coimbra, Lisboa e Sintra e termine junto ao mar no Algarve.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="pt-dicas" aria-labelledby="titulo-dicas">
+                <div class="pt-titulo">
+                    <p class="tc-etiqueta">Antes de viajar</p>
+                    <h2 id="titulo-dicas">Dicas para visitantes</h2>
+                    <p>Pequenas escolhas podem tornar o roteiro mais tranquilo e responsável.</p>
+                </div>
+                <ol class="pt-dicas-faixa">
+                    <li><span aria-hidden="true">01</span><div><h3>Transporte</h3><p>Use trens entre as principais cidades e transporte público nos centros urbanos. Confira as conexões antes de sair.</p></div></li>
+                    <li><span aria-hidden="true">02</span><div><h3>Melhor época</h3><p>Primavera e início do outono costumam ser boas opções. Considere o clima de cada região e o movimento nas férias.</p></div></li>
+                    <li><span aria-hidden="true">03</span><div><h3>Reservas antecipadas</h3><p>Confira nos sites oficiais os horários e as condições de visita. Reserve atrações concorridas com antecedência.</p></div></li>
+                    <li><span aria-hidden="true">04</span><div><h3>Planejamento</h3><p>Agrupe atrações próximas, respeite áreas protegidas e reserve tempo para os deslocamentos e as pausas.</p></div></li>
+                </ol>
+            </section>
+
+            <section class="pt-continuar" aria-labelledby="titulo-continuar">
+                <div>
+                    <p class="tc-etiqueta">Continue explorando</p>
+                    <h2 id="titulo-continuar">Portugal tem sempre um novo lugar para descobrir.</h2>
+                </div>
+                <nav class="tc-acoes" aria-label="Continuar explorando Portugal">
+                    <a class="tc-botao tc-botao-contorno" href="../../portugal.html">← Voltar para Portugal</a>
+                    <a class="tc-botao" href="cultura.html">Conhecer a cultura →</a>
+                    <a class="tc-botao tc-botao-contorno" href="gastronomia.html">Explorar a gastronomia</a>
+                </nav>
+            </section>
+
+            <details class="pt-creditos" id="creditos-fotografias">
+                <summary>Créditos das fotografias</summary>
+                <p>Fotografias reais, obtidas no Wikimedia Commons. Os sete arquivos novos são versões de 1280 pixels fornecidas pelo Commons, sem edição adicional. As quatro fotografias já existentes no projeto foram preservadas. As imagens são redimensionadas e recortadas apenas na exibição; as adaptações de fotografias CC BY-SA mantêm a respectiva licença.</p>
+                <ul>
+                    <li><strong>Palácio da Pena (banner e Sintra)</strong> — <a href="https://commons.wikimedia.org/wiki/File:Pena_Palace_Sintra.jpg">Pena Palace Sintra.jpg</a>, © Sergey Pesterev / Wikimedia Commons.
+                        <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Versão local em menor resolução, preservada nesta implementação.</li>
+                    <li><strong>Lisboa</strong> — <a href="https://commons.wikimedia.org/wiki/File:Lisbon_panorama_from_Alfama_-_panoramio.jpg">Lisbon panorama from Alfama - panoramio.jpg</a>, milos milosevic, via Wikimedia Commons / Panoramio.
+                        <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</li>
+                    <li><strong>Porto</strong> — <a href="https://commons.wikimedia.org/wiki/File:Ribeira_do_porto.jpg">Ribeira do porto.jpg</a>, Gustavo Motta, via Wikimedia Commons.
+                        <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>. Versão local em menor resolução, preservada nesta implementação.</li>
+                    <li><strong>Algarve (destino e galeria)</strong> — <a href="https://commons.wikimedia.org/wiki/File:Praia_da_Marinha.jpg">Praia da Marinha.jpg</a>, Had01, via Wikimedia Commons.
+                        <a href="https://commons.wikimedia.org/wiki/File:Praia_da_Marinha.jpg#Licensing">Domínio público por declaração do autor</a>. Atribuição voluntária.</li>
+                    <li><strong>Torre de Belém</strong> — <a href="https://commons.wikimedia.org/wiki/File:Torre_de_Bel%C3%A9m,_Lisbon_01.jpg">Torre de Belém, Lisbon 01.jpg</a>, Simon Burchell, via Wikimedia Commons.
+                        <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Versão local em menor resolução, preservada nesta implementação.</li>
+                    <li><strong>Mosteiro dos Jerónimos</strong> — <a href="https://commons.wikimedia.org/wiki/File:Cloister_of_the_Jer%C3%B3nimos_Monastery_in_Bel%C3%A9m,_Lisbon,_20250604_1308_9180.jpg">Cloister of the Jerónimos Monastery in Belém, Lisbon, 20250604 1308 9180.jpg</a>, Jakub Hałun, via Wikimedia Commons.
+                        <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</li>
+                    <li><strong>Castelo de São Jorge</strong> — <a href="https://commons.wikimedia.org/wiki/File:Castelo_de_Sao_Jorge_-_Lisbon_-_01.jpg">Castelo de Sao Jorge - Lisbon - 01.jpg</a>, NorbertNagel, via Wikimedia Commons.
+                        <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</li>
+                    <li><strong>Universidade de Coimbra</strong> — <a href="https://commons.wikimedia.org/wiki/File:Coimbra-Pa%C3%A7o_das_Escolas-P%C3%A1tio-20140914.jpg">Coimbra-Paço das Escolas-Pátio-20140914.jpg</a>, Daniel VILLAFRUELA, via Wikimedia Commons.
+                        <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</li>
+                    <li><strong>Vale do Douro</strong> — <a href="https://commons.wikimedia.org/wiki/File:Terraced_vineyards_along_the_Douro_river.jpg">Terraced vineyards along the Douro river.jpg</a>, Yiwenli0203, via Wikimedia Commons.
+                        <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a>. Atribuição voluntária.</li>
+                    <li><strong>Ilha da Madeira</strong> — <a href="https://commons.wikimedia.org/wiki/File:PSL_-_Cliffs_and_sea_stacks_at_Ponta_de_S%C3%A3o_Louren%C3%A7o,_Madeira,_2012.jpg">PSL - Cliffs and sea stacks at Ponta de São Lourenço, Madeira, 2012.jpg</a>, Josep M. Gracia, via Wikimedia Commons.
+                        <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</li>
+                    <li><strong>Açores</strong> — <a href="https://commons.wikimedia.org/wiki/File:Lagoa_das_Sete_Cidades_-_panoramio.jpg">Lagoa das Sete Cidades - panoramio.jpg</a>, Luís Rochinha, via Wikimedia Commons / Panoramio.
+                        <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>. Versão local em menor resolução, preservada nesta implementação.</li>
+                </ul>
+            </details>
+        </div>
+    </main>
+
+    <!-- Mesmo rodapé local de Cultura e Gastronomia; o script gera apenas o cabeçalho. -->
+    <footer class="tc-rodape">
+        <div class="tc-container">
+            <div class="tc-rodape-grade">
+                <div class="tc-fluxo">
+                    <h2>✈ TURISMO<span>.COM</span></h2>
+                    <p>Descubra destinos, culturas e experiências incríveis ao redor do mundo.</p>
+                </div>
+                <nav class="tc-rodape-coluna" aria-label="Navegação do rodapé">
+                    <h3>Explorar</h3>
+                    <a href="../../index.html">Início</a>
+                    <a href="../../portugal.html">Portugal</a>
+                    <a href="../../portugal-fotos.html">Galeria de Portugal</a>
+                </nav>
+                <nav class="tc-rodape-coluna" aria-label="Serviços">
+                    <h3>Serviços</h3>
+                    <a href="../../hospedagem.html">Hospedagem</a>
+                    <a href="../../alimentacao.html">Alimentação</a>
+                    <a href="../../compras.html">Compras</a>
+                </nav>
+                <nav class="tc-rodape-coluna" aria-label="Informações">
+                    <h3>Informações</h3>
+                    <a href="../../contato.html">Contato</a>
+                </nav>
+            </div>
+            <div class="tc-rodape-inferior">
+                <p>© 2026 Turismo.com — Todos os direitos reservados.</p>
+                <p>Projeto acadêmico desenvolvido em equipe.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
