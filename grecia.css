@@ -1666,3 +1666,543 @@ html {
 .pagina-grecia .voltar-topo:hover {
     background: #008b98;
 }
+
+/* =====================================================
+   GRÉCIA — PÁGINAS INTERNAS (cultura, gastronomia,
+   pontos turísticos e curiosidades)
+   Usa junto com estilo.css e grecia.css.
+   Cores: azul-petróleo #163b50 | turquesa #00a7b5
+===================================================== */
+
+
+/* ===== ESPAÇOS PARA FOTOS =====
+   Se a imagem existir, ela aparece normalmente.
+   Se ainda não existir, o espaço mostra o nome do arquivo
+   que você precisa colocar na pasta. */
+
+.pagina-grecia .foto-slot {
+    position: relative;
+    margin: 0;
+    overflow: hidden;
+    border-radius: 14px;
+    background: #e0f4f5;
+    aspect-ratio: 4 / 3;
+}
+
+.pagina-grecia .foto-slot.larga {
+    aspect-ratio: 16 / 9;
+}
+
+.pagina-grecia .foto-slot img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border-radius: 0;
+    object-fit: cover;
+}
+
+/* Foto ainda não encontrada: mostra o nome do arquivo */
+.pagina-grecia .foto-slot.sem-foto img {
+    display: none;
+}
+
+.pagina-grecia .foto-slot.sem-foto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    border: 2px dashed #00a7b5;
+    color: #008b98;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.7;
+    text-align: center;
+    white-space: pre-line;
+    overflow-wrap: anywhere;
+}
+
+.pagina-grecia .foto-slot.sem-foto::before {
+    content: "📷 Coloque aqui a foto:\A " attr(data-arquivo);
+}
+
+
+/* ===== BANNER DAS PÁGINAS INTERNAS ===== */
+
+.pagina-grecia .sub-banner {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    min-height: 420px;
+    overflow: hidden;
+    background: #163b50;
+    color: #ffffff;
+}
+
+.pagina-grecia .sub-banner .foto-slot {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    height: 100%;
+    border-radius: 0;
+    aspect-ratio: auto;
+}
+
+/* Degradê para melhorar a leitura do texto */
+.pagina-grecia .sub-banner::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(
+        90deg,
+        rgba(10, 34, 48, 0.88) 0%,
+        rgba(10, 34, 48, 0.55) 55%,
+        rgba(10, 34, 48, 0.12) 100%
+    );
+    pointer-events: none;
+}
+
+/* Quando a foto do banner ainda não existe */
+.pagina-grecia .sub-banner .foto-slot.sem-foto {
+    inset: 16px;
+    height: auto;
+    align-items: flex-start;
+    justify-content: flex-end;
+    border-color: #67e8f0;
+    border-radius: 12px;
+    background: #1f5470;
+    color: #67e8f0;
+}
+
+.pagina-grecia .sub-banner-conteudo {
+    position: relative;
+    z-index: 2;
+    width: calc(100% - 48px);
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 56px 0;
+}
+
+.pagina-grecia .sub-banner-texto {
+    max-width: 650px;
+}
+
+.pagina-grecia .sub-banner-texto h1 {
+    margin: 0 0 18px;
+    color: #ffffff;
+    font-size: clamp(30px, 4vw, 50px);
+    line-height: 1.15;
+}
+
+.pagina-grecia .sub-banner-texto p {
+    margin: 0;
+    color: #f0f7f9;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+    .pagina-grecia .sub-banner {
+        min-height: 380px;
+    }
+
+    .pagina-grecia .sub-banner-conteudo {
+        width: calc(100% - 32px);
+        padding: 40px 0;
+    }
+
+    .pagina-grecia .sub-banner-texto p {
+        font-size: 15px;
+    }
+}
+
+
+/* ===== MIGALHAS DE PÃO ===== */
+
+.pagina-grecia .migalhas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0 0 20px;
+    color: #67e8f0;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.pagina-grecia .migalhas a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.pagina-grecia .migalhas a:hover {
+    text-decoration: underline;
+}
+
+
+/* ===== CONTEÚDO ===== */
+
+.pagina-grecia.pagina-grecia-sub main {
+    max-width: none;
+    width: 100%;
+    margin: 0;
+}
+
+.pagina-grecia .sub-conteudo {
+    width: calc(100% - 48px);
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 72px 0 24px;
+}
+
+@media (max-width: 600px) {
+    .pagina-grecia .sub-conteudo {
+        width: calc(100% - 32px);
+        padding-top: 48px;
+    }
+}
+
+.pagina-grecia .sub-introducao {
+    max-width: 760px;
+    margin: 0 0 64px;
+}
+
+.pagina-grecia .sub-introducao p {
+    margin: 0 0 18px;
+    color: #465d69;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+
+/* ===== BLOCOS: FOTO + TEXTO ===== */
+
+.pagina-grecia .bloco {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 48px;
+    margin: 0 0 72px;
+}
+
+.pagina-grecia .bloco.inverso .foto-slot {
+    order: 2;
+}
+
+.pagina-grecia .bloco-texto {
+    min-width: 0;
+}
+
+.pagina-grecia .bloco-texto h2 {
+    margin: 0 0 16px;
+    color: #163b50;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(26px, 3vw, 36px);
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.pagina-grecia .bloco-texto p {
+    margin: 0 0 16px;
+    color: #465d69;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.pagina-grecia .bloco-texto p:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 800px) {
+    .pagina-grecia .bloco {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        margin-bottom: 52px;
+    }
+
+    .pagina-grecia .bloco.inverso .foto-slot {
+        order: 0;
+    }
+}
+
+
+/* ===== FICHA DE INFORMAÇÕES (pontos turísticos) ===== */
+
+.pagina-grecia .ficha {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin: 20px 0 0;
+}
+
+.pagina-grecia .ficha div {
+    min-width: 0;
+    padding: 12px 14px;
+    border-radius: 10px;
+    background: #f4fafb;
+}
+
+.pagina-grecia .ficha dt {
+    margin: 0 0 4px;
+    color: #008b98;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.pagina-grecia .ficha dd {
+    margin: 0;
+    color: #163b50;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.pagina-grecia .ficha .ficha-larga {
+    grid-column: 1 / -1;
+}
+
+@media (max-width: 480px) {
+    .pagina-grecia .ficha {
+        grid-template-columns: 1fr;
+    }
+}
+
+.pagina-grecia .bloco-etiqueta {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: #00a7b5;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+
+/* ===== CARTÕES COM FOTO ===== */
+
+.pagina-grecia .cartoes-foto {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    margin: 0 0 72px;
+}
+
+.pagina-grecia .cartoes-foto.dois {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.pagina-grecia .cartao-foto {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid #e6edef;
+    border-radius: 14px;
+    background: #ffffff;
+    box-shadow: 0 4px 18px rgba(22, 59, 80, 0.05);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.pagina-grecia .cartao-foto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 32px rgba(22, 59, 80, 0.12);
+}
+
+.pagina-grecia .cartao-foto .foto-slot {
+    border-radius: 0;
+}
+
+.pagina-grecia .cartao-foto .foto-slot.sem-foto {
+    border-width: 0 0 2px;
+}
+
+.pagina-grecia .cartao-foto-corpo {
+    padding: 22px 24px 26px;
+}
+
+.pagina-grecia .cartao-foto-tag {
+    display: block;
+    margin-bottom: 8px;
+    color: #008b98;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.pagina-grecia .cartao-foto h3 {
+    margin: 0 0 10px;
+    color: #163b50;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 23px;
+    font-weight: 500;
+    line-height: 1.25;
+}
+
+.pagina-grecia .cartao-foto p {
+    margin: 0;
+    color: #465d69;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+@media (max-width: 1000px) {
+    .pagina-grecia .cartoes-foto {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .pagina-grecia .cartoes-foto,
+    .pagina-grecia .cartoes-foto.dois {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        margin-bottom: 52px;
+    }
+}
+
+
+/* ===== CHIPS DE PALAVRAS / LUGARES ===== */
+
+.pagina-grecia .chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 24px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.pagina-grecia .chips li {
+    padding: 8px 16px;
+    border-radius: 999px;
+    background: #e0f4f5;
+    color: #163b50;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.pagina-grecia .chips li span {
+    color: #008b98;
+    font-weight: 400;
+}
+
+.pagina-grecia .faixa-destaque {
+    margin: 0 0 72px;
+    padding: 40px;
+    border-radius: 16px;
+    background: #f4fafb;
+}
+
+@media (max-width: 600px) {
+    .pagina-grecia .faixa-destaque {
+        padding: 28px 20px;
+        margin-bottom: 52px;
+    }
+}
+
+
+/* ===== ONDE COMER (gastronomia) ===== */
+
+.pagina-grecia .lista-simples {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin: 28px 0 0;
+}
+
+.pagina-grecia .lista-simples div {
+    min-width: 0;
+    padding: 20px 22px;
+    border-left: 4px solid #00a7b5;
+    border-radius: 0 14px 14px 0;
+    background: #ffffff;
+    box-shadow: 0 4px 18px rgba(22, 59, 80, 0.05);
+}
+
+.pagina-grecia .lista-simples h3 {
+    margin: 0 0 6px;
+    color: #163b50;
+    font-size: 17px;
+}
+
+.pagina-grecia .lista-simples p {
+    margin: 0;
+    color: #465d69;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+@media (max-width: 700px) {
+    .pagina-grecia .lista-simples {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ===== CONTINUE EXPLORANDO ===== */
+
+.pagina-grecia .continuar {
+    margin: 0 0 72px;
+    padding: 48px 40px;
+    border-radius: 16px;
+    background: #163b50;
+    color: #ffffff;
+}
+
+.pagina-grecia .continuar .secao-etiqueta {
+    color: #67e8f0;
+}
+
+.pagina-grecia .continuar .secao-titulo {
+    color: #ffffff;
+}
+
+.pagina-grecia .continuar-grade {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+    margin-top: 24px;
+}
+
+.pagina-grecia .continuar-grade a {
+    display: block;
+    padding: 18px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.07);
+    color: #ffffff;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.pagina-grecia .continuar-grade a:hover {
+    border-color: #67e8f0;
+    background: rgba(103, 232, 240, 0.18);
+}
+
+.pagina-grecia .continuar-grade a small {
+    display: block;
+    margin-top: 4px;
+    color: #d4e2e8;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+@media (max-width: 900px) {
+    .pagina-grecia .continuar-grade {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .pagina-grecia .continuar {
+        padding: 32px 20px;
+    }
+
+    .pagina-grecia .continuar-grade {
+        grid-template-columns: 1fr;
+    }
+}
