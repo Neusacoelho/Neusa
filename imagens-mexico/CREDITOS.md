@@ -1,6 +1,6 @@
 # Créditos das fotografias do méxico
 
-As 18 fotografias são exibidas em `../mexico-fotos.html`, `../mexico/gastronomia.html`, `../mexico/paisagens-cidades.html` e `../mexico/viagem-plural.html`,. O CSS ajusta o enquadramento apenas na exibição (`object-fit: cover`); os arquivos locais não foram editados, as fotografias foram baixadas em sua resolução disponibilizada na página do arquivo.
+As 18 fotografias são exibidas em `../mexico-fotos.html`, `../mexico/gastronomia.html`, `../mexico/paisagens-cidades.html` e `../mexico/viagem-plural.html`, O CSS ajusta o enquadramento apenas na exibição (`object-fit: cover`); os arquivos locais não foram editados, as fotografias foram baixadas em sua resolução disponibilizada na página do arquivo.
 
 | Arquivo local            | Local retratado        | Autor             | Fonte e licença                                                                                                                                                               |
 | ------------------------ | ---------------------- | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
