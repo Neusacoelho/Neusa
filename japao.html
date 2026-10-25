@@ -2,62 +2,129 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Japão — Turismo.com</title>
-    <link rel="stylesheet" href="estilo.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Conheça o Japão: cidades, cultura, paisagens e dicas para viajar.">
+    <title>Japão — TURISMO.COM</title>
+
+    <!-- CSS compartilhados do projeto: mantenha esta ordem. -->
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/componentes.css">
+    <link rel="stylesheet" href="assets/css/pais.css">
+    <!-- CSS exclusivo da página do Japão. -->
+    <link rel="stylesheet" href="japao.css">
+    <script src="assets/js/site.js" defer></script>
 </head>
-<body>
 
-<header>
-    <h1>🌍 TURISMO.COM — Descubra o Mundo</h1>
-    <nav>
-        <a href="index.html">🏠 Início</a>
-        <a href="brasil.html">Brasil</a>
-        <a href="brasil-fotos.html">📸 Fotos do Brasil</a>
-        <a href="portugal.html">Portugal</a>
-        <a href="portugal-fotos.html">📸 Fotos de Portugal</a>
-        <a href="franca.html">França</a>
-        <a href="franca-fotos.html">📸 Fotos da França</a>
-        <a href="espanha.html">Espanha</a>
-        <a href="espanha-fotos.html">📸 Fotos da Espanha</a>
-        <a href="italia.html">Itália</a>
-        <a href="italia-fotos.html">📸 Fotos da Itália</a>
-        <a href="japao.html" class="ativo">Japão</a>
-        <a href="japao-fotos.html">📸 Fotos do Japão</a>
-        <a href="china.html">China</a>
-        <a href="hospedagem.html">🏠 Hospedagem</a>
-        <a href="alimentacao.html">🍽️ Alimentação</a>
-        <a href="compras.html">🛒 Compras</a>
-        <a href="contato.html">Contato</a>
-    </nav>
-</header>
+<body class="tc-site pais-japao"
+      data-raiz="./"
+      data-pais-nome="Japão"
+      data-pais-url="japao.html"
+      data-galeria-url="japao-fotos.html">
 
-<main>
-    <h2>Japão</h2>
+    <a class="tc-pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
 
-    <div class="secao">
-        <h3>🏙️ Cidades</h3>
-        <p>Tóquio — modernidade; Quioto — templos e tradição; Osaka — animação e gastronomia!</p>
-    </div>
+    <!-- Estes links funcionam como alternativa se o JavaScript não carregar. -->
+    <header class="tc-cabecalho" data-tc-cabecalho>
+        <div class="tc-container tc-fallback-cabecalho">
+            <a class="tc-marca" href="index.html">
+                <span class="tc-marca-simbolo" aria-hidden="true">✈</span>
+                <span class="tc-marca-texto"><strong>TURISMO<span>.COM</span></strong><small>DESCUBRA O MUNDO</small></span>
+            </a>
+            <nav class="tc-navegacao-basica" aria-label="Navegação básica">
+                <a href="index.html">Início</a>
+                <a href="japao.html" aria-current="page">Japão</a>
+                <a href="japao-fotos.html">Fotos do Japão</a>
+                <a href="contato.html">Contato</a>
+            </nav>
+        </div>
+    </header>
 
-    <div class="secao">
-        <h3>⛰️ Paisagens</h3>
-        <p>Monte Fuji, cerejeiras em flor, florestas sagradas — natureza belíssima!</p>
-    </div>
+    <main id="conteudo" tabindex="-1">
+        <section class="tc-banner japao-banner" aria-labelledby="titulo-japao">
+            <div class="tc-container japao-banner-conteudo">
+                <p class="tc-etiqueta">Ásia Oriental · Cultura e natureza</p>
+                <h1 id="titulo-japao">Descubra o Japão</h1>
+                <p>Um destino onde cidades cheias de energia convivem com templos históricos, montanhas e tradições preservadas ao longo de gerações.</p>
+                <div class="tc-acoes">
+                    <a class="tc-botao japao-botao" href="japao-fotos.html">Explorar a galeria de fotos</a>
+                    <a class="tc-botao tc-botao-contorno japao-botao-secundario" href="#sobre">Conhecer o país</a>
+                </div>
+            </div>
+        </section>
 
-    <div class="secao">
-        <h3>🍜 Gastronomia</h3>
-        <p>Sushi, sashimi, ramen — sabores deliciosos!</p>
-    </div>
+        <div class="tc-container japao-conteudo">
+            <section class="tc-resumo japao-resumo" aria-label="Informações rápidas sobre o Japão">
+                <div><dt>Capital</dt><dd>Tóquio</dd></div>
+                <div><dt>Moeda</dt><dd>Iene (JPY)</dd></div>
+                <div><dt>Idioma principal</dt><dd>Japonês</dd></div>
+            </section>
 
-    <p style="text-align: center; margin-top: 30px;">
-        Conheça os <a href="japao-fotos.html">📸 Pontos Turísticos do Japão</a> →
-    </p>
-</main>
+            <section class="tc-secao tc-fluxo" id="sobre" aria-labelledby="sobre-titulo">
+                <p class="tc-etiqueta">Conheça o destino</p>
+                <h2 id="sobre-titulo">Um país de contrastes</h2>
+                <p>Japão é um país insular da Ásia Oriental. É conhecido pela combinação de tecnologia, transporte urbano, artes tradicionais, culinária regional e paisagens que mudam bastante ao longo das estações.</p>
+                <p>Em uma mesma viagem, é possível visitar bairros movimentados, jardins tranquilos, castelos, santuários e regiões montanhosas. A experiência varia conforme a cidade e a época do ano.</p>
+            </section>
 
-<footer>
-    <p>&copy; 2026 Turismo.com — Todos os direitos reservados</p>
-</footer>
+            <section class="tc-secao tc-fluxo" aria-labelledby="cidades-titulo">
+                <p class="tc-etiqueta">Lugares para conhecer</p>
+                <h2 id="cidades-titulo">Cidades marcantes</h2>
+                <div class="tc-cartoes japao-cartoes">
+                    <article class="tc-cartao japao-cartao">
+                        <span class="tc-cartao-numero">01 · Metrópole</span>
+                        <h3>Tóquio</h3>
+                        <p>A capital combina bairros modernos, lojas, museus, parques e santuários históricos.</p>
+                    </article>
+                    <article class="tc-cartao japao-cartao">
+                        <span class="tc-cartao-numero">02 · Tradição</span>
+                        <h3>Quioto</h3>
+                        <p>Conhecida por templos, jardins, casas tradicionais e paisagens especialmente populares na época das cerejeiras.</p>
+                    </article>
+                    <article class="tc-cartao japao-cartao">
+                        <span class="tc-cartao-numero">03 · Gastronomia</span>
+                        <h3>Osaka</h3>
+                        <p>Uma cidade famosa por sua cena gastronômica, áreas comerciais animadas e pontos de interesse históricos.</p>
+                    </article>
+                </div>
+            </section>
 
+            <section class="tc-secao tc-fluxo" aria-labelledby="cultura-titulo">
+                <p class="tc-etiqueta">Tradições e cotidiano</p>
+                <h2 id="cultura-titulo">Cultura japonesa</h2>
+                <div class="japao-duas-colunas">
+                    <article class="japao-painel">
+                        <h3>Costumes e respeito</h3>
+                        <p>Boas maneiras, atenção aos espaços compartilhados e respeito às regras locais são importantes. Em templos e santuários, observe as orientações e a sinalização de cada lugar.</p>
+                    </article>
+                    <article class="japao-painel">
+                        <h3>Arte e celebrações</h3>
+                        <p>Caligrafia, cerâmica, teatro tradicional, festivais locais e a contemplação das flores de cerejeira fazem parte de diferentes expressões culturais do país.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="tc-secao tc-fluxo" aria-labelledby="comida-titulo">
+                <p class="tc-etiqueta">Sabores do Japão</p>
+                <h2 id="comida-titulo">Gastronomia</h2>
+                <p>A culinária japonesa é variada e regional. Entre os pratos conhecidos estão sushi, ramen, tempura, soba e okonomiyaki. Ingredientes, preparo e apresentação podem mudar bastante de uma região para outra.</p>
+            </section>
+
+            <section class="tc-secao japao-chamada tc-fluxo" aria-labelledby="fotos-titulo">
+                <div>
+                    <p class="tc-etiqueta">Inspire sua viagem</p>
+                    <h2 id="fotos-titulo">Veja o Japão em imagens</h2>
+                    <p>Explore uma seleção de paisagens, templos e lugares conhecidos do país.</p>
+                </div>
+                <a class="tc-botao japao-botao" href="japao-fotos.html">Abrir galeria de fotos →</a>
+            </section>
+        </div>
+    </main>
+
+    <footer class="tc-rodape" data-tc-rodape>
+        <div class="tc-container japao-rodape-basico">
+            <p>© 2026 TURISMO.COM — Projeto acadêmico desenvolvido em equipe.</p>
+            <a href="japao-fotos.html">Galeria de fotos do Japão</a>
+        </div>
+    </footer>
 </body>
 </html>
