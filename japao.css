@@ -1,0 +1,148 @@
+.tc-site.pais-japao .japao-banner {
+    background:
+        linear-gradient(115deg, rgba(15, 43, 58, .96), rgba(22, 59, 80, .83)),
+        radial-gradient(circle at 80% 15%, #d34b57 0, transparent 32%),
+        linear-gradient(135deg, #163b50, #006b75);
+    padding-block: clamp(3.5rem, 8vw, 7rem);
+}
+
+.tc-site.pais-japao .japao-banner-conteudo {
+    display: grid;
+    justify-items: start;
+    gap: 1.25rem;
+}
+
+.tc-site.pais-japao .japao-banner h1 {
+    max-width: 12ch;
+    color: #fff;
+}
+
+.tc-site.pais-japao .japao-banner p:not(.tc-etiqueta) {
+    max-width: 48rem;
+    color: #f4fbfc;
+    font-size: clamp(1.05rem, 2vw, 1.25rem);
+}
+
+.tc-site.pais-japao .japao-banner .tc-etiqueta {
+    color: #ffccd0;
+    margin: 0;
+}
+
+.tc-site.pais-japao .japao-botao {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.9rem;
+    padding: .7rem 1rem;
+    border: 2px solid #00a7b5;
+    border-radius: .6rem;
+    background: #00a7b5;
+    color: #092b37;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.tc-site.pais-japao .japao-botao:hover {
+    background: #8de4e8;
+    border-color: #8de4e8;
+}
+
+.tc-site.pais-japao .japao-botao-secundario {
+    background: transparent;
+    border-color: #d6f5f6;
+    color: #fff;
+}
+
+.tc-site.pais-japao .japao-botao-secundario:hover {
+    background: rgba(255, 255, 255, .12);
+}
+
+.tc-site.pais-japao .japao-conteudo {
+    padding-bottom: 2rem;
+}
+
+.tc-site.pais-japao .japao-resumo {
+    margin-top: -1.5rem;
+    position: relative;
+}
+
+.tc-site.pais-japao .japao-cartoes {
+    margin-top: 1.5rem;
+}
+
+.tc-site.pais-japao .japao-cartao {
+    border-top: 4px solid #d34b57;
+    transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.tc-site.pais-japao .japao-cartao:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(22, 59, 80, .1);
+}
+
+.tc-site.pais-japao .japao-cartao h3 {
+    margin-block: .7rem;
+}
+
+.tc-site.pais-japao .japao-cartao p,
+.tc-site.pais-japao .japao-painel p {
+    margin-top: .65rem;
+}
+
+.tc-site.pais-japao .japao-duas-colunas {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+    margin-top: 1.25rem;
+}
+
+.tc-site.pais-japao .japao-painel {
+    padding: 1.5rem;
+    background: #fff;
+    border: 1px solid var(--tc-borda);
+    border-radius: .75rem;
+}
+
+.tc-site.pais-japao .japao-painel h3 {
+    color: var(--tc-link);
+}
+
+.tc-site.pais-japao .japao-chamada {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding: 2rem;
+    margin-block: 2rem;
+    border-radius: 1rem;
+    background: #e0f4f5;
+}
+
+.tc-site.pais-japao .japao-chamada .tc-etiqueta {
+    margin-bottom: .5rem;
+}
+
+.tc-site.pais-japao .japao-rodape-basico {
+    padding-block: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .tc-site.pais-japao .japao-duas-colunas {
+        grid-template-columns: 1fr;
+    }
+
+    .tc-site.pais-japao .japao-chamada {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .tc-site.pais-japao .japao-cartao {
+        transition: none;
+    }
+
+    .tc-site.pais-japao .japao-cartao:hover {
+        transform: none;
+    }
+}

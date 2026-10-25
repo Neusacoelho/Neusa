@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grécia — Turismo.com</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="grecia.css">
+   
+    <script>document.documentElement.classList.add("js");</script>
+</head>
+
+<body class="pagina-grecia pagina-grecia-inicio">
+
+
+    <!-- Cabeçalho principal do Turismo.com -->
+    <header class="cabecalho-principal">
+        <div class="barra-cabecalho">
+
+            <!-- Identidade do site -->
+            <a href="index.html" class="marca">
+                <span class="marca-simbolo">✈</span>
+
+                <span class="marca-texto">
+                    <strong>TURISMO<span>.COM</span></strong>
+                    <small>DESCUBRA O MUNDO</small>
+                </span>
+            </a>
+
+            <!-- Menu de navegação -->
+            <nav class="navegacao" aria-label="Menu principal">
+                <a href="index.html">Início</a>
+
+                <!-- Lista de países -->
+                <div class="grupo-dropdown">
+                    <button class="botao-dropdown" type="button" aria-expanded="false">
+                        Países <span>⌄</span>
+                    </button>
+
+                    <div class="menu-dropdown">
+                        <a href="brasil.html">Brasil</a>
+                        <a href="portugal.html">Portugal</a>
+                        <a href="grecia.html">Grécia</a>
+                        <a href="franca.html">França</a>
+                        <a href="espanha.html">Espanha</a>
+                        <a href="italia.html">Itália</a>
+                        <a href="japao.html">Japão</a>
+                        <a href="china.html">China</a>
+                    </div>
+                </div>
+
+                <a href="hospedagem.html">Hospedagem</a>
+                <a href="alimentacao.html">Alimentação</a>
+                <a href="compras.html">Compras</a>
+                <a href="contato.html">Contato</a>
+            </nav>
+
+            <!-- Botão para o menu no celular -->
+            <button class="botao-menu" type="button" aria-label="Abrir menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- Apresentação principal da Grécia -->
+        <section class="banner-grecia" aria-labelledby="titulo-banner-grecia">
+
+            <img src="imagens-grecia/Parthenon_from_west.jpg" alt="Acrópole de Atenas, na Grécia" width="1920"
+                height="1285">
+
+            <div class="banner-grecia-conteudo">
+                <div class="banner-grecia-texto">
+                    <span class="banner-etiqueta">DESCUBRA A GRÉCIA</span>
+
+                    <h1 id="titulo-banner-grecia">
+                        Grécia: história, mitologia e paisagens
+                    </h1>
+
+                    <p>
+                        Explore cidades milenares, ilhas de águas
+                        cristalinas, tradições e sabores
+                        inesquecíveis.
+                    </p>
+
+                    <a href="#titulo-apresentacao" class="banner-botao">
+                        Explorar a Grécia →
+                    </a>
+
+                    <!-- Atalhos para as seções da página -->
+                    <ul class="banner-atalhos" aria-label="Atalhos da página">
+                        <li><a href="#conteudo-pontos-turisticos">Pontos turísticos</a></li>
+                        <li><a href="#conteudo-roteiro">Roteiro</a></li>
+                        <li><a href="#conteudo-curiosidades">Curiosidades</a></li>
+                        <li><a href="#conteudo-dicas">Dicas</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- Informações rápidas: faixa de largura total, como no template aprovado. -->
+        <section class="resumo-grecia" aria-label="Informações rápidas sobre a Grécia">
+            <div class="resumo-conteudo">
+
+                <div class="resumo-item">
+                    <span class="resumo-icone" aria-hidden="true">🏛️</span>
+                    <div>
+                        <span class="resumo-label">CAPITAL</span>
+                        <strong>Atenas</strong>
+                    </div>
+                </div>
+
+                <div class="resumo-item">
+                    <span class="resumo-icone" aria-hidden="true">🗣️</span>
+                    <div>
+                        <span class="resumo-label">IDIOMA</span>
+                        <strong>Grego</strong>
+                    </div>
+                </div>
+
+                <div class="resumo-item">
+                    <span class="resumo-icone" aria-hidden="true">💶</span>
+                    <div>
+                        <span class="resumo-label">MOEDA</span>
+                        <strong>Euro (€)</strong>
+                    </div>
+                </div>
+
+                <div class="resumo-item">
+                    <span class="resumo-icone" aria-hidden="true">☀️</span>
+                    <div>
+                        <span class="resumo-label">MELHOR ÉPOCA</span>
+                        <strong>Maio a outubro</strong>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+
+        <div class="conteudo-grecia">
+            <!-- Introdução ao destino -->
+            <section class="apresentacao-grecia" aria-labelledby="titulo-apresentacao">
+
+                <div class="apresentacao-titulo">
+                    <span class="apresentacao-etiqueta">
+                        BEM-VINDO À GRÉCIA
+                    </span>
+
+                    <h2 id="titulo-apresentacao">
+                        O berço de civilizações com histórias eternas.
+                    </h2>
+                </div>
+
+                <div class="apresentacao-textos">
+                    <p>
+                        Localizada no sudeste da Europa, banhada pelos
+                        mares Egeu, Jônico e Mediterrâneo, a Grécia encanta
+                        pela combinação de história, mitologia, arquitetura
+                        e gastronomia. Berço da democracia, da filosofia
+                        e dos Jogos Olímpicos, o país marcou profundamente
+                        a cultura ocidental.
+                    </p>
+
+                    <p>
+                        De Atenas e Tessalônica aos mosteiros de Meteora,
+                        das praias de Creta às ilhas de Santorini, Mykonos
+                        e Rodes, o país reúne tradições, sabores
+                        e experiências inesquecíveis.
+                    </p>
+                </div>
+
+            </section>
+
+
+            <!-- Cartões para explorar a Grécia -->
+            <section class="explorar-grecia" aria-label="Explore mais sobre a Grécia">
+
+                <div class="explorar-cartoes">
+
+                    <!-- Cultura -->
+                    <article class="explorar-cartao">
+                        <span class="cartao-numero">01</span>
+
+                        <h3>Cultura</h3>
+
+                        <p>
+                            Descubra a mitologia, a filosofia, o teatro,
+                            a música e o patrimônio histórico que fazem
+                            da Grécia um destino tão especial.
+                        </p>
+
+                        <a href="paises/grecia/cultura.html" class="cartao-link">
+                            Saiba mais →
+                        </a>
+                    </article>
+
+                    <!-- Gastronomia -->
+                    <article class="explorar-cartao">
+                        <span class="cartao-numero">02</span>
+
+                        <h3>Gastronomia</h3>
+
+                        <p>
+                            Conheça os sabores gregos, da moussaka e do
+                            souvlaki à salada grega, ao queijo feta
+                            e às especialidades regionais.
+                        </p>
+
+                        <a href="paises/grecia/gastronomia.html" class="cartao-link">
+                            Saiba mais →
+                        </a>
+                    </article>
+
+                    <!-- Pontos turísticos -->
+                    <article class="explorar-cartao">
+                        <span class="cartao-numero">03</span>
+
+                        <h3>Pontos turísticos</h3>
+
+                        <p>
+                            Explore sítios arqueológicos, mosteiros, praias
+                            e paisagens inesquecíveis, da Acrópole
+                            de Atenas às ilhas gregas.
+                        </p>
+
+                        <a href="paises/grecia/pontos-turisticos.html" class="cartao-link">
+                            Saiba mais →
+                        </a>
+                    </article>
+
+                    <!-- Curiosidades -->
+                    <article class="explorar-cartao">
+                        <span class="cartao-numero">04</span>
+
+                        <h3>Curiosidades</h3>
+
+                        <p>
+                            Descubra histórias, costumes e detalhes
+                            surpreendentes sobre a identidade
+                            e o modo de vida grego.
+                        </p>
+
+                        <a href="paises/grecia/curiosidades.html" class="cartao-link">
+                            Saiba mais →
+                        </a>
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- A Grécia em números -->
+            <section class="grecia-numeros revelar" aria-labelledby="titulo-numeros">
+
+                <span class="secao-etiqueta">A GRÉCIA EM NÚMEROS</span>
+                <h2 id="titulo-numeros" class="secao-titulo">Um país feito de mar, sol e ilhas.</h2>
+
+                <div class="numeros-grade">
+
+                    <div class="numero-item">
+                        <strong>+6.000</strong>
+                        <span>ilhas e ilhotas, das quais pouco mais de 200 são habitadas</span>
+                    </div>
+
+                    <div class="numero-item">
+                        <strong>+13 mil km</strong>
+                        <span>de litoral, um dos mais extensos da Europa</span>
+                    </div>
+
+                    <div class="numero-item">
+                        <strong>~300</strong>
+                        <span>dias de sol por ano em boa parte do país</span>
+                    </div>
+
+                    <div class="numero-item">
+                        <strong>776 a.C.</strong>
+                        <span>data tradicional dos primeiros Jogos Olímpicos, em Olímpia</span>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Pontos turísticos -->
+            <section class="grecia-pontos revelar" id="conteudo-pontos-turisticos"
+                aria-labelledby="titulo-pontos">
+
+                <span class="secao-etiqueta">PONTOS TURÍSTICOS</span>
+                <h2 id="titulo-pontos" class="secao-titulo">Lugares que valem a viagem.</h2>
+                <p class="secao-intro">
+                    Da pedra antiga ao azul do Egeu: seis paradas para entender
+                    por que a Grécia é um dos destinos mais desejados do mundo.
+                </p>
+
+                <div class="pontos-grade">
+
+                    <article class="ponto-cartao">
+                        <span class="ponto-icone" aria-hidden="true">🏛️</span>
+                        <span class="ponto-tag">Atenas</span>
+                        <h3>Acrópole e Partenon</h3>
+                        <p>
+                            O templo dedicado à deusa Atena domina a cidade
+                            do alto da colina. Vá logo na abertura para fugir
+                            do calor e das filas, e aproveite a vista de Atenas
+                            ao entardecer.
+                        </p>
+                    </article>
+
+                    <article class="ponto-cartao">
+                        <span class="ponto-icone" aria-hidden="true">🌅</span>
+                        <span class="ponto-tag">Santorini</span>
+                        <h3>Oia e a caldeira</h3>
+                        <p>
+                            Casas brancas, cúpulas azuis e um dos pores do sol
+                            mais famosos do planeta, sobre as ruínas de um
+                            antigo vulcão.
+                        </p>
+                    </article>
+
+                    <article class="ponto-cartao">
+                        <span class="ponto-icone" aria-hidden="true">⛰️</span>
+                        <span class="ponto-tag">Tessália</span>
+                        <h3>Mosteiros de Meteora</h3>
+                        <p>
+                            Mosteiros erguidos no topo de gigantescas colunas
+                            de rocha, como se flutuassem no ar. Um cenário
+                            difícil de acreditar até ser visto de perto.
+                        </p>
+                    </article>
+
+                    <article class="ponto-cartao">
+                        <span class="ponto-icone" aria-hidden="true">🔮</span>
+                        <span class="ponto-tag">Fócida</span>
+                        <h3>Delfos</h3>
+                        <p>
+                            Para os antigos gregos, era o centro do mundo.
+                            Ali ficava o famoso oráculo, consultado por reis
+                            e generais antes das grandes decisões.
+                        </p>
+                    </article>
+
+                    <article class="ponto-cartao">
+                        <span class="ponto-icone" aria-hidden="true">🐂</span>
+                        <span class="ponto-tag">Creta</span>
+                        <h3>Palácio de Cnossos</h3>
+                        <p>
+                            Capital da civilização minoica, ligada à lenda do
+                            Minotauro e do labirinto. Depois, as praias de
+                            Elafonisi e Balos completam o roteiro.
+                        </p>
+                    </article>
+
+                    <article class="ponto-cartao">
+                        <span class="ponto-icone" aria-hidden="true">🏰</span>
+                        <span class="ponto-tag">Rodes</span>
+                        <h3>Cidade medieval</h3>
+                        <p>
+                            Muralhas, ruas de pedra e o Palácio do Grão-Mestre
+                            formam um dos centros medievais mais bem
+                            preservados da Europa.
+                        </p>
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- Roteiro sugerido -->
+            <section class="grecia-roteiro revelar" id="conteudo-roteiro" aria-labelledby="titulo-roteiro">
+
+                <span class="secao-etiqueta">ROTEIRO SUGERIDO</span>
+                <h2 id="titulo-roteiro" class="secao-titulo">10 dias para conhecer o essencial.</h2>
+                <p class="secao-intro">
+                    Uma sugestão equilibrada entre história, natureza e praia.
+                    Ajuste os dias conforme o seu ritmo.
+                </p>
+
+                <ol class="roteiro-linha">
+
+                    <li class="roteiro-passo">
+                        <span class="roteiro-dias">Dias 1 a 3</span>
+                        <h3>Atenas</h3>
+                        <p>
+                            Acrópole, Museu da Acrópole, o bairro de Plaka
+                            e o mercado de Monastiraki. Reserve uma noite
+                            para jantar em uma taverna com vista.
+                        </p>
+                    </li>
+
+                    <li class="roteiro-passo">
+                        <span class="roteiro-dias">Dias 4 e 5</span>
+                        <h3>Delfos e Meteora</h3>
+                        <p>
+                            Saia de Atenas rumo a Delfos e siga para
+                            Kalambaka, a cidade aos pés de Meteora,
+                            para ver os mosteiros ao nascer do sol.
+                        </p>
+                    </li>
+
+                    <li class="roteiro-passo">
+                        <span class="roteiro-dias">Dias 6 e 7</span>
+                        <h3>Santorini</h3>
+                        <p>
+                            Caminhe de Fira a Oia, faça um passeio de barco
+                            pela caldeira e experimente vinhos locais
+                            produzidos em solo vulcânico.
+                        </p>
+                    </li>
+
+                    <li class="roteiro-passo">
+                        <span class="roteiro-dias">Dias 8 a 10</span>
+                        <h3>Creta</h3>
+                        <p>
+                            Cnossos, a cidade de Chania com seu porto
+                            veneziano e as praias de águas cristalinas
+                            para fechar a viagem com calma.
+                        </p>
+                    </li>
+
+                </ol>
+
+            </section>
+
+
+            <!-- Curiosidades -->
+            <section class="grecia-curiosidades revelar" id="conteudo-curiosidades"
+                aria-labelledby="titulo-curiosidades">
+
+                <span class="secao-etiqueta">CURIOSIDADES</span>
+                <h2 id="titulo-curiosidades" class="secao-titulo">Detalhes que só quem conhece sabe.</h2>
+
+                <!-- Caixa interativa -->
+                <div class="voce-sabia" aria-live="polite">
+                    <span class="voce-sabia-etiqueta">VOCÊ SABIA?</span>
+                    <p id="voce-sabia-texto">
+                        Os gregos chamam o próprio país de Ellada (Ελλάδα),
+                        e não de “Grécia”. Esse nome veio dos romanos.
+                    </p>
+                    <button type="button" class="voce-sabia-botao" id="voce-sabia-botao">
+                        Outra curiosidade ↻
+                    </button>
+                </div>
+
+                <div class="curiosidades-grade">
+
+                    <article class="curiosidade-cartao">
+                        <h3>O olho grego</h3>
+                        <p>
+                            O <em>mati</em>, amuleto azul em forma de olho,
+                            é usado para afastar o mau-olhado. Você vai vê-lo
+                            em joias, portas e até em barcos.
+                        </p>
+                    </article>
+
+                    <article class="curiosidade-cartao">
+                        <h3>Dia do “Óchi”</h3>
+                        <p>
+                            Em 28 de outubro, os gregos celebram o “Não”
+                            (<em>Óchi</em>) dito em 1940 a um ultimato
+                            durante a Segunda Guerra. Há desfiles e bandeiras
+                            por todo o país.
+                        </p>
+                    </article>
+
+                    <article class="curiosidade-cartao">
+                        <h3>Acústica perfeita</h3>
+                        <p>
+                            No teatro de Epidauro, construído há mais de 2.300
+                            anos, uma moeda derrubada no palco pode ser
+                            ouvida das últimas fileiras.
+                        </p>
+                    </article>
+
+                    <article class="curiosidade-cartao">
+                        <h3>Sempre perto do mar</h3>
+                        <p>
+                            Em qualquer ponto da Grécia continental, o mar está
+                            a poucas horas de distância. Não à toa, navegar
+                            sempre fez parte da identidade do povo.
+                        </p>
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- Palavras em grego -->
+            <section class="grecia-palavras revelar" aria-labelledby="titulo-palavras">
+
+                <span class="secao-etiqueta">FALE COMO UM GREGO</span>
+                <h2 id="titulo-palavras" class="secao-titulo">Cinco palavras para começar.</h2>
+
+                <div class="palavras-grade">
+
+                    <div class="palavra-cartao">
+                        <span class="palavra-grego">Καλημέρα</span>
+                        <strong>Kaliméra</strong>
+                        <span>Bom dia</span>
+                    </div>
+
+                    <div class="palavra-cartao">
+                        <span class="palavra-grego">Ευχαριστώ</span>
+                        <strong>Efharistó</strong>
+                        <span>Obrigado(a)</span>
+                    </div>
+
+                    <div class="palavra-cartao">
+                        <span class="palavra-grego">Παρακαλώ</span>
+                        <strong>Parakaló</strong>
+                        <span>Por favor / de nada</span>
+                    </div>
+
+                    <div class="palavra-cartao">
+                        <span class="palavra-grego">Γεια μας</span>
+                        <strong>Iámas</strong>
+                        <span>Saúde! (no brinde)</span>
+                    </div>
+
+                    <div class="palavra-cartao">
+                        <span class="palavra-grego">Ναι / Όχι</span>
+                        <strong>Ne / Óhi</strong>
+                        <span>Sim / Não</span>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Dicas de viagem -->
+            <section class="grecia-dicas revelar" id="conteudo-dicas" aria-labelledby="titulo-dicas">
+
+                <span class="secao-etiqueta">DICAS DE VIAGEM</span>
+                <h2 id="titulo-dicas" class="secao-titulo">Para viajar com tranquilidade.</h2>
+
+                <div class="dicas-grade">
+
+                    <div class="dica-item">
+                        <span class="dica-icone" aria-hidden="true">⛴️</span>
+                        <div>
+                            <h3>Balsas entre ilhas</h3>
+                            <p>
+                                Em julho e agosto, reserve as balsas com
+                                antecedência. Fora da alta temporada, a oferta
+                                de horários é menor.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="dica-item">
+                        <span class="dica-icone" aria-hidden="true">🧢</span>
+                        <div>
+                            <h3>Calor no verão</h3>
+                            <p>
+                                Sítios arqueológicos têm pouca sombra. Leve
+                                chapéu, protetor solar e água, e visite no
+                                início da manhã.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="dica-item">
+                        <span class="dica-icone" aria-hidden="true">👕</span>
+                        <div>
+                            <h3>Roupa nos mosteiros</h3>
+                            <p>
+                                Em Meteora, ombros e joelhos devem estar
+                                cobertos para entrar. Uma camisa leve ou um
+                                lenço na mochila resolve.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="dica-item">
+                        <span class="dica-icone" aria-hidden="true">🍽️</span>
+                        <div>
+                            <h3>Ritmo das refeições</h3>
+                            <p>
+                                Os gregos jantam tarde e fazem das refeições um
+                                momento longo. Peça vários pratos para dividir,
+                                como manda a tradição.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Destaque para a galeria da Grécia -->
+            <section class="destaque-galeria" aria-labelledby="titulo-destaque-galeria">
+
+                <!-- Fotografia de destaque -->
+                <div class="destaque-galeria-imagem">
+                    <img src="imagens-grecia/IMG_5527.jpg" alt="Vila de Oia, na ilha de Santorini, Grécia" loading="lazy">
+                </div>
+
+                <!-- Apresentação da galeria -->
+                <div class="destaque-galeria-conteudo">
+
+                    <span class="destaque-galeria-etiqueta">
+                        OLHARES SOBRE A GRÉCIA
+                    </span>
+
+                    <h2 id="titulo-destaque-galeria">
+                        Veja o destino por outros ângulos.
+                    </h2>
+
+                    <p>
+                        Descubra as paisagens, a arquitetura e os
+                        encantos da Grécia por meio de uma seleção
+                        especial de fotografias.
+                    </p>
+
+                    <a href="grecia-fotos.html" class="destaque-galeria-botao">
+                        Abrir galeria →
+                    </a>
+
+                </div>
+
+            </section>
+        </div>
+
+    </main>
+
+
+    <!-- Botão para voltar ao topo -->
+    <a href="#" class="voltar-topo" id="voltar-topo" aria-label="Voltar ao topo">↑</a>
+
+
+    <!-- Rodapé principal do Turismo.com -->
+    <footer class="rodape-principal">
+        <div class="rodape-conteudo">
+
+            <!-- Apresentação do projeto -->
+            <div class="rodape-sobre">
+                <h2>✈ TURISMO<span>.COM</span></h2>
+                <p>
+                    Descubra destinos, culturas e experiências
+                    incríveis ao redor do mundo.
+                </p>
+            </div>
+
+            <!-- Links de navegação -->
+            <nav class="rodape-coluna" aria-label="Navegação do rodapé">
+                <h3>Explorar</h3>
+                <a href="index.html">Início</a>
+                <a href="grecia.html">Grécia</a>
+                <a href="grecia-fotos.html">Galeria da Grécia</a>
+            </nav>
+
+            <!-- Serviços -->
+            <nav class="rodape-coluna" aria-label="Serviços">
+                <h3>Serviços</h3>
+                <a href="hospedagem.html">Hospedagem</a>
+                <a href="alimentacao.html">Alimentação</a>
+                <a href="compras.html">Compras</a>
+            </nav>
+
+            <!-- Informações -->
+            <nav class="rodape-coluna" aria-label="Informações">
+                <h3>Informações</h3>
+                <a href="contato.html">Contato</a>
+            </nav>
+
+        </div>
+
+        <div class="rodape-inferior">
+            <p>© 2026 Turismo.com — Todos os direitos reservados.</p>
+            <p>Projeto acadêmico desenvolvido em equipe.</p>
+        </div>
+    </footer>
+
+
+
+    <script>
+        // Controla o menu em celulares e tablets
+        const botaoMenu = document.querySelector(".botao-menu");
+        const navegacao = document.querySelector(".navegacao");
+        const botaoPaises = document.querySelector(".botao-dropdown");
+        const grupoPaises = document.querySelector(".grupo-dropdown");
+
+        botaoMenu.addEventListener("click", () => {
+            const aberto = navegacao.classList.toggle("aberta");
+
+            botaoMenu.setAttribute("aria-expanded", aberto);
+            botaoMenu.setAttribute(
+                "aria-label",
+                aberto ? "Fechar menu" : "Abrir menu"
+            );
+        });
+
+        // Abre e fecha a lista de países ao clicar
+        botaoPaises.addEventListener("click", () => {
+            const aberto = grupoPaises.classList.toggle("aberto");
+            botaoPaises.setAttribute("aria-expanded", aberto);
+        });
+
+
+        // Mostra as seções com uma animação suave ao rolar a página
+        const secoesParaRevelar = document.querySelectorAll(".revelar");
+
+        if ("IntersectionObserver" in window) {
+            const observador = new IntersectionObserver((entradas) => {
+                entradas.forEach((entrada) => {
+                    if (entrada.isIntersecting) {
+                        entrada.target.classList.add("revelada");
+                        observador.unobserve(entrada.target);
+                    }
+                });
+            }, { threshold: 0.12 });
+
+            secoesParaRevelar.forEach((secao) => observador.observe(secao));
+        } else {
+            secoesParaRevelar.forEach((secao) => secao.classList.add("revelada"));
+        }
+
+
+        // Caixa "Você sabia?": mostra uma curiosidade diferente a cada clique
+        const curiosidades = [
+            "Os gregos chamam o próprio país de Ellada (Ελλάδα), e não de “Grécia”. Esse nome veio dos romanos.",
+            "A maratona moderna nasceu nos primeiros Jogos Olímpicos da era moderna, em Atenas, em 1896, inspirada na lenda do mensageiro de Maratona.",
+            "Atenas recebeu o nome da deusa Atena, que, segundo a mitologia, ganhou a disputa pela cidade ao oferecer a oliveira aos moradores.",
+            "A erupção do vulcão de Santorini, há cerca de 3.600 anos, foi uma das maiores da história e abalou a civilização minoica.",
+            "A palavra “teatro”, “democracia”, “filosofia” e “olimpíada” vêm do grego. Você fala grego mais do que imagina!",
+            "Em Meteora, os monges levavam mantimentos e visitantes até o alto das rochas com redes e cestos presos a cordas.",
+            "A Grécia é um dos maiores produtores de azeite do mundo, e muitas famílias ainda cuidam de oliveiras centenárias."
+        ];
+
+        const textoCuriosidade = document.getElementById("voce-sabia-texto");
+        const botaoCuriosidade = document.getElementById("voce-sabia-botao");
+        let curiosidadeAtual = 0;
+
+        botaoCuriosidade.addEventListener("click", () => {
+            curiosidadeAtual = (curiosidadeAtual + 1) % curiosidades.length;
+            textoCuriosidade.classList.add("trocando");
+
+            setTimeout(() => {
+                textoCuriosidade.textContent = curiosidades[curiosidadeAtual];
+                textoCuriosidade.classList.remove("trocando");
+            }, 180);
+        });
+
+
+        // Botão de voltar ao topo: aparece depois de rolar a página
+        const botaoTopo = document.getElementById("voltar-topo");
+
+        window.addEventListener("scroll", () => {
+            botaoTopo.classList.toggle("visivel", window.scrollY > 700);
+        });
+    </script>
+
+</body>
+
+</html>

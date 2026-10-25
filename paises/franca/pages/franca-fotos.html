@@ -1,0 +1,292 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Galeria de fotos da França: monumentos, cidades, arquitetura e paisagens.">
+    <title>Galeria da França | Turismo pelo Mundo</title>
+
+    <link rel="stylesheet" href="../styles/frança.css">
+
+    <style>
+        .galeria-intro {
+            width: min(100% - 40px, 1180px);
+            margin: 65px auto 35px;
+        }
+
+        .galeria-intro h1 {
+            color: #142b3b;
+            font: 500 clamp(2.5rem, 6vw, 4rem)/1.15 "Playfair Display", Georgia, serif;
+        }
+
+        .galeria-grid {
+            width: min(100% - 40px, 1180px);
+            margin: 35px auto 80px;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        .foto-card {
+            overflow: hidden;
+            border-radius: 12px;
+            border: 1px solid #e0e9ec;
+            background: #fff;
+        }
+
+        .foto-card img {
+            display: block;
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform .3s;
+        }
+
+        .foto-card:hover img {
+            transform: scale(1.04);
+        }
+
+        .foto-card div {
+            padding: 18px;
+        }
+
+        .foto-card h2 {
+            margin: 0 0 6px;
+            color: #142b3b;
+            font: 500 1.4rem "Playfair Display", Georgia, serif;
+        }
+
+        .foto-card p {
+            margin: 0;
+            color: #526570;
+        }
+
+        @media (max-width: 800px) {
+            .galeria-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 540px) {
+            .galeria-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .foto-card img {
+                height: 230px;
+            }
+        }
+    </style>
+</head>
+
+<body class="pagina-franca">
+
+    <header class="cabecalho-principal">
+        <a class="marca" href="franca.html">
+            <span class="marca-simbolo">🇫🇷</span>
+            <span class="marca-texto">
+                <strong>Turismo <span>pelo Mundo</span></strong>
+                <small>GALERIA DA FRANÇA</small>
+            </span>
+        </a>
+
+        <button class="botao-menu" aria-label="Abrir menu" aria-expanded="false">
+            ☰
+        </button>
+
+        <nav class="navegacao">
+            <a href="franca.html">Início</a>
+            <a href="cultura-franca.html">Cultura</a>
+
+            <div class="grupo-dropdown">
+                <button class="botao-dropdown" aria-expanded="false">
+                    Cidades ▾
+                </button>
+
+                <div class="menu-dropdown">
+                    <a href="paris.html">Paris</a>
+                    <a href="nice.html">Nice</a>
+                    <a href="lyon.html">Lyon</a>
+                    <a href="bordeaux.html">Bordeaux</a>
+                    <a href="estrasburgo.html">Estrasburgo</a>
+                </div>
+            </div>
+
+            <a class="ativo" href="franca-fotos.html">Galeria</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="galeria-intro">
+            <span class="etiqueta">PAISAGENS E ARQUITETURA</span>
+            <h1>França em imagens</h1>
+            <p>
+                Uma seleção de imagens para conhecer alguns dos cenários,
+                monumentos e regiões francesas.
+            </p>
+        </section>
+
+        <section class="galeria-grid">
+
+            <article class="foto-card">
+                <img
+                    loading="lazy"
+                    src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1000&q=85"
+                    alt="Torre Eiffel em Paris"
+                >
+                <div>
+                    <h2>Paris</h2>
+                    <p>Monumentos e avenidas históricas.</p>
+                </div>
+            </article>
+
+            <article class="foto-card">
+                <img
+                    loading="lazy"
+                    src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=1000&q=85"
+                    alt="Rua parisiense"
+                >
+                <div>
+                    <h2>Ruas de Paris</h2>
+                    <p>Cafés, edifícios e vida urbana.</p>
+                </div>
+            </article>
+
+            <article class="foto-card">
+                <img
+                    loading="lazy"
+                    src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1000&q=85"
+                    alt="Mar e costa"
+                >
+                <div>
+                    <h2>Costa Azul</h2>
+                    <p>Mar Mediterrâneo e paisagens litorâneas.</p>
+                </div>
+            </article>
+
+            <article class="foto-card">
+                <img
+                    loading="lazy"
+                    src="https://images.unsplash.com/photo-1514481538271-cf9f99627ab4?auto=format&fit=crop&w=1000&q=85"
+                    alt="Arquitetura histórica"
+                >
+                <div>
+                    <h2>Lyon</h2>
+                    <p>História, praças e gastronomia.</p>
+                </div>
+            </article>
+
+            <article class="foto-card">
+                <img
+                    loading="lazy"
+                    src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1000&q=85"
+                    alt="Edifícios europeus"
+                >
+                <div>
+                    <h2>Bordeaux</h2>
+                    <p>Arquitetura clássica e espaços urbanos.</p>
+                </div>
+            </article>
+
+            <article class="foto-card">
+                <img
+                    loading="lazy"
+                    src="https://images.unsplash.com/photo-1549144511-f099e773c147?auto=format&fit=crop&w=1000&q=85"
+                    alt="Centro histórico europeu"
+                >
+                <div>
+                    <h2>Estrasburgo</h2>
+                    <p>Casas tradicionais e canais.</p>
+                </div>
+            </article>
+
+            <article class="foto-card">
+                <img
+                    loading="lazy"
+                    src="https://images.unsplash.com/photo-1511739001486-6bfe10ce785f?auto=format&fit=crop&w=1000&q=85"
+                    alt="Vista da Torre Eiffel"
+                >
+                <div>
+                    <h2>Monumentos</h2>
+                    <p>Marcos históricos e culturais.</p>
+                </div>
+            </article>
+
+            <article class="foto-card">
+                <img
+                    loading="lazy"
+                    src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=1000&q=85"
+                    alt="Arquitetura de cidade francesa"
+                >
+                <div>
+                    <h2>Vida urbana</h2>
+                    <p>Ruas para explorar caminhando.</p>
+                </div>
+            </article>
+
+            <article class="foto-card">
+                <img
+                    loading="lazy"
+                    src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=85"
+                    alt="Paisagem natural"
+                >
+                <div>
+                    <h2>Paisagens</h2>
+                    <p>A diversidade natural do território francês.</p>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+    <footer class="rodape-principal">
+        <div class="rodape-conteudo">
+            <div>
+                <h2>Turismo <span>pelo Mundo</span></h2>
+                <p>Um guia educacional para descobrir a França.</p>
+            </div>
+
+            <div>
+                <h3>Destinos</h3>
+                <a href="paris.html">Paris</a>
+                <a href="nice.html">Nice</a>
+                <a href="lyon.html">Lyon</a>
+                <a href="bordeaux.html">Bordeaux</a>
+                <a href="estrasburgo.html">Estrasburgo</a>
+            </div>
+
+            <div>
+                <h3>Explore</h3>
+                <a href="cultura-franca.html">Cultura</a>
+                <a href="franca.html">Página principal</a>
+            </div>
+        </div>
+
+        <p class="rodape-inferior">
+            © 2026 Turismo pelo Mundo · Projeto educacional
+        </p>
+    </footer>
+
+    <script>
+        (() => {
+            const menu = document.querySelector(".botao-menu");
+            const nav = document.querySelector(".navegacao");
+            const dropdown = document.querySelector(".botao-dropdown");
+            const grupo = document.querySelector(".grupo-dropdown");
+
+            menu?.addEventListener("click", () => {
+                const aberto = nav.classList.toggle("aberta");
+                menu.setAttribute("aria-expanded", String(aberto));
+            });
+
+            dropdown?.addEventListener("click", () => {
+                const aberto = grupo.classList.toggle("aberto");
+                dropdown.setAttribute("aria-expanded", String(aberto));
+            });
+        })();
+    </script>
+
+</body>
+</html>
