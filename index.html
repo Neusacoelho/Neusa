@@ -6,6 +6,9 @@
     <title>Turismo.com — Descubra o Mundo</title>
     <meta name="description" content="Guias, fotos, hospedagem e dicas para 8 destinos incríveis: Brasil, Portugal, Grécia, França, Espanha, Itália, Japão e China.">
     <script>document.documentElement.classList.add("js");</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,500;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="estilo.css">
     <link rel="stylesheet" href="turismo-inicio.css">
 </head>
@@ -15,9 +18,9 @@
 <header class="cabecalho-principal" id="topo">
     <div class="barra-cabecalho">
         <a class="marca" href="index.html" aria-label="Turismo.com — página inicial">
-            <span class="marca-simbolo" aria-hidden="true">🌍</span>
+            <span class="marca-simbolo" aria-hidden="true">T</span>
             <span class="marca-texto">
-                <strong>Turismo<span>.com</span></strong>
+                <strong>TURISMO<span>.COM</span></strong>
                 <small>DESCUBRA O MUNDO</small>
             </span>
         </a>
@@ -30,7 +33,7 @@
             <a href="index.html">Início</a>
 
             <div class="grupo-dropdown">
-                <button class="botao-dropdown" type="button" aria-expanded="false">Destinos ▾</button>
+                <button class="botao-dropdown" type="button" aria-expanded="false">Países <span class="seta" aria-hidden="true">⌄</span></button>
                 <div class="menu-dropdown">
                     <a href="brasil.html">Brasil</a>
                     <a href="portugal.html">Portugal</a>
@@ -43,92 +46,45 @@
                 </div>
             </div>
 
-            <div class="grupo-dropdown">
-                <button class="botao-dropdown" type="button" aria-expanded="false">📸 Fotos ▾</button>
-                <div class="menu-dropdown">
-                    <a href="brasil-fotos.html">Brasil</a>
-                    <a href="portugal-fotos.html">Portugal</a>
-                    <a href="grecia-fotos.html">Grécia</a>
-                    <a href="paises/franca/pages/franca-fotos.html">França</a>
-                    <a href="espanha-fotos.html">Espanha</a>
-                    <a href="italia-fotos.html">Itália</a>
-                    <a href="japao-fotos.html">Japão</a>
-                    <a href="china-fotos.html">China</a>
+            <a href="hospedagem.html">Hospedagem</a>
+            <a href="alimentacao.html">Alimentação</a>
+            <a href="compras.html">Compras</a>
+            <a href="contato.html">Contato</a>
+
+            <div class="grupo-dropdown nav-guia">
+                <button class="botao-dropdown botao-guia" type="button" aria-expanded="false">Guia visual</button>
+                <div class="menu-dropdown menu-direita">
+                    <a href="brasil-fotos.html">Fotos do Brasil</a>
+                    <a href="portugal-fotos.html">Fotos de Portugal</a>
+                    <a href="grecia-fotos.html">Fotos da Grécia</a>
+                    <a href="paises/franca/pages/franca-fotos.html">Fotos da França</a>
+                    <a href="espanha-fotos.html">Fotos da Espanha</a>
+                    <a href="italia-fotos.html">Fotos da Itália</a>
+                    <a href="japao-fotos.html">Fotos do Japão</a>
+                    <a href="china-fotos.html">Fotos da China</a>
                 </div>
             </div>
-
-            <a href="hospedagem.html">🏠 Hospedagem</a>
-            <a href="alimentacao.html">🍽️ Alimentação</a>
-            <a href="compras.html">🛒 Compras</a>
-            <a href="contato.html">Contato</a>
         </nav>
     </div>
 </header>
 
 <main>
 
-    <!-- ===== HERO (parte principal nova) ===== -->
+    <!-- ===== HERO ===== -->
     <section class="hero">
-        <div class="hero-grade">
+        <div class="hero-conteudo">
+            <span class="hero-etiqueta">GUIA EDUCATIVO DE TURISMO</span>
+            <h1>O mundo está <em>esperando por você.</em></h1>
+            <p>Conheça novos lugares, culturas e sabores. Sua próxima descoberta começa aqui.</p>
 
-            <div class="hero-texto">
-                <h1>Seu próximo destino começa <em>aqui</em>.</h1>
-                <p>Guias, fotos e dicas de hospedagem, comida e compras para oito países. Escolha para onde ir e comece a planejar.</p>
-
-                <form class="embarque" id="form-destino">
-                    <div class="embarque-campo">
-                        <label for="select-destino">Para onde você quer ir?</label>
-                        <select id="select-destino">
-                            <option value="brasil.html">Brasil</option>
-                            <option value="portugal.html">Portugal</option>
-                            <option value="grecia.html" selected>Grécia</option>
-                            <option value="paises/franca/pages/franca.html">França</option>
-                            <option value="espanha.html">Espanha</option>
-                            <option value="italia.html">Itália</option>
-                            <option value="japao.html">Japão</option>
-                            <option value="china.html">China</option>
-                        </select>
-                    </div>
-                    <div class="embarque-acao">
-                        <button class="botao" type="submit">Ver guia</button>
-                    </div>
-                </form>
-
-                <ul class="hero-numeros">
-                    <li><strong>8</strong><span>países</span></li>
-                    <li><strong>4</strong><span>continentes</span></li>
-                    <li><strong>100%</strong><span>guias e fotos</span></li>
-                </ul>
+            <div class="hero-botoes">
+                <a class="botao botao-principal" href="#destinos">Explorar destinos <span aria-hidden="true">→</span></a>
+                <a class="botao botao-vidro" href="hospedagem.html">Ver hospedagem</a>
             </div>
-
-            <div class="colagem" aria-hidden="false">
-                <figure class="foto-slot arco" data-arquivo="imagens/inicio/hero-1.jpg">
-                    <img src="imagens/inicio/hero-1.jpg" alt="Paisagem de um destino turístico">
-                </figure>
-                <figure class="foto-slot redonda" data-arquivo="imagens/inicio/hero-2.jpg">
-                    <img src="imagens/inicio/hero-2.jpg" alt="Vista de uma cidade histórica">
-                </figure>
-                <figure class="foto-slot quadrada" data-arquivo="imagens/inicio/hero-3.jpg">
-                    <img src="imagens/inicio/hero-3.jpg" alt="Praia de águas azuis">
-                </figure>
-
-                <span class="chip chip-1"><i aria-hidden="true">📍</i> Santorini</span>
-                <span class="chip chip-2"><i aria-hidden="true">🌅</i> Pôr do sol</span>
-
-                <div class="colagem-selo">
-                    <b aria-hidden="true">✈️</b>
-                    <span><strong>8 destinos</strong>em 4 continentes</span>
-                </div>
-            </div>
-
         </div>
-
-        <svg class="hero-onda" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
-            <path d="M0,64 C240,120 480,0 720,48 C960,96 1200,112 1440,40 L1440,120 L0,120 Z"></path>
-        </svg>
     </section>
 
-    <!-- ===== ATALHOS (cartão sobre o hero) ===== -->
+    <!-- ===== ATALHOS ===== -->
     <section class="inicio-atalhos" aria-label="Atalhos">
         <div class="inicio-atalhos-conteudo">
             <a class="atalho-item" href="#destinos">
@@ -283,9 +239,6 @@
         </div>
     </section>
 
-
-    
-
 </main>
 
 <!-- ===== RODAPÉ ===== -->
@@ -309,7 +262,6 @@
             <a href="japao.html">Japão</a>
             <a href="china.html">China</a>
         </div>
-       
     </div>
     <div class="rodape-inferior">
         <p>&copy; 2026 Turismo.com — Todos os direitos reservados</p>
@@ -346,12 +298,6 @@
     });
     document.addEventListener("click", function () {
         grupos.forEach(function (g) { g.classList.remove("aberto"); });
-    });
-
-    /* Escolha de destino no cartão de embarque */
-    document.getElementById("form-destino").addEventListener("submit", function (e) {
-        e.preventDefault();
-        window.location.href = document.getElementById("select-destino").value;
     });
 
     /* Foto ausente: mostra o nome do arquivo esperado */
